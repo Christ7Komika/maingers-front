@@ -1,12 +1,14 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import About from "./pages/about/About";
-import Contact from "./components/contact/Contact";
-import Flexibles from "./pages/flexibles/Flexibles";
-import Home from "./pages/home/Home";
-import NotFound from "./pages/notFound/NotFound";
-import Services from "./pages/services/Services";
-import Shop from "./pages/shop/Shop";
+import Loader from "./components/Loader/Loader";
+
+const About = React.lazy(() => import("./pages/about/About"));
+const Contact = React.lazy(() => import("./pages/contact/Contact"));
+const Flexibles = React.lazy(() => import("./pages/flexibles/Flexibles"));
+const Home = React.lazy(() => import("./pages/home/Home"));
+const NotFound = React.lazy(() => import("./pages/notFound/NotFound"));
+const Services = React.lazy(() => import("./pages/services/Services"));
+const Shop = React.lazy(() => import("./pages/shop/Shop"));
 
 export const router = createBrowserRouter([
   {

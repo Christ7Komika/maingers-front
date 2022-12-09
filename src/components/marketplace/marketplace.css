@@ -1,7 +1,9 @@
 .marketplace {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1.5fr;
   position: relative;
+  height: 120vh;
+  background: var(--bg-light);
 }
 
 .marketplace .marketplace-list-product {
@@ -15,28 +17,10 @@
   background: rgba(3, 3, 3, 0.274);
   backdrop-filter: blur(4px);
   display: grid;
-  grid-template-areas:
-    "a b c"
-    "d d e";
-  padding: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem 4rem;
   gap: 2rem;
   overflow: hidden;
-}
-
-.marketplace .marketplace-list-product > div:first-child {
-  grid-area: a;
-}
-.marketplace .marketplace-list-product > div:nth-child(2) {
-  grid-area: b;
-}
-.marketplace .marketplace-list-product > div:nth-child(3) {
-  grid-area: c;
-}
-.marketplace .marketplace-list-product > div:nth-child(4) {
-  grid-area: d;
-}
-.marketplace .marketplace-list-product > div:nth-child(5) {
-  grid-area: e;
 }
 
 .marketplace .marketplace-content {

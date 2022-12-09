@@ -1,0 +1,18 @@
+.banner {
+  width: 100vw;
+  height: calc(100vh - 7rem);
+  position: relative;
+  background-image: url("../../assets/pictures/img1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.banner .banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-white);
+  padding: 2rem;
+}

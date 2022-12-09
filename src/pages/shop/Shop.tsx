@@ -1,11 +1,18 @@
 import React from "react";
-import Header from "../../components/header/Header";
+
+const Header = React.lazy(() => import("../../components/header/Header"));
+const Banner = React.lazy(() => import("../../components/Banner/Banner"));
+const MarketPlace = React.lazy(
+  () => import("../../components/marketplace/MarketPlace")
+);
 
 const Shop = () => {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <Banner />
+      <MarketPlace />
+    </>
   );
 };
 

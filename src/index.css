@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --bg-blue: #384e68;
+  --text-blue: #27364a;
+  --bg-blue2: #27364a;
+  --light-grey: #e7e4e4;
+  --orange: #ff8913;
+  --white: #fff;
+  --bg-white: #fff;
+  --focus: rgb(201, 201, 201);
+  --text-lightgrey: #e7e4e4;
+  --text-orange: #fb5901;
+  --text-dark: #000000;
+  --text-grey: #585858;
+  --text-darkgrey: #2d2d2d;
+  --bg-dark: #2d2d2d;
+  --bg-orange: #ff6613;
+  --bg-orange-opacity: #ff6613c2;
+  --bg-light: #c5d8df;
+  --shadow: 1px 3px 15px rgba(0, 0, 0, 0.2);
+  --light-shadow: 0.5px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.container {
+  height: 100vh;
+}

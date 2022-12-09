@@ -1,0 +1,13 @@
+.footer {
+}
+
+.footer .footer-top {
+  padding: 0 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  gap: 1rem;
+  background: var(--bg-blue2);
+}
+
+.footer .footer-top {
+}

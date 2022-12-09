@@ -1,0 +1,107 @@
+.company {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*
+****************************************
+******************* LEFT SIDE
+****************************************
+*/
+
+.company .company-content {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  gap: 0.5rem;
+}
+
+.company .company-content h2 {
+  color: var(--text-orange);
+  text-transform: uppercase;
+}
+
+.company .company-content h3 {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+}
+
+.company .company-content p {
+  color: var(--text-darkgrey);
+  font-size: 0.9rem;
+}
+
+.company .company-content button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 180px;
+  height: 40px;
+  border-radius: 40px;
+  color: var(--white);
+  background: var(--bg-dark);
+  border: 1px solid var(--bg-dark);
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+
+.company .company-content button:hover {
+  background: transparent;
+  color: var(--text-darkgrey);
+}
+
+/*
+****************************************
+******************* RIGHT SIDE
+****************************************
+*/
+
+.company .company-img {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4rem;
+}
+
+.company .company-img > div {
+  width: 300px;
+  height: 70%;
+  position: relative;
+  overflow: hidden;
+}
+
+.company .company-img > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.company .company-img .company-first-img {
+  align-self: flex-start;
+  border-radius: 0 0 5px 5px;
+}
+
+.company .company-img .company-first-img .company-infos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem;
+  background: var(--bg-orange);
+  width: 50%;
+  height: 30%;
+  border-radius: 0 5px 0 0;
+  color: var(--white);
+}
+
+.company .company-img .company-first-img .company-infos span {
+  font-size: 2rem;
+}
+.company .company-img .company-first-img .company-infos p {
+  font-size: 1.1rem;
+}
+.company .company-img .company-second-img {
+  align-self: flex-end;
+  border-radius: 5px 0 0 0;
+}

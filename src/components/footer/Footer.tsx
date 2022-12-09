@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import { FaArrowRight } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -7,12 +8,7 @@ const Footer = () => {
       <div className="footer-top">
         <div className="newsletter">
           <form className="newsletter-form">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, rem
-              sed doloribus porro veritatis repellendus obcaecati, eum
-              cupiditate dolorem temporibus necessitatibus sequi reiciendis
-              alias? Praesentium.
-            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <input type="email" placeholder="Saisir votre email" />
             <button>Souscrire</button>
           </form>
@@ -21,17 +17,27 @@ const Footer = () => {
           <h3>Lorem ipsum dolor sit amet.</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            quas vero nulla laboriosam explicabo sapiente illo eaque
-            necessitatibus excepturi nostrum?
+            quas vero nulla laboriosam explicabo.
           </p>
         </div>
         <div className="list-link">
           <h3>Lien</h3>
           <div className="group-link">
-            <a href="">Acceuil</a>
-            <a href="">Nos services</a>
-            <a href="">A propos</a>
-            <a href="">Contact</a>
+            <a href="">
+              <FaArrowRight />
+              Acceuil
+            </a>
+            <a href="">
+              <FaArrowRight />
+              Nos services
+            </a>
+            <a href="">
+              <FaArrowRight />A propos
+            </a>
+            <a href="">
+              <FaArrowRight />
+              Contact
+            </a>
           </div>
         </div>
         <div className="contact-infos">
@@ -42,7 +48,9 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="footer-bottom">&copy; 2022 Mainger's Hydraulic</div>
+      <div className="footer-bottom">
+        <p>&copy; 2022 Mainger's Hydraulic</p>
+      </div>
     </div>
   );
 };

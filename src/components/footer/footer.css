@@ -1,13 +1,158 @@
 .footer {
+  height: auto;
+  background: var(--bg-blue2);
 }
+
+/*
+********************************
+************** FOOTER TOP
+********************************
+*/
 
 .footer .footer-top {
   padding: 0 4rem;
   padding-bottom: 4rem;
   display: flex;
   gap: 1rem;
-  background: var(--bg-blue2);
+  justify-content: center;
 }
 
-.footer .footer-top {
+/*
+********************************
+************** NEWSLETTER
+********************************
+*/
+
+.footer .footer-top .newsletter {
+  background: var(--bg-orange2);
+  width: 500px;
+  padding: 1rem;
+}
+
+.footer .footer-top .newsletter .newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer .footer-top .newsletter p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.footer .footer-top .newsletter input {
+  width: 100%;
+  height: 35px;
+  border: 1px solid var(--bg-white);
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+.footer .footer-top .newsletter button {
+  width: 60%;
+  height: 35px;
+  background: var(--bg-blue2);
+  border-radius: 5px;
+  border: 1px solid var(--bg-blue2);
+  color: var(--white);
+}
+
+/*
+********************************
+************** COMPANY INFOS
+********************************
+*/
+
+.footer .footer-top .company-infos {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--white);
+  max-width: 300px;
+}
+
+.footer .footer-top .company-infos h3 {
+  font-weight: 500;
+}
+
+.footer .footer-top .company-infos p {
+  font-size: 0.9rem;
+}
+
+/*
+********************************
+************** LIST LINK
+********************************
+*/
+
+.footer .footer-top .list-link {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--white);
+  width: 300px;
+}
+
+.footer .footer-top .list-link h3 {
+  font-weight: 500;
+}
+
+.footer .footer-top .list-link .group-link {
+  display: flex;
+  flex-direction: column;
+  grid-template: 1rem;
+}
+
+.footer .footer-top .list-link .group-link a {
+  color: dodgerblue;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/*
+********************************
+************** LIST LINK
+********************************
+*/
+
+.footer .footer-top .contact-infos {
+  padding: 1rem;
+  width: 300px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer .footer-top .contact-infos h3 {
+  font-weight: 500;
+}
+.footer .footer-top .contact-infos p {
+  font-size: 0.9rem;
+}
+
+/*
+********************************
+************** FOOTER BOTTOM
+********************************
+*/
+
+.footer .footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-black-transparency);
+  height: 60px;
+}
+
+.footer .footer-bottom p {
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 400;
 }

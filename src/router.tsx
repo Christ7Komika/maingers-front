@@ -8,7 +8,11 @@ const Flexibles = React.lazy(() => import("./pages/flexibles/Flexibles"));
 const Home = React.lazy(() => import("./pages/home/Home"));
 const NotFound = React.lazy(() => import("./pages/notFound/NotFound"));
 const Services = React.lazy(() => import("./pages/services/Services"));
+const IndustrialCleaning = React.lazy(
+  () => import("./pages/industrialCleaning/IndustrialCleaning")
+);
 const Shop = React.lazy(() => import("./pages/shop/Shop"));
+const RentEngine = React.lazy(() => import("./pages/rentEngine/RentEngine"));
 
 export const router = createBrowserRouter([
   {
@@ -32,8 +36,16 @@ export const router = createBrowserRouter([
     element: <Shop />,
   },
   {
-    path: "/departement",
+    path: "/departement/flexibles",
     element: <Flexibles />,
+  },
+  {
+    path: "/departement/industrial-cleaning",
+    element: <IndustrialCleaning />,
+  },
+  {
+    path: "/departement/rent-engine",
+    element: <RentEngine />,
   },
   {
     path: "*",

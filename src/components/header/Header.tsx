@@ -60,7 +60,7 @@ const Header = () => {
             </div>
             <div
               className={
-                location.pathname === "/departement"
+                location.pathname.search("/departement") != -1
                   ? "link selected select-menu"
                   : "link select-menu"
               }
@@ -83,48 +83,36 @@ const Header = () => {
                   <Link
                     className="element"
                     data-id={uuid}
-                    to={"/departement"}
-                    onClick={(e) => {
-                      setOpen(false);
-                    }}
+                    to={"/departement/flexibles"}
+                    onClick={(e) => setOpen(false)}
                   >
                     Flexible
                   </Link>
                   <Link
                     className="element"
                     data-id={uuid}
-                    to={"/departement"}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setOpen(false);
-                    }}
+                    to={"/departement/industrial-cleaning"}
+                    onClick={(e) => setOpen(false)}
                   >
-                    Flexible
+                    Néttoyage industriel
                   </Link>
                   <Link
                     className="element"
                     data-id={uuid}
-                    to={"/departement"}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setOpen(false);
-                    }}
+                    to={"/departement/rent-engine"}
+                    onClick={(e) => setOpen(false)}
                   >
-                    Flexible
-                  </Link>
-                  <Link
-                    className="element"
-                    data-id={uuid}
-                    to={"/departement"}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setOpen(false);
-                    }}
-                  >
-                    Flexible
+                    Location engins élevateurs
                   </Link>
                 </div>
               )}
+            </div>
+            <div
+              className={
+                location.pathname === "/shop" ? "link selected" : "link"
+              }
+            >
+              <Link to="/shop">Boutique</Link>
             </div>
             <div
               className={

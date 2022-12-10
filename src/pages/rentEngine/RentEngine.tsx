@@ -1,8 +1,8 @@
 import React from "react";
-import "./flexibles.css";
+import "./rentengine.css";
 const Header = React.lazy(() => import("../../components/header/Header"));
 
-const Flexibles = () => {
+const RentEngine = () => {
   return (
     <>
       <Header />
@@ -10,4 +10,4 @@ const Flexibles = () => {
   );
 };
 
-export default Flexibles;
+export default RentEngine;

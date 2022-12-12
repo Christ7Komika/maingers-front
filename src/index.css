@@ -4,6 +4,7 @@
   --text-blue: #27364a;
   --bg-blue2: #27364a;
   --light-grey: #e7e4e4;
+  --bg-light-grey: #d2d5d5;
   --bg-light1: #e3e7e5;
   --orange: #ff8913;
   --white: #fff;
@@ -20,7 +21,8 @@
   --bg-dark: #2d2d2d;
   --bg-orange: #ff6613;
   --bg-orange-opacity: #ff6613c2;
-  --bg-light: #c5d8df;
+  /* --bg-light: #c5d8df; */
+  --bg-light: #e6ecee;
   --shadow: 1px 3px 15px rgba(0, 0, 0, 0.2);
   --light-shadow: 0.5px 3px 8px rgba(0, 0, 0, 0.2);
   --bg--blue-grey: #91979e;

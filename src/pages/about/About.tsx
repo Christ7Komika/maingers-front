@@ -1,11 +1,25 @@
 import React from "react";
-import Header from "../../components/header/Header";
+const Header = React.lazy(() => import("../../components/header/Header"));
+const Banner = React.lazy(() => import("../../components/Banner/Banner"));
+const Story = React.lazy(() => import("../../components/story/Story"));
+const Valor = React.lazy(() => import("../../components/valor/Valor"));
+const Teams = React.lazy(() => import("../../components/teams/Teams"));
+const Partner = React.lazy(() => import("../../components/partner/Partner"));
+const Footer = React.lazy(() => import("../../components/footer/Footer"));
+
+import "./about.css";
 
 const About = () => {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <Banner />
+      <Story />
+      <Valor />
+      <Teams />
+      <Partner />
+      <Footer />
+    </>
   );
 };
 

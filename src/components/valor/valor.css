@@ -1,0 +1,54 @@
+.valor {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.valor .valor-img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url("../../assets/pictures/img11.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.valor .valor-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.valor .valor-content .valor-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.valor .valor-content .valor-card .valor-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  height: 60px;
+  box-shadow: var(--shadow);
+}
+
+.valor .valor-content .valor-card .valor-card-header span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--text-grey);
+}
+
+.valor .valor-content .valor-card .valor-card-header h3 {
+  color: var(--text-grey);
+}
+
+.valor .valor-content .valor-card p {
+  font-size: 0.9rem;
+}

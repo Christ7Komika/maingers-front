@@ -1,0 +1,41 @@
+.story {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  background: var(--bg-light);
+}
+
+.story .story-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.story .story-content h2 {
+  color: var(--text-orange);
+  text-transform: uppercase;
+}
+
+.story .story-content h3 {
+  text-transform: uppercase;
+}
+
+.story .story-content .story-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-right: 2rem;
+}
+
+.story .story-content .story-text-content p {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.story .story-img {
+  background: url("../../assets/pictures/img14.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}

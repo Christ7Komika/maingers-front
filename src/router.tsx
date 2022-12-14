@@ -30,6 +30,14 @@ const RentEngine = React.lazy(() =>
   wait(1000).then(() => import("./pages/rentEngine/RentEngine"))
 );
 
+const FlexibleType = React.lazy(() =>
+  wait(1000).then(() => import("./pages/flexibleType/FlexibleType"))
+);
+
+const FlexibleInfos = React.lazy(() =>
+  wait(1000).then(() => import("./pages/flexibleInfos/FlexibleInfos"))
+);
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -54,6 +62,14 @@ export const router = createBrowserRouter([
   {
     path: "/departement/flexibles",
     element: <Flexibles />,
+  },
+  {
+    path: "/departement/flexibles/type",
+    element: <FlexibleType />,
+  },
+  {
+    path: "/departement/flexibles/type/infos",
+    element: <FlexibleInfos />,
   },
   {
     path: "/departement/industrial-cleaning",

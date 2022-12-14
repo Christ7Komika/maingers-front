@@ -44,7 +44,7 @@ const FlexiblesCategories = () => {
             <img src={Flexible} alt="" />
           </div>
           <div className="flexible-ctg-card-content">
-            <a href="#">VOIR</a>
+            <a href="/departement/flexibles/type">VOIR</a>
           </div>
         </div>
         <div className="flexible-ctg-card">
@@ -53,7 +53,7 @@ const FlexiblesCategories = () => {
             <img src={Flexible} alt="" />
           </div>
           <div className="flexible-ctg-card-content">
-            <a href="#">VOIR</a>
+            <a href="/departement/flexibles/type">VOIR</a>
           </div>
         </div>
         <div className="flexible-ctg-card">
@@ -62,7 +62,7 @@ const FlexiblesCategories = () => {
             <img src={Flexible} alt="" />
           </div>
           <div className="flexible-ctg-card-content">
-            <a href="#">VOIR</a>
+            <a href="/departement/flexibles/type">VOIR</a>
           </div>
         </div>
         <div className="flexible-ctg-card">
@@ -71,7 +71,7 @@ const FlexiblesCategories = () => {
             <img src={Flexible} alt="" />
           </div>
           <div className="flexible-ctg-card-content">
-            <a href="#">VOIR</a>
+            <a href="/departement/flexibles/type">VOIR</a>
           </div>
         </div>
         <div className="flexible-ctg-card">
@@ -80,7 +80,7 @@ const FlexiblesCategories = () => {
             <img src={Flexible} alt="" />
           </div>
           <div className="flexible-ctg-card-content">
-            <a href="#">VOIR</a>
+            <a href="/departement/flexibles/type">VOIR</a>
           </div>
         </div>
         <div className="flexible-ctg-card">
@@ -89,7 +89,7 @@ const FlexiblesCategories = () => {
             <img src={Flexible} alt="" />
           </div>
           <div className="flexible-ctg-card-content">
-            <a href="#">VOIR</a>
+            <a href="/departement/flexibles/type">VOIR</a>
           </div>
         </div>
       </div>

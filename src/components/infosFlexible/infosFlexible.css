@@ -1,0 +1,31 @@
+.flexible-infos {
+  padding: 4rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.flexible-infos h2 {
+  color: var(--text-orange);
+  text-transform: uppercase;
+}
+
+.flexible-infos h3 {
+  color: var(--text-darkgrey);
+  text-transform: uppercase;
+}
+
+.flexible-infos p {
+  font-size: 0.9rem;
+  color: var(--text-darkgrey);
+}
+
+.flexible-infos .flexible-infos-desc {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+.flexible-infos .flexible-infos-tab {
+  height: 400px;
+}

@@ -2,40 +2,32 @@ import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Loader from "./components/Loader/Loader";
 
-const About = React.lazy(() =>
-  wait(1000).then(() => import("./pages/about/About"))
-);
-const Contact = React.lazy(() =>
-  wait(1000).then(() => import("./pages/contact/Contact"))
-);
-const Flexibles = React.lazy(() =>
-  wait(1000).then(() => import("./pages/flexibles/Flexibles"))
-);
-const Home = React.lazy(() =>
-  wait(1000).then(() => import("./pages/home/Home"))
-);
-const NotFound = React.lazy(() =>
-  wait(1000).then(() => import("./pages/notFound/NotFound"))
-);
-const Services = React.lazy(() =>
-  wait(1000).then(() => import("./pages/services/Services"))
-);
-const IndustrialCleaning = React.lazy(() =>
-  wait(1000).then(() => import("./pages/industrialCleaning/IndustrialCleaning"))
-);
-const Shop = React.lazy(() =>
-  wait(1000).then(() => import("./pages/shop/Shop"))
-);
-const RentEngine = React.lazy(() =>
-  wait(1000).then(() => import("./pages/rentEngine/RentEngine"))
+const About = React.lazy(() => import("./pages/about/About"));
+
+const Contact = React.lazy(() => import("./pages/contact/Contact"));
+
+const Flexibles = React.lazy(() => import("./pages/flexibles/Flexibles"));
+
+const Home = React.lazy(() => import("./pages/home/Home"));
+
+const NotFound = React.lazy(() => import("./pages/notFound/NotFound"));
+
+const Services = React.lazy(() => import("./pages/services/Services"));
+
+const IndustrialCleaning = React.lazy(
+  () => import("./pages/industrialCleaning/IndustrialCleaning")
 );
 
-const FlexibleType = React.lazy(() =>
-  wait(1000).then(() => import("./pages/flexibleType/FlexibleType"))
+const Shop = React.lazy(() => import("./pages/shop/Shop"));
+
+const RentEngine = React.lazy(() => import("./pages/rentEngine/RentEngine"));
+
+const FlexibleType = React.lazy(
+  () => import("./pages/flexibleType/FlexibleType")
 );
 
-const FlexibleInfos = React.lazy(() =>
-  wait(1000).then(() => import("./pages/flexibleInfos/FlexibleInfos"))
+const FlexibleInfos = React.lazy(
+  () => import("./pages/flexibleInfos/FlexibleInfos")
 );
 
 export const router = createBrowserRouter([
@@ -84,8 +76,3 @@ export const router = createBrowserRouter([
     element: <NotFound />,
   },
 ]);
-function wait(time: number) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, time);
-  });
-}

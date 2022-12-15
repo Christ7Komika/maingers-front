@@ -5,6 +5,7 @@ import {
   FaPhone,
   FaSearch,
   FaAngleDown,
+  FaBars,
 } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -14,131 +15,147 @@ import "./header.css";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
   const [uuid] = useState(uuidV4);
   const location = useLocation();
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    window.addEventListener("resize", (e) => {
+      setWidth(window.innerWidth);
+    });
+  });
 
   return (
     <>
       {open && (
         <div className="header-layer" onClick={() => setOpen(false)}></div>
       )}
-      <div className="header">
-        <div className="header--content">
-          <div className="logo">
-            <h1>LOGO</h1>
-          </div>
-          <div className="header--infos">
-            <div className="header--search-bar">
-              <div className="search">
-                <button>
-                  <FaSearch />
-                </button>
-                <input type="text" placeholder="Recherche" />
+      {width >= 650 ? (
+        <div className="header">
+          <div className="header--content">
+            <div className="logo">
+              <h1>LOGO</h1>
+            </div>
+            <div className="header--infos">
+              <div className="header--search-bar">
+                <div className="search">
+                  <button>
+                    <FaSearch />
+                  </button>
+                  <input type="text" placeholder="Recherche" />
+                </div>
+              </div>
+              <div className="header--contact">
+                <a href="#" className="social-network">
+                  <FaFacebook />
+                </a>
+                <a href="#" className="social-network">
+                  <FaEnvelope />
+                </a>
+                <a href="#" className="phone-number">
+                  <FaPhone /> 06 XXX XX XX
+                </a>
               </div>
             </div>
-            <div className="header--contact">
-              <a href="#" className="social-network">
-                <FaFacebook />
-              </a>
-              <a href="#" className="social-network">
-                <FaEnvelope />
-              </a>
-              <a href="#" className="phone-number">
-                <FaPhone /> 06 XXX XX XX
-              </a>
-            </div>
           </div>
-        </div>
-        <nav className="header--nav">
-          <div className="main-nav">
-            <div
-              className={location.pathname === "/" ? "link selected" : "link"}
-            >
-              <Link to="/">Acceuil</Link>
-            </div>
-            <div
-              className={
-                location.pathname.search("/departement") != -1
-                  ? "link selected select-menu"
-                  : "link select-menu"
-              }
-            >
-              <a
-                href=""
-                onClick={(e) => {
-                  e.preventDefault();
-                  setOpen(!open);
-                }}
+          <nav className="header--nav">
+            <div className="main-nav">
+              <div
+                className={location.pathname === "/" ? "link selected" : "link"}
               >
-                Département
-                <span>
-                  <FaAngleDown />
-                </span>
-              </a>
+                <Link to="/">Acceuil</Link>
+              </div>
+              <div
+                className={
+                  location.pathname.search("/departement") != -1
+                    ? "link selected select-menu"
+                    : "link select-menu"
+                }
+              >
+                <a
+                  href=""
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setOpen(!open);
+                  }}
+                >
+                  Département
+                  <span>
+                    <FaAngleDown />
+                  </span>
+                </a>
 
-              {open && (
-                <div className="sub-menu" id="select-sub-menu" data-id={uuid}>
-                  <Link
-                    className="element"
-                    data-id={uuid}
-                    to={"/departement/flexibles"}
-                    onClick={(e) => setOpen(false)}
-                  >
-                    Flexible
-                  </Link>
-                  <Link
-                    className="element"
-                    data-id={uuid}
-                    to={"/departement/industrial-cleaning"}
-                    onClick={(e) => setOpen(false)}
-                  >
-                    Néttoyage industriel
-                  </Link>
-                  <Link
-                    className="element"
-                    data-id={uuid}
-                    to={"/departement/rent-engine"}
-                    onClick={(e) => setOpen(false)}
-                  >
-                    Location engins élevateurs
-                  </Link>
-                </div>
-              )}
+                {open && (
+                  <div className="sub-menu" id="select-sub-menu" data-id={uuid}>
+                    <Link
+                      className="element"
+                      data-id={uuid}
+                      to={"/departement/flexibles"}
+                      onClick={(e) => setOpen(false)}
+                    >
+                      Flexible
+                    </Link>
+                    <Link
+                      className="element"
+                      data-id={uuid}
+                      to={"/departement/industrial-cleaning"}
+                      onClick={(e) => setOpen(false)}
+                    >
+                      Néttoyage industriel
+                    </Link>
+                    <Link
+                      className="element"
+                      data-id={uuid}
+                      to={"/departement/rent-engine"}
+                      onClick={(e) => setOpen(false)}
+                    >
+                      Location engins élevateurs
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <div
+                className={
+                  location.pathname === "/shop" ? "link selected" : "link"
+                }
+              >
+                <Link to="/shop">Boutique</Link>
+              </div>
+              <div
+                className={
+                  location.pathname === "/services" ? "link selected" : "link"
+                }
+              >
+                <Link to="/services">Nos Services</Link>
+              </div>
+              <div
+                className={
+                  location.pathname === "/about" ? "link selected" : "link"
+                }
+              >
+                <Link to="/about">A Propos</Link>
+              </div>
+              <div
+                className={
+                  location.pathname === "/contact" ? "link selected" : "link"
+                }
+              >
+                <Link to="/contact">Contact</Link>
+              </div>
             </div>
-            <div
-              className={
-                location.pathname === "/shop" ? "link selected" : "link"
-              }
-            >
-              <Link to="/shop">Boutique</Link>
-            </div>
-            <div
-              className={
-                location.pathname === "/services" ? "link selected" : "link"
-              }
-            >
-              <Link to="/services">Nos Services</Link>
-            </div>
-            <div
-              className={
-                location.pathname === "/about" ? "link selected" : "link"
-              }
-            >
-              <Link to="/about">A Propos</Link>
-            </div>
-            <div
-              className={
-                location.pathname === "/contact" ? "link selected" : "link"
-              }
-            >
-              <Link to="/contact">Contact</Link>
-            </div>
+            <div className="account"></div>
+          </nav>
+        </div>
+      ) : (
+        <div className="small-header">
+          <div className="logo">
+            <h1>Logo</h1>
           </div>
-          <div className="account"></div>
-        </nav>
-      </div>
+          <span>
+            <FaBars />
+          </span>
+        </div>
+      )}
     </>
   );
 };

@@ -9,37 +9,37 @@ import bgTransparentImg3 from "../../assets/pictures/bg-transparent3.png";
 const productData = [
   {
     title: "Product name",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,minus?",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     link: "#",
     img: bgTransparentImg1,
   },
   {
     title: "Product name",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,minus?",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     link: "#",
     img: bgTransparentImg2,
   },
   {
     title: "Product name",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,minus?",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     link: "#",
     img: bgTransparentImg3,
   },
   {
     title: "Product name",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,minus?",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     link: "#",
     img: bgTransparentImg1,
   },
   {
     title: "Product name",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,minus?",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     link: "#",
     img: bgTransparentImg2,
   },
   {
     title: "Product name",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,minus?",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     link: "#",
     img: bgTransparentImg3,
   },

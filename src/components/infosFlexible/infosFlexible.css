@@ -27,5 +27,38 @@
   gap: 0.5rem;
 }
 .flexible-infos .flexible-infos-tab {
-  height: 400px;
+  height: auto;
+  padding: 2rem 0;
+}
+
+.flexible-infos .flexible-infos-tab table {
+  border-collapse: collapse;
+}
+.flexible-infos .flexible-infos-tab thead {
+  background: var(--bg--blue-grey);
+}
+.flexible-infos .flexible-infos-tab thead th {
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  height: 40px;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  color: var(--text-darkgrey);
+}
+.flexible-infos .flexible-infos-tab tr:first-child {
+  border-bottom: 1px solid #fff;
+}
+
+.flexible-infos .flexible-infos-tab tbody tr {
+  min-height: 40px;
+  height: auto;
+}
+
+.flexible-infos .flexible-infos-tab tbody tr:nth-child(even) {
+  background: var(--bg-light);
+}
+
+.flexible-infos .flexible-infos-tab tbody td {
+  font-size: 0.9rem;
+  text-align: center;
 }

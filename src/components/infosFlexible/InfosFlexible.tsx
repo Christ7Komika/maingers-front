@@ -1,5 +1,33 @@
 import React from "react";
+import { v4 as uuid } from "uuid";
 import "./infosFlexible.css";
+
+const datas = {
+  head: {
+    title: [
+      "Reference",
+      "Diamètre interieur",
+      "Epaisseur parois",
+      "Diamètre exterieur",
+      "Pression de service",
+      "PLNE",
+      "Rayon de courbure",
+      "Poids",
+      "Longueur",
+    ],
+    measure: ["", "mm", "mm", "mm", "bar", "bar", "mm", "Kg/ml", "m"],
+  },
+  value: [
+    ["IVA17706012501", "13", "5.1", "23.2", "6", "60", "117", "0.35", "20"],
+    ["IVA17706012501", "13", "5.1", "23.2", "6", "60", "117", "0.35", "20"],
+    ["IVA17706012501", "13", "5.1", "23.2", "6", "60", "117", "0.35", "20"],
+    ["IVA17706012501", "13", "5.1", "23.2", "6", "60", "117", "0.35", "20"],
+    ["IVA17706012501", "13", "5.1", "23.2", "6", "60", "117", "0.35", "20"],
+    ["IVA17706012501", "13", "5.1", "23.2", "6", "60", "117", "0.35", "20"],
+    ["IVA17706012501", "13", "5.1", "23.2", "6", "60", "117", "0.35", "20"],
+    ["IVA17706012501", "13", "5.1", "23.2", "6", "60", "117", "0.35", "20"],
+  ],
+};
 
 const InfosFlexible = () => {
   return (
@@ -10,7 +38,31 @@ const InfosFlexible = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut porro
         rerum quas vitae incidunt temporibus tempora aspernatur velit mollitia!
       </p>
-      <div className="flexible-infos-tab"></div>
+      <div className="flexible-infos-tab">
+        <table>
+          <thead>
+            <tr>
+              {datas.head.title.map((data) => (
+                <th id={uuid()}>{data}</th>
+              ))}
+            </tr>
+            <tr>
+              {datas.head.measure.map((data) => (
+                <th id={uuid()}>{data}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {datas.value.map((data) => (
+              <tr id={uuid()}>
+                {data.map((value) => (
+                  <td id={uuid()}>{value}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <div className="flexible-infos-desc">
         <h3>Application</h3>
         <p>

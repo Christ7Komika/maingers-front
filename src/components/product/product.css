@@ -17,3 +17,30 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
+
+@media (max-width: 1300px) {
+  .product {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .product {
+    padding: 1rem;
+  }
+
+  .product .product-container {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .product .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .product .product-container {
+    grid-template-columns: 1fr;
+  }
+}

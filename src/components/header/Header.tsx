@@ -14,13 +14,13 @@ import Layer from "../../portals/Layer";
 import "./header.css";
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
-  const [uuid] = useState(uuidV4);
+  const [open, setOpen] = useState<boolean>(false);
+  const [width, setWidth] = useState<number>(window.innerWidth);
+  const [uuid] = useState<string>(uuidV4);
   const location = useLocation();
 
   useEffect(() => {
-    window.addEventListener("resize", (e) => {
+    window.addEventListener("resize", () => {
       setWidth(window.innerWidth);
     });
   });

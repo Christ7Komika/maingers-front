@@ -9,7 +9,6 @@ const InfosContact = React.lazy(
 const FormContact = React.lazy(
   () => import("../../components/formContact/FormContact")
 );
-import "./contact.css";
 
 const Contact = () => {
   return (

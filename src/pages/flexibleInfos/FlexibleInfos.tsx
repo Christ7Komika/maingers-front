@@ -1,5 +1,4 @@
 import React from "react";
-import "./flexibleInfos.css";
 const Header = React.lazy(() => import("../../components/header/Header"));
 const Banner = React.lazy(() => import("../../components/Banner/Banner"));
 const InfosFlexible = React.lazy(

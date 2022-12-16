@@ -7,8 +7,6 @@ const Teams = React.lazy(() => import("../../components/teams/Teams"));
 const Partner = React.lazy(() => import("../../components/partner/Partner"));
 const Footer = React.lazy(() => import("../../components/footer/Footer"));
 
-import "./about.css";
-
 const About = () => {
   return (
     <>

@@ -1,0 +1,41 @@
+.rent-engine-infos {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 500px;
+}
+
+.rent-engine-infos .rent-engine-infos-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+  padding-top: 0;
+}
+
+.rent-engine-infos .rent-engine-infos-content h2 {
+  color: var(--text-orange);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.rent-engine-infos .rent-engine-infos-content p {
+  color: var(--text-darkgrey);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.rent-engine-infos .rent-engine-infos-img {
+  width: calc(100% - 4rem);
+  height: calc(500px - 8rem);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rent-engine-infos .rent-engine-infos-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+}

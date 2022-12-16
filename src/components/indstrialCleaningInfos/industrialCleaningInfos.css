@@ -1,0 +1,46 @@
+.industrial-cleaning-infos {
+  padding: 4rem;
+}
+
+.industrial-cleaning-infos h2 {
+  color: var(--text-orange);
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
+}
+
+.industrial-cleaning-infos .industrial-cleaning-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  height: 400px;
+}
+
+.industrial-cleaning-infos .industrial-cleaning-infos-img {
+  width: 100%;
+  height: 400px;
+}
+
+.industrial-cleaning-infos .industrial-cleaning-infos-img img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+}
+
+.industrial-cleaning-infos .industrial-cleaning-infos-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.industrial-cleaning-infos .industrial-cleaning-infos-content h3 {
+  font-size: 1.2rem;
+  color: var(--text-darkgrey);
+}
+
+.industrial-cleaning-infos .industrial-cleaning-infos-content p {
+  font-size: 0.9rem;
+  color: var(--text-darkgrey);
+}

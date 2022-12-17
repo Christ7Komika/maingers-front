@@ -34,8 +34,17 @@ const InfosContact = () => {
           </div>
         </div>
         <div className="infos-contact-map">
-          <iframe
+          {/* <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d850.3308182317533!2d11.858450238413226!3d-4.774085207748759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a60bb2370c5e6f1%3A0xc9b9ecedf62cb3cd!2sMus%C3%A9e%20du%20Cercle%20Africain%20de%20Pointe-Noire!5e1!3m2!1sfr!2scg!4v1670600312372!5m2!1sfr!2scg"
+            width="100%"
+            height="100%"
+            style={{ border: 0, borderRadius: 5 }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe> */}
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1dxLMcS9aN7KkmmzaZRu9ZJuZ8mDStlE&ehbc=2E312F"
             width="100%"
             height="100%"
             style={{ border: 0, borderRadius: 5 }}

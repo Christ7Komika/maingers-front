@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1800px" height="1800px" viewBox="0 0 1800 1800" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="logo">
+    <path d="M0 0L1800 0L1800 1800L0 1800L0 0Z" id="Rectangle-2" fill="#F8632D" fill-rule="evenodd" stroke="none" />
+    <g id="Groupes" transform="translate(314.9961 299.9995)">
+      <g id="M" fill="#27364A">
+        <path d="M685.6 320.4L685.6 882L548.8 882L548.8 545.2L423.2 882L312.8 882L186.4 544.4L186.4 882L49.6 882L49.6 320.4L211.2 320.4L368.8 709.2L524.8 320.4L685.6 320.4Z" />
+      </g>
+      <g id="H" fill="#27364A" transform="translate(524 0)">
+        <path d="M536 320.4L536 882L399.2 882L399.2 650.8L186.4 650.8L186.4 882L49.6 882L49.6 320.4L186.4 320.4L186.4 540.4L399.2 540.4L399.2 320.4L536 320.4Z" />
+      </g>
+    </g>
+  </g>
+</svg>

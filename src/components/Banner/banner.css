@@ -16,3 +16,28 @@
   background: var(--bg-white);
   padding: 2rem;
 }
+
+.banner .banner-content h2 {
+  text-align: center;
+}
+.banner .banner-content p {
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  .banner .banner-content {
+    width: 60%;
+  }
+}
+
+@media (max-width: 650px) {
+  .banner .banner-content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 650px) {
+  .banner .banner-content {
+    width: 90%;
+  }
+}

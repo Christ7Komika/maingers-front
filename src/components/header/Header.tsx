@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { v4 as uuidV4 } from "uuid";
 import Layer from "../../portals/Layer";
 import "./header.css";
+import Logo from "../../assets/logo/Logo.svg";
 
 const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -34,7 +35,7 @@ const Header = () => {
         <div className="header">
           <div className="header--content">
             <div className="logo">
-              <h1>LOGO</h1>
+              <img src={Logo} alt="logo" />
             </div>
             <div className="header--infos">
               <div className="header--search-bar">

@@ -1,12 +1,16 @@
 import React from "react";
-import Img6 from "../../assets/pictures/img6.jpg";
 import "./banner.css";
 
-const Banner = () => {
+type Props = {
+  title: string;
+  description: string;
+};
+
+const Banner: React.FC = () => {
   return (
     <div className="banner">
       <div className="banner-content">
-        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
           aliquid tenetur qui ipsam ex ipsum? Numquam ullam reiciendis commodi

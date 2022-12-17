@@ -2,7 +2,7 @@ import React from "react";
 import Loader from "../../components/Loader/Loader";
 
 const Header = React.lazy(() => import("../../components/header/Header"));
-const Banner = React.lazy(() => import("../../components/Banner/Banner"));
+const Banner = React.lazy(() => import("../../components/banner/Banner"));
 const MarketPlace = React.lazy(
   () => import("../../components/marketplace/MarketPlace")
 );

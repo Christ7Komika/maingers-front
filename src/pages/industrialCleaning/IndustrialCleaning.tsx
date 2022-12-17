@@ -1,6 +1,6 @@
 import React from "react";
 const Header = React.lazy(() => import("../../components/header/Header"));
-const Banner = React.lazy(() => import("../../components/Banner/Banner"));
+const Banner = React.lazy(() => import("../../components/banner/Banner"));
 const IndustrialCleaningInfos = React.lazy(
   () =>
     import("../../components/indstrialCleaningInfos/IndustrialCleaningInfos")

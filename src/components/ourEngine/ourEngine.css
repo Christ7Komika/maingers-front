@@ -42,3 +42,31 @@
   padding: 2rem;
   height: 200px;
 }
+
+@media (max-width: 1300px) {
+    .our-engine {
+        padding: 2rem;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .our-engine .our-engine-list {
+
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 950px) {
+    .our-engine {
+        padding: 1rem;
+    }
+    .our-engine .our-engine-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .our-engine .our-engine-list {
+        grid-template-columns: 1fr;
+    }
+}

@@ -25,3 +25,29 @@
   width: 100%;
   height: 100%;
 }
+
+@media (max-width: 1200px) {
+  .industrial-cleaning-gallery {
+    padding: 2rem;
+  }
+}
+@media (max-width: 1050px) {
+  .industrial-cleaning-gallery {
+    padding: 1rem;
+  }
+}
+@media (max-width: 990px) {
+  .industrial-cleaning-gallery-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 850px) {
+  .industrial-cleaning-gallery-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .industrial-cleaning-gallery-list {
+    grid-template-columns: 1fr;
+  }
+}

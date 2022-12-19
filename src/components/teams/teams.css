@@ -14,6 +14,7 @@
 
 .teams .team-list {
   height: 400px;
+
 }
 
 .teams .team-list .card-team {
@@ -39,7 +40,7 @@
   width: 100%;
 }
 .teams .team-list .card-team:hover .card-content-post {
-  bottom: 0;
+  bottom: -10px;
 }
 .teams .team-list .card-team .card-content-post p {
   font-weight: 500;

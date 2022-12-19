@@ -24,8 +24,7 @@
 }
 
 .marketplace .marketplace-content {
-  padding: 4rem;
-  padding-top: 2rem;
+    padding: 2rem 4rem 4rem;
 }
 
 .marketplace .marketplace-content h2 {
@@ -36,8 +35,62 @@
 }
 
 .marketplace .marketplace-img {
-  background: url("../../assets/pictures/img16.jpg");
-  background-position: center center;
-  background-clip: cover;
-  background-attachment: fixed;
+    background-size: cover;
+    background: url("../../assets/pictures/img16.jpg") fixed center center;
+}
+
+
+@media (max-width: 1170px) {
+    .marketplace .marketplace-list-product {
+        padding: 2rem 2rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .marketplace .marketplace-list-product {
+        padding: 2rem 1rem;
+        gap: 1rem;
+
+    }
+}
+
+@media (max-width: 1050px) {
+    .marketplace {
+        height: 160vh;
+    }
+    .marketplace .marketplace-list-product {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+
+@media (max-width: 700px) {
+    .marketplace {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .marketplace .marketplace-img {
+        display: none;
+    }
+
+    .marketplace .marketplace-list-product {
+        position: static;
+        grid-template-columns: 1fr;
+        overflow: initial;
+        height: auto;
+        transform: translateY(0)
+
+    }
+
+.marketplace .marketplace-content {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .marketplace .marketplace-content {
+        padding: 1rem;
+    }
 }

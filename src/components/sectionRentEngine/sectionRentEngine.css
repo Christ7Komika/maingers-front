@@ -58,3 +58,24 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
+@media (max-width: 1050px) {
+  .rent-engine .rent-engine-content {
+    padding: 4rem 1rem;
+  }
+}
+@media (max-width: 950px) {
+  .rent-engine .rent-engine-content {
+    padding: 2rem 1rem;
+  }
+}
+@media (max-width: 950px) {
+  .rent-engine {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .rent-engine .rent-engine-img {
+    height: 400px;
+  }
+}

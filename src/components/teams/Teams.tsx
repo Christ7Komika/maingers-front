@@ -16,14 +16,22 @@ const Teams = () => {
       <h2>Our team</h2>
       <div className="team-list">
         <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          centeredSlides={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper"
+            slidesPerView={4}
+            spaceBetween={30}
+            breakpoints={
+                {
+                    0: {slidesPerView: 1, spaceBetween: 30},
+                    450: {slidesPerView: 2, spaceBetween: 30},
+                    850: {slidesPerView: 3},
+                    1200: {slidesPerView: 4, spaceBetween: 30}
+
+        }}
+            centeredSlides={true}
+            pagination={{
+                clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
         >
           <SwiperSlide>
             <div className="card-team">

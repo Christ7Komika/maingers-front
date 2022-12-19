@@ -57,3 +57,24 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
+@media (max-width: 1050px) {
+  .industrial-cleaning .industrial-cleaning-content {
+    padding: 4rem 1rem;
+  }
+}
+@media (max-width: 950px) {
+  .industrial-cleaning .industrial-cleaning-content {
+    padding: 2rem 1rem;
+  }
+}
+@media (max-width: 950px) {
+  .industrial-cleaning {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .industrial-cleaning .industrial-cleaning-img {
+    height: 400px;
+  }
+}

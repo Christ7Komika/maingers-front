@@ -44,3 +44,24 @@
   font-size: 0.9rem;
   color: var(--text-darkgrey);
 }
+
+@media (max-width: 950px) {
+  .industrial-cleaning-infos {
+    padding: 2rem;
+  }
+}
+@media (max-width: 850px) {
+  .industrial-cleaning-infos {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .industrial-cleaning-infos .industrial-cleaning-container,
+  .industrial-cleaning-infos {
+    height: auto;
+  }
+  .industrial-cleaning-infos .industrial-cleaning-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -6,6 +6,7 @@ import {
   FaSearch,
   FaAngleDown,
   FaBars,
+  FaPlus,
 } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -13,13 +14,13 @@ import { v4 as uuidV4 } from "uuid";
 import Layer from "../../portals/Layer";
 import "./header.css";
 import Logo from "../../assets/logo/Logo.svg";
+import ResponsiveMenu from "../menu/reponsiveMenu/ResponsiveMenu";
 
 const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [width, setWidth] = useState<number>(window.innerWidth);
   const [uuid] = useState<string>(uuidV4);
   const location = useLocation();
-
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWidth(window.innerWidth);
@@ -148,14 +149,7 @@ const Header = () => {
           </nav>
         </div>
       ) : (
-        <div className="small-header">
-          <div className="logo">
-            <h1>Logo</h1>
-          </div>
-          <span>
-            <FaBars />
-          </span>
-        </div>
+        <ResponsiveMenu />
       )}
     </>
   );

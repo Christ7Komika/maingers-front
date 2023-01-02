@@ -227,14 +227,6 @@
   background: var(--bg-orange3);
 }
 
-.small-header {
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
-}
-
 @media (max-width: 1000px) {
   .header--infos .header--search-bar .search {
     width: 100%;
@@ -247,6 +239,4 @@
   .header--infos .header--contact .phone-number {
     width: 8rem;
   }
-}
-@media (max-width: 650px) {
 }

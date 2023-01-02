@@ -1,0 +1,86 @@
+.small-header {
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.small-header .logo {
+  width: 15rem;
+  height: 7rem;
+}
+
+.small-header .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.small-header span {
+  color: var(--bg-dark);
+}
+
+.small-header .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--bg-white);
+  z-index: 10000;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  background: rgb(231, 231, 231);
+}
+
+.small-header .menu span {
+  color: var(--bg-dark);
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  font-size: 1.5rem;
+}
+
+.small-header .menu span > * {
+  transform: rotate(45deg);
+}
+
+.small-header .menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.small-header .menu .sub-menu a,
+small {
+  color: var(--bg-blue);
+  padding: 0.5rem 2rem;
+  height: 60px;
+  background: rgb(231, 231, 231);
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.small-header .menu .drop-menu small.drop-select {
+  border-bottom: 5px solid var(--bg-nice-orange);
+}
+
+.small-header .menu .sub-menu a.select {
+  background: var(--bg-nice-orange-op) !important;
+}
+
+.small-header .menu .sub-menu .drop-submenu {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.116);
+}
+
+.small-header .menu .sub-menu .drop-submenu a {
+  background: rgb(217, 219, 219);
+}

@@ -8,12 +8,12 @@ const MarketPlace = React.lazy(
 );
 const Partner = React.lazy(() => import("../../components/partner/Partner"));
 const Footer = React.lazy(() => import("../../components/footer/Footer"));
-
+import lottie from "../../lottie/lf30_about_us.json";
 const Shop = () => {
   return (
     <React.Suspense fallback={<Loader />}>
       <Header />
-      <Banner />
+      <Banner animation={lottie} />
       <MarketPlace />
       <Partner />
       <Footer />

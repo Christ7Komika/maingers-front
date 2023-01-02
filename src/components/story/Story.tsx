@@ -5,7 +5,7 @@ const Story = () => {
   return (
     <div className="container story">
       <div className="story-content">
-        <h2>Our story</h2>
+        <h2>NOTRE HISTOIRE</h2>
         <h3>What is Lorem Ipsum?</h3>
         <div className="story-text-content">
           <p>

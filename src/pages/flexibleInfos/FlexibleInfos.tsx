@@ -6,12 +6,13 @@ const InfosFlexible = React.lazy(
 );
 const Partner = React.lazy(() => import("../../components/partner/Partner"));
 const Footer = React.lazy(() => import("../../components/footer/Footer"));
+import lottie from "../../lottie/lf30_about_us.json";
 
 const FlexibleInfos = () => {
   return (
     <>
       <Header />
-      <Banner />
+      <Banner animation={lottie} />
       <InfosFlexible />
       <Partner />
       <Footer />

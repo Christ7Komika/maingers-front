@@ -20,7 +20,7 @@ const ProductCard = ({ product }: { product: Props }) => {
           <h3>{product.title}</h3>
           <small>{product.text}</small>
           <a href={product.link}>
-            Learn more <FaAngleRight />
+            En savoir plus <FaAngleRight />
           </a>
         </div>
       </div>

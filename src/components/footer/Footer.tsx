@@ -8,16 +8,16 @@ const Footer = () => {
       <div className="footer-top">
         <div className="newsletter">
           <form className="newsletter-form">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p style={{ fontSize: 20 }}>Newsletter</p>
             <input type="email" placeholder="Saisir votre email" />
             <button>Souscrire</button>
           </form>
         </div>
         <div className="company-infos">
-          <h3>Lorem ipsum dolor sit amet.</h3>
+          <h3>MAINGER'S HYDRAULIC & SERVICES</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            quas vero nulla laboriosam explicabo.
+            Votre partenaire idéal pour toutes vos opérations hydrauliques,
+            location d'engins et de nettoyage industriel.
           </p>
         </div>
         <div className="list-link">
@@ -43,8 +43,8 @@ const Footer = () => {
         <div className="contact-infos">
           <h3>Contact</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            quo sunt quaerat nobis minus aut omnis consectetur ab.
+            Retrouvez toutes les informations pour nous joindre sur la page
+            contact de notre site.
           </p>
         </div>
       </div>

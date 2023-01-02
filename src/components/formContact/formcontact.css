@@ -32,7 +32,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .form-contact .form-contact-left .form-contact-form input,
@@ -57,6 +57,13 @@
   max-width: 80%;
   cursor: pointer;
   font-weight: 500;
+  transition: linear 0.4s;
+}
+
+.form-contact .form-contact-left .form-contact-form button:hover {
+  background: var(--bg-nice-orange);
+  color: var(--bg-light-grey);
+  border: 1px solid var(--bg-nice-orange);
 }
 
 @media (max-width: 1300px) {

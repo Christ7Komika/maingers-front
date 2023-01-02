@@ -9,19 +9,13 @@ const InfosContact = React.lazy(
 const FormContact = React.lazy(
   () => import("../../components/formContact/FormContact")
 );
-
-// const banner = {
-//   title: "Lorem ipsum dolor sit amet."
-//   description:   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-//   aliquid tenetur qui ipsam ex ipsum? Numquam ullam reiciendis commodi
-//   sequi!
-// }
+import lottie from "../../lottie/129404-contact-us.json";
 
 const Contact = () => {
   return (
     <>
       <Header />
-      <Banner />
+      <Banner animation={lottie} />
       <InfosContact />
       <FormContact />
       <Partner />

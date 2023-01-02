@@ -8,19 +8,19 @@ const Company = () => {
   return (
     <div className="container company">
       <div className="company-content">
-        <h2>Contrary to popular belief</h2>
+        <h2>QUI SOMME NOUS ?</h2>
         <h3>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout
+          MAINGER'S HYDRAULIC & SERVICES est une entreprise spécialisée sur le
+          conseil, la confection, la pose, l'inspection et la vente de flexible
+          hydraulique.
         </h3>
         <p>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly bel
+          En outre MAINGER'S HYDRAULIC & SERVICES propose d'autre services dont
+          le nettoyage industriel et la location des engins élévateur.
         </p>
         <button>
           <FaArrowRight />
-          HAVE A PROJECT
+          EN SAVOR PLUS
         </button>
       </div>
       <div className="company-img">
@@ -29,7 +29,7 @@ const Company = () => {
             <span>
               <FaIndustry />
             </span>
-            <p>The standard chunk</p>
+            <p>MH Votre partenaire</p>
           </div>
           <img src={Img7} alt="" />
         </div>

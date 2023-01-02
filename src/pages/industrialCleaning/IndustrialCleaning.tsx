@@ -12,12 +12,12 @@ const IndustrialCleaningGallery = React.lazy(
     )
 );
 const Footer = React.lazy(() => import("../../components/footer/Footer"));
-
+import lottie from "../../lottie/lf30_about_us.json";
 const IndustrialCleaning = () => {
   return (
     <>
       <Header />
-      <Banner />
+      <Banner animation={lottie} />
       <IndustrialCleaningInfos />
       <IndustrialCleaningGallery />
       <Footer />

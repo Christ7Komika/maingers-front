@@ -20,11 +20,10 @@ const Slider = () => {
   return (
     <div className="slider">
       <div className="content">
-        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>MAINGER'S HYDRAULIC & SERVICES.</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-          aliquid tenetur qui ipsam ex ipsum? Numquam ullam reiciendis commodi
-          sequi!
+          Votre partenaire indiqué pour tous vos travaux hydrauliques et de
+          nettoyage industriel, et pour la location d'engins élévateurs .
         </p>
       </div>
       <Swiper

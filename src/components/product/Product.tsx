@@ -8,38 +8,20 @@ import bgTransparentImg3 from "../../assets/pictures/bg-transparent3.png";
 
 const productData = [
   {
-    title: "Product name",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Hydraulique",
+    text: "Confection et pose tuyauterie hydraulique.",
     link: "#",
     img: bgTransparentImg1,
   },
   {
-    title: "Product name",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Néttoyage industriel",
+    text: "Néttoyage des plateforme, des capacités...",
     link: "#",
     img: bgTransparentImg2,
   },
   {
-    title: "Product name",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    link: "#",
-    img: bgTransparentImg3,
-  },
-  {
-    title: "Product name",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    link: "#",
-    img: bgTransparentImg1,
-  },
-  {
-    title: "Product name",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    link: "#",
-    img: bgTransparentImg2,
-  },
-  {
-    title: "Product name",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Location engin élévateur",
+    text: "Location des vehicules industriels, grues...",
     link: "#",
     img: bgTransparentImg3,
   },
@@ -48,7 +30,7 @@ const productData = [
 const Product = () => {
   return (
     <div className="container product">
-      <h2>Our product</h2>
+      <h2>NOS SERVICES</h2>
       <div className="product-container">
         {productData.map((product) => (
           <ProductCard key={uuid()} product={product} />

@@ -16,12 +16,12 @@ const SectionRentEngine = React.lazy(
 
 const Partner = React.lazy(() => import("../../components/partner/Partner"));
 const Footer = React.lazy(() => import("../../components/footer/Footer"));
-
+import lottie from "../../lottie/lf30_about_us.json";
 const Services = () => {
   return (
     <div>
       <Header />
-      <Banner />
+      <Banner animation={lottie} />
       <SectionFlexible />
       <SectionIndustrialCleaning />
       <SectionRentEngine />

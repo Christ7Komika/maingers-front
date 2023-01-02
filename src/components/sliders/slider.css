@@ -14,10 +14,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 1rem;
+  row-gap: 0.5rem;
   background-color: var(--bg-white);
   z-index: 2;
   text-align: center;
+}
+
+.slider .content h1 {
+  font-weight: 900;
+  color: var(--text-orange);
+}
+
+.slider .content p {
+  font-weight: 600;
 }
 
 .slider .slider-img {

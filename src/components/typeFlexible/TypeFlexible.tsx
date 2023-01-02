@@ -7,15 +7,43 @@ import "./typeFlexible.css";
 const data = [
   {
     id: 1,
-    name: "Norme ISO 1403",
-  },
-  {
-    id: 2,
-    name: "Norme ISO 4641",
-  },
-  {
-    id: 3,
-    name: "Norme ISO 73411",
+    type: "Eau",
+    data: [
+      {
+        id: 1,
+        name: "VODA 6",
+        img: "",
+        def: "TUYAU CAOUTCHOUC REFOULEMENT D'EAU SUIVANT ISO 1403 TYPE 1 & WATER DELIVERY RUBBER HOSE - ISO 1403 TYPE 1",
+        application:
+          "Tuyau polyvalent pour le refoulement d'eau et de produits chimiques légers.&Adapté à tous les secteurs, industrie, bâtiment, travaux publics, agriculture, chimie.",
+        caracteristique: `Tube : EPDM/SBR noir lisse
+        &Renforcement: Plis textile
+        &Revêtement: EPDM/SBR noir, aspect lisse ou toilé
+        &Aspect toilé à partir du diamètre intèrieur 19
+        &Resistant aux intempéries, détergents et produits
+        &Chimiques dilués.
+        &Température: -25°c à +70°c
+        &Homologations: EN ISOS 1403`,
+        IdTableau: 1,
+      },
+      {
+        id: 2,
+        name: "VODA 10",
+        img: "",
+        def: "TUYAU CAOUTCHOUC REFOULEMENT D'EAU SUIVANT ISO 1403 TYPE 2 & WATER DELIVERY RUBBER HOSE - ISO 1403 TYPE 2",
+        application:
+          "Tuyau polyvalent pour le refoulement d'eau et de produits chimiques légers.&Adapté à tous les secteurs, industrie, bâtiment, travaux publics, agriculture, chimie.",
+        caracteristique: `Tube : EPDM/SBR noir lisse
+        &Renforcement: Plis textile
+        &Revêtement: EPDM/SBR noir, aspect lisse ou toilé
+        &Aspect toilé à partir du diamètre intèrieur 19
+        &Resistant aux intempéries, détergents et produits
+        &Chimiques dilués.
+        &Température: -25°c à +70°c
+        &Homologations: EN ISOS 1403`,
+        IdTableau: 2,
+      },
+    ],
   },
 ];
 

@@ -1,7 +1,7 @@
 import React from "react";
 import "./product.css";
 import { v4 as uuid } from "uuid";
-const ProductCard = React.lazy(() => import("../card/ProductCard"));
+import ProductCard from "../card/ProductCard";
 import bgTransparentImg1 from "../../assets/pictures/bg-transparent1.png";
 import bgTransparentImg2 from "../../assets/pictures/bg-transparent2.png";
 import bgTransparentImg3 from "../../assets/pictures/bg-transparent3.png";

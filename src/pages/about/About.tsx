@@ -1,11 +1,11 @@
 import React from "react";
-const Header = React.lazy(() => import("../../components/header/Header"));
-const Banner = React.lazy(() => import("../../components/banner/Banner"));
-const Story = React.lazy(() => import("../../components/story/Story"));
-const Valor = React.lazy(() => import("../../components/valor/Valor"));
-const Teams = React.lazy(() => import("../../components/teams/Teams"));
-const Partner = React.lazy(() => import("../../components/partner/Partner"));
-const Footer = React.lazy(() => import("../../components/footer/Footer"));
+import Header from "../../components/header/Header";
+import Banner from "../../components/banner/Banner";
+import Story from "../../components/story/Story";
+import Valor from "../../components/valor/Valor";
+import Teams from "../../components/teams/Teams";
+import Partner from "../../components/partner/Partner";
+import Footer from "../../components/footer/Footer";
 
 import lottie from "../../lottie/lf30_about_us.json";
 

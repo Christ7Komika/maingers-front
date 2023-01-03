@@ -1,13 +1,13 @@
 import React from "react";
 
-const Header = React.lazy(() => import("../../components/header/Header"));
-const Slider = React.lazy(() => import("../../components/sliders/Slider"));
-const Company = React.lazy(() => import("../../components/company/Company"));
-const Product = React.lazy(() => import("../../components/product/Product"));
-const Work = React.lazy(() => import("../../components/work/Work"));
-const Projects = React.lazy(() => import("../../components/projects/Projects"));
-const Partner = React.lazy(() => import("../../components/partner/Partner"));
-const Footer = React.lazy(() => import("../../components/footer/Footer"));
+import Header from "../../components/header/Header";
+import Slider from "../../components/sliders/Slider";
+import Company from "../../components/company/Company";
+import Product from "../../components/product/Product";
+import Work from "../../components/work/Work";
+import Projects from "../../components/projects/Projects";
+import Partner from "../../components/partner/Partner";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   return (

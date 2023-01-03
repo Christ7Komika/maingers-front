@@ -1,13 +1,10 @@
 import React from "react";
 import Loader from "../../components/Loader/Loader";
-
-const Header = React.lazy(() => import("../../components/header/Header"));
-const Banner = React.lazy(() => import("../../components/banner/Banner"));
-const MarketPlace = React.lazy(
-  () => import("../../components/marketplace/MarketPlace")
-);
-const Partner = React.lazy(() => import("../../components/partner/Partner"));
-const Footer = React.lazy(() => import("../../components/footer/Footer"));
+import Header from "../../components/header/Header";
+import Banner from "../../components/banner/Banner";
+import MarketPlace from "../../components/marketplace/MarketPlace";
+import Partner from "../../components/partner/Partner";
+import Footer from "../../components/footer/Footer";
 import lottie from "../../lottie/lf30_about_us.json";
 const Shop = () => {
   return (

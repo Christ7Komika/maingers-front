@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import styled from "styled-components";
 import { FiChevronDown } from "react-icons/fi";
 import { v4 as uuid } from "uuid";
 import "./customSelect.css";

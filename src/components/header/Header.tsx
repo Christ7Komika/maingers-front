@@ -5,13 +5,10 @@ import {
   FaPhone,
   FaSearch,
   FaAngleDown,
-  FaBars,
-  FaPlus,
 } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { v4 as uuidV4 } from "uuid";
-import Layer from "../../portals/Layer";
 import "./header.css";
 import Logo from "../../assets/logo/Logo.svg";
 import ResponsiveMenu from "../menu/reponsiveMenu/ResponsiveMenu";

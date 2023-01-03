@@ -1,6 +1,5 @@
 import React from "react";
 import "./marketplace.css";
-const ProductCard = React.lazy(() => import("../card/ProductCard"));
 import { v4 as uuid } from "uuid";
 import bgTransparentImg1 from "../../assets/pictures/bg-transparent1.png";
 import bgTransparentImg2 from "../../assets/pictures/bg-transparent2.png";

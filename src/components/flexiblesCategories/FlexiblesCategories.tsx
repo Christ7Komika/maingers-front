@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-const CustomSelect = React.lazy(
-  () => import("../../components/input/CustomSelect")
-);
+import CustomSelect from "../../components/input/CustomSelect";
 import Flexible from "../../assets/flexibles/flexibles.png";
 import "./flexiblesCategories.css";
 import { v4 as uuid } from "uuid";

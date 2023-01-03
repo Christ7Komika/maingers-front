@@ -1,11 +1,9 @@
 import React from "react";
-const Header = React.lazy(() => import("../../components/header/Header"));
-const Banner = React.lazy(() => import("../../components/banner/Banner"));
-const FlexiblesCategories = React.lazy(
-  () => import("../../components/flexiblesCategories/FlexiblesCategories")
-);
-const Partner = React.lazy(() => import("../../components/partner/Partner"));
-const Footer = React.lazy(() => import("../../components/footer/Footer"));
+import Header from "../../components/header/Header";
+import Banner from "../../components/banner/Banner";
+import FlexiblesCategories from "../../components/flexiblesCategories/FlexiblesCategories";
+import Partner from "../../components/partner/Partner";
+import Footer from "../../components/footer/Footer";
 import lottie from "../../lottie/lf30_about_us.json";
 const Flexibles = () => {
   return (

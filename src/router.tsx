@@ -56,11 +56,11 @@ export const router = createBrowserRouter([
     element: <Flexibles />,
   },
   {
-    path: "/departement/flexibles/type",
+    path: "/departement/flexibles/type/:id",
     element: <FlexibleType />,
   },
   {
-    path: "/departement/flexibles/type/infos",
+    path: "/departement/flexibles/type/infos/:type/:data",
     element: <FlexibleInfos />,
   },
   {

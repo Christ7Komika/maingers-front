@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 import "./infosFlexible.css";
+import { useParams } from "react-router-dom";
+import {
+  TYPE_FLEXIBLE,
+  flexibleTypeData,
+  flexiblesTableData,
+} from "../../data/flexibleType";
 
 const datas = {
   head: {
@@ -30,14 +36,34 @@ const datas = {
 };
 
 const InfosFlexible = () => {
+  const { data: idTab, type: idType } = useParams<{
+    data: string;
+    type: string;
+  }>();
+  const [flexibles, setFlexibles] = useState(flexibleTypeData);
+  const [flexiblesTable, setFlexiblesTable] = useState(flexiblesTableData);
+  const [flexible, setFlexible] = useState<null | TYPE_FLEXIBLE>();
+  const [flexibleTable, setFlexibleTable] = useState<null | any>();
+
+  useEffect(() => {
+    const flexibleInfos = flexibles.filter(
+      (data) => data.id.toString() == idType
+    );
+    setFlexible(flexibleInfos.flat()[0]);
+  }, []);
+
+  useEffect(() => {
+    const tabData = flexible?.data.filter(
+      (data) => data.IdTableau.toString() === idTab
+    );
+    setFlexibleTable(tabData?.flat()[0]);
+  }, [flexible]);
+
+  console.log("---------> ", flexibleTable);
   return (
     <div className="container flexible-infos">
-      <h2>Name : Voda 01</h2>
-      <h3>Norme ISO 1025</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut porro
-        rerum quas vitae incidunt temporibus tempora aspernatur velit mollitia!
-      </p>
+      <h2>Name : {flexibleTable?.name}</h2>
+      <p>{flexibleTable?.def}</p>
       <div className="flexible-infos-tab">
         <table>
           <thead>

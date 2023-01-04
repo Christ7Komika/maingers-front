@@ -3,6 +3,7 @@ import CustomSelect from "../../components/input/CustomSelect";
 import Flexible from "../../assets/flexibles/flexibles.png";
 import "./flexiblesCategories.css";
 import { v4 as uuid } from "uuid";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -89,7 +90,7 @@ const FlexiblesCategories = () => {
               <img src={Flexible} alt="" />
             </div>
             <div className="flexible-ctg-card-content">
-              <a href="/departement/flexibles/type">VOIR</a>
+              <Link to={`/departement/flexibles/type/${value.id}`}>VOIR</Link>
             </div>
           </div>
         ))}

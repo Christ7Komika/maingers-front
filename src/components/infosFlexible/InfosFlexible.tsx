@@ -59,7 +59,6 @@ const InfosFlexible = () => {
     setFlexibleTable(tabData?.flat()[0]);
   }, [flexible]);
 
-  console.log("---------> ", flexibleTable);
   return (
     <div className="container flexible-infos">
       <h2>Name : {flexibleTable?.name}</h2>
@@ -89,21 +88,156 @@ const InfosFlexible = () => {
           </tbody>
         </table>
       </div>
-      <div className="flexible-infos-desc">
-        <h3>Application</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-          odit minima eveniet, natus hic dicta.
-        </p>
-      </div>
-      <div className="flexible-infos-desc">
-        <h3>Caractéristique technique</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, modi
-          magni voluptate necessitatibus vel recusandae maxime placeat? Aliquam
-          tempora quae labore nulla, explicabo maxime doloribus.
-        </p>
-      </div>
+
+      {/* APPLICATION */}
+      {flexibleTable?.application && (
+        <div className="flexible-infos-desc">
+          <h3>Application</h3>
+          <ul style={{ listStyleType: "none" }}>
+            {flexibleTable?.application?.split("&")?.map((value: string) => (
+              <li>{value}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* CARACTERISTIQUE TECHNIQUE */}
+      {flexibleTable?.caracteristique && (
+        <div className="flexible-infos-desc">
+          <h3>Caractéristique technique</h3>
+          <ul style={{ listStyleType: "none" }}>
+            {flexibleTable?.caracteristique
+              ?.split("&")
+              ?.map((value: string) => (
+                <li>{value}</li>
+              ))}
+          </ul>
+        </div>
+      )}
+
+      {/* TUBE */}
+      {flexibleTable?.tube && (
+        <div className="flexible-infos-desc">
+          <h3>Tube</h3>
+          <ul style={{ listStyleType: "none" }}>
+            {flexibleTable?.tube?.split("&")?.map((value: string) => (
+              <li>{value}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* ARMATURE */}
+      {flexibleTable?.armature && (
+        <div className="flexible-infos-desc">
+          <h3>Armature</h3>
+          <ul style={{ listStyleType: "none" }}>
+            {flexibleTable?.armature?.split("&")?.map((value: string) => (
+              <li>{value}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* REVETEMENT */}
+      {flexibleTable?.revetement && (
+        <div className="flexible-infos-desc">
+          <h3>Revêtement</h3>
+          <ul style={{ listStyleType: "none" }}>
+            {flexibleTable?.revetement?.split("&")?.map((value: string) => (
+              <li>{value}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* UTILISATION */}
+      {flexibleTable?.utilisation && (
+        <div className="flexible-infos-desc">
+          <h3>Utilisation</h3>
+          <ul style={{ listStyleType: "none" }}>
+            {flexibleTable?.utilisation?.split("&")?.map((value: string) => (
+              <li>{value}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* C.D.S */}
+      {flexibleTable?.cds && (
+        <div className="flexible-infos-desc">
+          <h3>C.d.S</h3>
+          <ul style={{ listStyleType: "none" }}>
+            {flexibleTable?.cds?.split("&")?.map((value: string) => (
+              <li>{value}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* TEMPERATURE */}
+      {flexibleTable?.temperature && (
+        <div className="flexible-infos-desc">
+          <h3>Température</h3>
+          <ul style={{ listStyleType: "none" }}>
+            {flexibleTable?.temperature?.split("&")?.map((value: string) => (
+              <li>{value}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* TEMPERATURE EN CONTINU */}
+      {flexibleTable?.temperatureContinu && (
+        <div className="flexible-infos-desc">
+          <h3>Température en continu</h3>
+          <ul style={{ listStyleType: "none" }}>
+            {flexibleTable?.temperatureContinu
+              ?.split("&")
+              ?.map((value: string) => (
+                <li>{value}</li>
+              ))}
+          </ul>
+        </div>
+      )}
+
+      {/* TEMPERATURE MAXI */}
+      {flexibleTable?.temperatureMaxi && (
+        <div className="flexible-infos-desc">
+          <h3>Température maxi</h3>
+          <ul style={{ listStyleType: "none" }}>
+            {flexibleTable?.temperatureMaxi
+              ?.split("&")
+              ?.map((value: string) => (
+                <li>{value}</li>
+              ))}
+          </ul>
+        </div>
+      )}
+
+      {/* NORME */}
+      {flexibleTable?.norme && (
+        <div className="flexible-infos-desc">
+          <h3>Norme</h3>
+          <ul style={{ listStyleType: "none" }}>
+            {flexibleTable?.norme?.split("&")?.map((value: string) => (
+              <li>{value}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* OPTION */}
+      {flexibleTable?.option && (
+        <div className="flexible-infos-desc">
+          <h3>Option</h3>
+          <ul style={{ listStyleType: "none" }}>
+            {flexibleTable?.option?.split("&")?.map((value: string) => (
+              <li>{value}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

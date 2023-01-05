@@ -7,13 +7,11 @@ import Teams from "../../components/teams/Teams";
 import Partner from "../../components/partner/Partner";
 import Footer from "../../components/footer/Footer";
 
-import lottie from "../../lottie/lf30_about_us.json";
-
 const About = () => {
   return (
     <>
       <Header />
-      <Banner animation={lottie} />
+      <Banner title="à propos" />
       <Story />
       <Valor />
       <Teams />

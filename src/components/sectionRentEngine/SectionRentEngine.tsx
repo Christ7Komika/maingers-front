@@ -1,6 +1,5 @@
 import React from "react";
 import "./sectionRentEngine.css";
-import { v4 as uuid } from "uuid";
 import { FaCheckCircle } from "react-icons/fa";
 
 const SectionRentEngine = () => {
@@ -16,8 +15,8 @@ const SectionRentEngine = () => {
           </p>
         </div>
         <ul>
-          {datas.map((data) => (
-            <li key={uuid()}>
+          {datas.map((data, index) => (
+            <li key={`section-rent-engine-${index}`}>
               <span>
                 <FaCheckCircle />
               </span>

@@ -6,12 +6,13 @@ import SectionIndustrialCleaning from "../../components/sectionIndustrialCleanin
 import SectionRentEngine from "../../components/sectionRentEngine/SectionRentEngine";
 import Partner from "../../components/partner/Partner";
 import Footer from "../../components/footer/Footer";
-import lottie from "../../lottie/lf30_about_us.json";
+
 const Services = () => {
   return (
     <div>
       <Header />
-      <Banner animation={lottie} />
+      <img src="" alt="" />
+      <Banner title="Services" />
       <SectionFlexible />
       <SectionIndustrialCleaning />
       <SectionRentEngine />

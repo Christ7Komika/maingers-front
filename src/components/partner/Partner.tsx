@@ -17,7 +17,6 @@ import Ilogs from "../../assets/partner/ilogs.png";
 import Friedlander from "../../assets/partner/friedlander.png";
 import ExpressAfric from "../../assets/partner/ocean_express.png";
 import CongoServices from "../../assets/partner/congo_service.png";
-import { v4 as uuid } from "uuid";
 
 import "./partner.css";
 
@@ -47,8 +46,8 @@ const Partner = () => {
     <div className="container partner">
       <h2>Nos partenaires</h2>
       <div className="partner-list">
-        {data.map((img) => (
-          <div className="partner-card" key={uuid()}>
+        {data.map((img, index) => (
+          <div className="partner-card" key={`partner-${index}`}>
             <div className="logo">
               <img src={img} alt="" />
             </div>

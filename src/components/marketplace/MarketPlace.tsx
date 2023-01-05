@@ -1,6 +1,5 @@
 import React from "react";
 import "./marketplace.css";
-import { v4 as uuid } from "uuid";
 import bgTransparentImg1 from "../../assets/pictures/bg-transparent1.png";
 import bgTransparentImg2 from "../../assets/pictures/bg-transparent2.png";
 import bgTransparentImg3 from "../../assets/pictures/bg-transparent3.png";
@@ -43,8 +42,8 @@ const MarketPlace = () => {
   return (
     <div className="container marketplace">
       <div className="marketplace-list-product">
-        {productData.map((product) => (
-          <ServiceCard key={uuid()} product={product} />
+        {productData.map((product, index) => (
+          <ServiceCard key={`market-place-${index}`} product={product} />
         ))}
       </div>
       <div className="marketplace-content">

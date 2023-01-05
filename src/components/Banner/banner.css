@@ -7,6 +7,13 @@
   justify-content: center;
 }
 
+.banner h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 4rem;
+  color: var(--white);
+}
+
 .banner h2 {
   font-size: 2rem;
   font-weight: 800;

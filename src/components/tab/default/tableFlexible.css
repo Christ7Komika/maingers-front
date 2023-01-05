@@ -1,0 +1,75 @@
+.table {
+  border-collapse: collapse;
+}
+.table thead {
+  background: var(--bg-grey);
+}
+.table thead th {
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  height: 40px;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  color: var(--text-dark);
+}
+.table tr:first-child {
+  border-bottom: 1px solid #fff;
+}
+
+.table tbody tr {
+  min-height: 40px;
+  height: auto;
+}
+
+.table tbody tr:nth-child(even) {
+  background: var(--bg-blue-grey);
+}
+
+.table tbody td {
+  font-size: 0.9rem;
+  text-align: center;
+  height: 40px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.table tbody .option {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.table tbody .option span {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  transition: linear 0.4s;
+}
+
+.table tbody .option .update {
+  color: dodgerblue;
+}
+
+.table tbody .option .update:hover {
+  background: var(--bg-blue-opacity2);
+}
+.table tbody .option .delete {
+  color: crimson;
+  transform: rotate(45deg);
+}
+
+.table tbody .option .delete:hover {
+  background: rgba(220, 20, 60, 0.274);
+}
+@media (max-width: 820px) {
+  .flexible-infos-tab {
+    overflow-x: auto;
+  }
+}

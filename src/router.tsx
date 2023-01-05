@@ -1,6 +1,5 @@
 import React from "react";
-import { createBrowserRouter } from "react-router-dom";
-import Loader from "./components/Loader/Loader";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const About = React.lazy(() => import("./pages/about/About"));
 
@@ -30,49 +29,28 @@ const FlexibleInfos = React.lazy(
   () => import("./pages/flexibleInfos/FlexibleInfos")
 );
 
-export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/services",
-    element: <Services />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
-  },
-  {
-    path: "/shop",
-    element: <Shop />,
-  },
-  {
-    path: "/departement/flexibles",
-    element: <Flexibles />,
-  },
-  {
-    path: "/departement/flexibles/type/:id",
-    element: <FlexibleType />,
-  },
-  {
-    path: "/departement/flexibles/type/infos/:type/:data",
-    element: <FlexibleInfos />,
-  },
-  {
-    path: "/departement/industrial-cleaning",
-    element: <IndustrialCleaning />,
-  },
-  {
-    path: "/departement/rent-engine",
-    element: <RentEngine />,
-  },
-  {
-    path: "*",
-    element: <NotFound />,
-  },
-]);
+export const Router = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/departement/flexibles" element={<Flexibles />} />
+        <Route path="/departement/flexibles/type" element={<FlexibleType />} />
+        <Route
+          path="/departement/flexibles/type/infos"
+          element={<FlexibleInfos />}
+        />
+        <Route
+          path="/departement/industrial-cleaning"
+          element={<IndustrialCleaning />}
+        />
+        <Route path="/departement/rent-engine" element={<RentEngine />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};

@@ -1,5 +1,4 @@
 import React from "react";
-import { v4 as uuid } from "uuid";
 import "./sectionIndustrialCleaning.css";
 import { FaCheckCircle } from "react-icons/fa";
 
@@ -17,8 +16,8 @@ const SectionIndustrialCleaning = () => {
           </p>
         </div>
         <ul>
-          {datas.map((data) => (
-            <li key={uuid()}>
+          {datas.map((data, index) => (
+            <li key={`section-industrial-cleaning-${index}`}>
               <span>
                 <FaCheckCircle />
               </span>

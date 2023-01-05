@@ -5,13 +5,12 @@ import Partner from "../../components/partner/Partner";
 import Banner from "../../components/banner/Banner";
 import InfosContact from "../../components/infosContact/InfosContact";
 import FormContact from "../../components/formContact/FormContact";
-import lottie from "../../lottie/129404-contact-us.json";
 
 const Contact = () => {
   return (
     <>
       <Header />
-      <Banner animation={lottie} />
+      <Banner title="Contact" />
       <InfosContact />
       <FormContact />
       <Partner />

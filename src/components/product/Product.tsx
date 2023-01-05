@@ -1,6 +1,5 @@
 import React from "react";
 import "./product.css";
-import { v4 as uuid } from "uuid";
 import ProductCard from "../card/ProductCard";
 import bgTransparentImg1 from "../../assets/pictures/bg-transparent1.png";
 import bgTransparentImg2 from "../../assets/pictures/bg-transparent2.png";
@@ -32,8 +31,8 @@ const Product = () => {
     <div className="container product">
       <h2>NOS SERVICES</h2>
       <div className="product-container">
-        {productData.map((product) => (
-          <ProductCard key={uuid()} product={product} />
+        {productData.map((product, index) => (
+          <ProductCard key={`product-${index}`} product={product} />
         ))}
       </div>
     </div>

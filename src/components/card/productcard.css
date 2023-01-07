@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: var(--bg-white);
-  height: 200px;
+  height: 250px;
   border-radius: 5px;
   box-shadow: var(--shadow);
   position: relative;
@@ -46,7 +46,6 @@
 
 .card-product .card-content {
   padding: 1rem;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,7 +58,9 @@
 }
 .card-product .card-content small {
   font-size: 0.8rem;
+  padding: 0.2rem;
   color: var(--text-darkgrey);
+  height: auto;
 }
 
 .card-product .card-content a {
@@ -70,6 +71,12 @@
   font-weight: 600;
 }
 
+/* @media (max-width: 400px) {
+  .card-product .card-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+} */
 @media (max-width: 300px) {
   .card-product .card-container {
     grid-template-columns: 1fr;

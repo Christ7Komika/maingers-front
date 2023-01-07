@@ -10,13 +10,14 @@ const Company = () => {
       <div className="company-content">
         <h2>QUI SOMME NOUS ?</h2>
         <h3>
-          MAINGER'S HYDRAULIC & SERVICES est une entreprise spécialisée sur le
+          MAINGER'S-HYDRAULIC & SERVICES est une entreprise spécialisée sur le
           conseil, la confection, la pose, l'inspection et la vente de flexible
           hydraulique.
         </h3>
         <p>
-          En outre MAINGER'S HYDRAULIC & SERVICES propose d'autre services dont
-          le nettoyage industriel et la location des engins élévateur.
+          En outre MAINGER'S-HYDRAULIC & SERVICES propose d'autre services dont
+          le nettoyage industriel et la location des engins élévateur et
+          semi-remorque.
         </p>
         <button>
           <FaArrowRight />

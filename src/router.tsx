@@ -17,8 +17,6 @@ const IndustrialCleaning = React.lazy(
   () => import("./pages/industrialCleaning/IndustrialCleaning")
 );
 
-const Shop = React.lazy(() => import("./pages/shop/Shop"));
-
 const RentEngine = React.lazy(() => import("./pages/rentEngine/RentEngine"));
 
 const FlexibleType = React.lazy(
@@ -37,7 +35,6 @@ export const Router = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/shop" element={<Shop />} />
         <Route path="/departement/flexibles" element={<Flexibles />} />
         <Route path="/departement/flexibles/type" element={<FlexibleType />} />
         <Route

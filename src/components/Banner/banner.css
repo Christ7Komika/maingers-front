@@ -10,8 +10,10 @@
 .banner h1 {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 2.5rem;
+  padding: 1rem;
   color: var(--white);
+  text-align: center;
 }
 
 .banner h2 {

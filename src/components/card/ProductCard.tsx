@@ -29,14 +29,3 @@ const ProductCard = ({ product }: { product: Props }) => {
 };
 
 export default ProductCard;
-
-/**
- * 
- * 
- * 
- *     title: "Product name",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,minus?",
-    link: "#",
-    img: bgTransparentImg1,
-  },
- */

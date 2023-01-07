@@ -96,6 +96,8 @@
 .projects .projects-all-list .project-card:hover .project-card-content {
   left: 0;
   border-radius: 0;
+
+  height: 100%;
 }
 
 .projects .projects-all-list .project-card .project-card-content h3 {
@@ -107,6 +109,7 @@
   font-size: 0.9rem;
   font-weight: 500;
   text-align: right;
+  background: transparent;
 }
 
 @media (max-width: 1300px) {

@@ -85,14 +85,6 @@ const ResponsiveMenu = () => {
             </div>
             <div className="sub-menu">
               <Link
-                to="/shop"
-                className={location.pathname == "/shop" ? "select" : ""}
-              >
-                Boutique
-              </Link>
-            </div>
-            <div className="sub-menu">
-              <Link
                 to="/services"
                 className={location.pathname == "/services" ? "select" : ""}
               >

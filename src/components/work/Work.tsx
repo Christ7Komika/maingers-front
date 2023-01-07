@@ -45,18 +45,16 @@ const Work = () => {
         </div>
       </div>
       <div className="work-content">
-        <h2>The standard chunk</h2>
+        <h2>Nos objectifs</h2>
         <h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-          architecto!
+          Notre entreprise vise à atteindre plusieurs objectifs importants afin
+          de garantir le succès à long terme de l'entreprise et de répondre aux
+          besoins de nos clients. Ces objectifs incluent l'augmentation de la
+          productivité, l'amélioration de la qualité de nos produits, la
+          réduction de nos coûts de production, l'augmentation de nos ventes, la
+          diversification de notre gamme de produits et l'amélioration de la
+          satisfaction de nos clients.
         </h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
-          reprehenderit, autem mollitia inventore quia similique nam consectetur
-          odit sint nihil eaque vitae laboriosam velit eos doloremque quos
-          consequuntur dignissimos sunt earum excepturi necessitatibus
-          recusandae quam accusamus error. Consectetur, dolorum facere.
-        </p>
       </div>
       <div className="work-img">
         <img src={Img10} alt="" />

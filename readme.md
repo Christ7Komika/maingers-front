@@ -1,4 +1,10 @@
-bug a corriger
+{
+modele: "FINN POWER P 32",
+modele: "PRESSE PORTATIF FINN POWER P 10",
+modele: " FINN POWER P 50",
+model": "Tronçoneuse"
+model: "Denudeuse"
+model: "tour mecanique"
+}
 
-page location engins respensive
-les differents card comme celle de la page home
+magasins flexibles

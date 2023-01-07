@@ -1,0 +1,32 @@
+.page-notfound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-grey);
+  height: 100vh;
+}
+
+.page-notfound h1 {
+  color: var(--bg-nice-orange);
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+.page-notfound h2 {
+  color: var(--bg-nice-orange);
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 800;
+  position: relative;
+  top: -20px;
+}
+
+.page-notfound a {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text-blue);
+  text-decoration: underline;
+}

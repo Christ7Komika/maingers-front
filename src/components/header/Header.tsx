@@ -115,13 +115,6 @@ const Header = () => {
               </div>
               <div
                 className={
-                  location.pathname === "/shop" ? "link selected" : "link"
-                }
-              >
-                <Link to="/shop">Boutique</Link>
-              </div>
-              <div
-                className={
                   location.pathname === "/services" ? "link selected" : "link"
                 }
               >

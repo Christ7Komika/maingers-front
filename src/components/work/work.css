@@ -4,7 +4,8 @@
   grid-template-columns: repeat(2, 1fr);
   position: relative;
   width: 100%;
-  margin-bottom: 75px;
+  padding-bottom: 75px;
+  height: 550px;
 }
 
 .work .work-content {
@@ -96,12 +97,19 @@
     padding: 2rem;
   }
 }
+@media (max-width: 900px) {
+  .work {
+    height: 570px;
+  }
+}
+
 @media (max-width: 850px) {
   .work {
     display: grid;
     grid-template-areas:
       "a b"
       "c c";
+    height: auto;
   }
 
   .work .work-content {
@@ -114,11 +122,12 @@
   }
 
   .work .work-about {
-    background: var(--bg-white);
+    /* background: var(--bg-white); */
     grid-area: c;
     position: static;
     grid-template-columns: repeat(3, 1fr);
     border: none;
+    background: var(--bg-light);
   }
 }
 

@@ -12,17 +12,17 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  height: 400px;
+  height: 550px;
 }
 
 .industrial-cleaning-infos .industrial-cleaning-infos-img {
   width: 100%;
-  height: 400px;
+  height: 550px;
 }
 
 .industrial-cleaning-infos .industrial-cleaning-infos-img img {
   width: 100%;
-  height: 400px;
+  height: 550px;
   object-fit: cover;
   object-position: center center;
   border-radius: 5px;
@@ -37,19 +37,37 @@
 
 .industrial-cleaning-infos .industrial-cleaning-infos-content h3 {
   font-size: 1.2rem;
-  color: var(--text-darkgrey);
+  color: var(--text-orange);
 }
 
 .industrial-cleaning-infos .industrial-cleaning-infos-content p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-darkgrey);
 }
 
-@media (max-width: 950px) {
+.industrial-cleaning-infos .industrial-cleaning-infos-content ul {
+  list-style-type: none;
+}
+.industrial-cleaning-infos .industrial-cleaning-infos-content ul li {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.industrial-cleaning-infos .industrial-cleaning-infos-content ul li span > * {
+  color: var(--bg-nice-orange);
+}
+
+@media (max-width: 1230px) {
   .industrial-cleaning-infos {
     padding: 2rem;
   }
 }
+@media (max-width: 1180px) {
+  .industrial-cleaning-infos .industrial-cleaning-container {
+    height: auto;
+  }
+}
+
 @media (max-width: 850px) {
   .industrial-cleaning-infos {
     padding: 1rem;

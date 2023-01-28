@@ -39,34 +39,41 @@
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1rem;
   height: 200px;
 }
 
-@media (max-width: 1300px) {
-    .our-engine {
-        padding: 2rem;
-    }
+.our-engine .our-engine-list .our-engine-elt-content p:last-child {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  justify-content: flex-end;
+  cursor: pointer;
 }
 
+@media (max-width: 1300px) {
+  .our-engine {
+    padding: 2rem;
+  }
+}
 
 @media (max-width: 1200px) {
-    .our-engine .our-engine-list {
-
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .our-engine .our-engine-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media (max-width: 950px) {
-    .our-engine {
-        padding: 1rem;
-    }
-    .our-engine .our-engine-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .our-engine {
+    padding: 1rem;
+  }
+  .our-engine .our-engine-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 650px) {
-    .our-engine .our-engine-list {
-        grid-template-columns: 1fr;
-    }
+  .our-engine .our-engine-list {
+    grid-template-columns: 1fr;
+  }
 }

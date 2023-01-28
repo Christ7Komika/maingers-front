@@ -69,13 +69,13 @@ const Projects = () => {
       <div className="projects-content">
         <h2>Nos réalisation</h2>
         <div className="projects-more">
-          <h3>Projets réalise</h3>
-          <a href="">
+          <h3>Projets réalisé</h3>
+          {/* <a href="">
             <span>
               <BsFillArrowRightCircleFill />
             </span>
             EXPLORE MORE
-          </a>
+          </a> */}
         </div>
       </div>
       <div className="projects-all-list">
@@ -83,7 +83,7 @@ const Projects = () => {
           <div className="project-card" key={`project-card-${index}`}>
             <div className="project-card-content">
               <h3>{data.title}</h3>
-              <small>{data.content}</small>
+              <p>{data.content}</p>
             </div>
             <img src={data.img} alt="" />
           </div>

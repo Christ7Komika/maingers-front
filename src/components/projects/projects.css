@@ -70,7 +70,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  /* mix-blend-mode: multiply; */
 }
 
 .projects .projects-all-list .project-card .project-card-content {
@@ -79,7 +78,8 @@
   left: -1000px;
   width: calc(100% - 40px);
   height: 100%;
-  background: var(--bg-orange-opacity);
+  /* background: var(--bg-orange-opacity); */
+  background-color: rgba(255, 136, 1, 0.685);
   backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
@@ -96,16 +96,16 @@
 .projects .projects-all-list .project-card:hover .project-card-content {
   left: 0;
   border-radius: 0;
-
   height: 100%;
 }
 
 .projects .projects-all-list .project-card .project-card-content h3 {
   text-transform: uppercase;
   text-align: right;
+  text-decoration: underline;
 }
 
-.projects .projects-all-list .project-card .project-card-content small {
+.projects .projects-all-list .project-card .project-card-content p {
   font-size: 0.9rem;
   font-weight: 500;
   text-align: right;

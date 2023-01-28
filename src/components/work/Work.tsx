@@ -13,7 +13,6 @@ const Work = () => {
           </span>
           <div className="card-about-content">
             <h3>Experience</h3>
-            <p>There are many</p>
           </div>
         </div>
         <div className="card-about">
@@ -21,8 +20,7 @@ const Work = () => {
             <FaIndustry />
           </span>
           <div className="card-about-content">
-            <h3>Experience</h3>
-            <p>There are many</p>
+            <h3>Fiabilité</h3>
           </div>
         </div>
         <div className="card-about">
@@ -30,8 +28,7 @@ const Work = () => {
             <FaIndustry />
           </span>
           <div className="card-about-content">
-            <h3>Experience</h3>
-            <p>There are many</p>
+            <h3>Qualité</h3>
           </div>
         </div>
         <div className="card-about">
@@ -39,8 +36,7 @@ const Work = () => {
             <FaIndustry />
           </span>
           <div className="card-about-content">
-            <h3>Experience</h3>
-            <p>There are many</p>
+            <h3>satisfaction</h3>
           </div>
         </div>
       </div>

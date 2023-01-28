@@ -17,7 +17,57 @@ import Img8 from "../../assets/pictures/img8.jpg";
 
 const SectionFlexible = () => {
   return (
-    <div className="container section-flexible">
+    <div className="section-flexible">
+      <div className="section-flexible-top">
+        <div className="section-flexible-top-left">
+          <h2>CONFECTION DE FLEXIBLES HYDRAULIQUES</h2>
+          <p>
+            MAINGER'S-HYDRAULIC & SERVICES dispose d'un atelier de confection de
+            tuyauteries hydrauliques aux normes de sécurité moderne et
+            performante.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+            non eaque facere voluptatum, nulla aliquid iusto debitis nisi
+            voluptates minus est! Accusantium fugit fuga maxime expedita.
+            Aliquid sapiente quis magni vel in nulla velit fuga.
+          </p>
+        </div>
+        <div className="section-flexible-top-right">
+          <img src={Img4} alt="" />
+        </div>
+      </div>
+      <div className="section-flexible-bottom">
+        {[0, 1, 2, 3].map((elt) => (
+          <div className="card">
+            <div className="card-img">
+              <img src={Img6} alt="" />
+            </div>
+            <div className="card-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+                quidem sequi quasi aliquam nulla hic!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Facilis inventore quas earum unde dolorum? Sit eos minima,
+                voluptate harum porro blanditiis assumenda libero natus
+                molestias.
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default SectionFlexible;
+
+/**
+ * 
+ * 
+ *  <div className="container section-flexible">
       <div className="section-content">
         <h2>CONFECTION DE FLEXIBLES HYDRAULIQUES</h2>
         <p>
@@ -73,7 +123,12 @@ const SectionFlexible = () => {
         </Swiper>
       </div>
     </div>
-  );
-};
-
-export default SectionFlexible;
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */

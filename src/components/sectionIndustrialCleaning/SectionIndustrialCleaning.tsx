@@ -7,7 +7,7 @@ const SectionIndustrialCleaning = () => {
     <div className="container industrial-cleaning">
       <div className="industrial-cleaning-img"></div>
       <div className="industrial-cleaning-content">
-        <h2>Lorem, ipsum dolor.</h2>
+        <h2>Location d'engins</h2>
         <div className="industrial-cleaning-card">
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam,

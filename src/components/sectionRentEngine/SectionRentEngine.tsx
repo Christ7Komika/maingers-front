@@ -6,16 +6,28 @@ const SectionRentEngine = () => {
   return (
     <div className="container rent-engine">
       <div className="rent-engine-content">
-        <h2>Lorem, ipsum dolor.</h2>
+        <h2>Néttoyage industriel</h2>
         <div className="rent-engine-card">
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam,
-            sequi iure. Dolorem enim placeat, omnis assumenda quidem vitae
-            dolorum laboriosam vero excepturi animi, ea magnam.
+            MAINGER'S - Néttoyage industriel est votre partenaire indiqué pour
+            tout vos travaux de néttoyage industriel OFF / ON SHORT. Spécialisé
+            dans les différents types de travaux et de prestations
           </p>
         </div>
         <ul>
-          {datas.map((data, index) => (
+          <h2>ON SHORT</h2>
+          {onShort.map((data, index) => (
+            <li key={`section-rent-engine-${index}`}>
+              <span>
+                <FaCheckCircle />
+              </span>
+              {data}
+            </li>
+          ))}
+        </ul>
+        <ul>
+          <h2>OFF SHORT</h2>
+          {offShort.map((data, index) => (
             <li key={`section-rent-engine-${index}`}>
               <span>
                 <FaCheckCircle />
@@ -30,14 +42,15 @@ const SectionRentEngine = () => {
   );
 };
 
-const datas = [
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Eum vel eaque, in eligendi cum quas!",
+const onShort = [
+  "Inspection & Maintenance des TUBINGS NEUFS",
+  "Inspection & Maintenance des TUBINGS USAGES",
+];
+const offShort = [
+  "Néttoyage des plateformes",
+  "Néttoyage des capacités",
+  "Néttoyage des faisceaux",
+  "Néttoyage des bacs etc...",
 ];
 
 export default SectionRentEngine;

@@ -1,12 +1,12 @@
 import React from "react";
 import "./industrialCleaningInfos.css";
-import Img from "../../assets/pictures/img2.jpg";
+import Img from "../../assets/cleaning/image2.png";
 import { FaCheckCircle } from "react-icons/fa";
 
 const IndustrialCleaningInfos = () => {
   return (
     <div className="industrial-cleaning-infos">
-      <h2>NETTOYAGE HAUTE PRESSION</h2>
+      <h2>NETTOYAGE HAUTE PRESSION PIPE</h2>
       <div className="industrial-cleaning-container">
         <div className="industrial-cleaning-infos-img">
           <img src={Img} alt="" />

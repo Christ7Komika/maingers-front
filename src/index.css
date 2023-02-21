@@ -29,6 +29,8 @@
   --light-shadow: 0.5px 3px 8px rgba(0, 0, 0, 0.2);
   --bg--blue-grey: #91979e;
   --bg-text-violetblue: #27364a;
+  --bg-light-green: #23865d;
+  --bg-opacity-blue: #0061bd25;
 }
 
 *,

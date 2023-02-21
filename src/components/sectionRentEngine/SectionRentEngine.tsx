@@ -44,13 +44,14 @@ const SectionRentEngine = () => {
 
 const onShort = [
   "Inspection & Maintenance des TUBINGS NEUFS",
-  "Inspection & Maintenance des TUBINGS USAGES",
+  "Inspection , Maintenance & Néttoyage des TUBINGS USAGES",
 ];
 const offShort = [
   "Néttoyage des plateformes",
   "Néttoyage des capacités",
   "Néttoyage des faisceaux",
-  "Néttoyage des bacs etc...",
+  "Néttoyage des bacs etc",
+  "Traitement et évacuation des boues...",
 ];
 
 export default SectionRentEngine;

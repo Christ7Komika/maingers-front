@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/header/Header";
-import Banner from "../../components/banner/Banner";
+import Banner from "../../components/Banner/Banner";
 import SectionFlexible from "../../components/sectionFlexible/SectionFlexible";
 import SectionIndustrialCleaning from "../../components/sectionIndustrialCleaning/SectionIndustrialCleaning";
 import SectionRentEngine from "../../components/sectionRentEngine/SectionRentEngine";

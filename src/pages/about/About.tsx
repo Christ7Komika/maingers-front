@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/header/Header";
-import Banner from "../../components/banner/Banner";
+import Banner from "../../components/Banner/Banner";
 import Story from "../../components/story/Story";
 import Valor from "../../components/valor/Valor";
 import Teams from "../../components/teams/Teams";

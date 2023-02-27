@@ -52,15 +52,27 @@
 }
 
 .industrial-cleaning .industrial-cleaning-img {
-  background: url(../../assets/pictures/img7.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.industrial-cleaning .industrial-cleaning-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
 }
 
 @media (max-width: 1050px) {
   .industrial-cleaning .industrial-cleaning-content {
     padding: 4rem 1rem;
+  }
+
+  .industrial-cleaning .industrial-cleaning-img {
+    padding: 1rem;
   }
 }
 @media (max-width: 950px) {

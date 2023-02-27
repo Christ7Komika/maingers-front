@@ -1,6 +1,7 @@
 import React from "react";
 import "./sectionRentEngine.css";
 import { FaCheckCircle } from "react-icons/fa";
+import Img1 from "../../assets/cleaning/image2.png";
 
 const SectionRentEngine = () => {
   return (
@@ -37,7 +38,9 @@ const SectionRentEngine = () => {
           ))}
         </ul>
       </div>
-      <div className="rent-engine-img"></div>
+      <div className="rent-engine-img">
+        <img src={Img1} alt="" />
+      </div>
     </div>
   );
 };

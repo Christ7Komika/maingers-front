@@ -17,7 +17,7 @@
 
 .our-engine .our-engine-list .our-engine-elt {
   background: var(--bg-light-grey);
-  height: 400px;
+  height: 300px;
   border-radius: 5px;
   overflow: hidden;
   transition: ease-in-out 0.4s;
@@ -40,16 +40,12 @@
   gap: 0.5rem;
   flex-direction: column;
   padding: 1rem;
-  height: 200px;
+  height: 100px;
 }
 
-.our-engine .our-engine-list .our-engine-elt-content p:last-child {
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-  justify-content: flex-end;
-  cursor: pointer;
+.our-engine .our-engine-list .our-engine-elt-content h3 {
+  color: var(--text-darkgrey);
+  font-size: 1.2rem;
 }
 
 @media (max-width: 1300px) {

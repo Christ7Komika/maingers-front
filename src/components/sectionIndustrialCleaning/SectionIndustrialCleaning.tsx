@@ -1,19 +1,18 @@
 import React from "react";
 import "./sectionIndustrialCleaning.css";
 import { FaCheckCircle } from "react-icons/fa";
+import Img1 from "../../assets/pictures/img7.jpg";
 
 const SectionIndustrialCleaning = () => {
   return (
     <div className="container industrial-cleaning">
-      <div className="industrial-cleaning-img"></div>
+      <div className="industrial-cleaning-img">
+        <img src={Img1} alt="" />
+      </div>
       <div className="industrial-cleaning-content">
         <h2>Location d'engins</h2>
         <div className="industrial-cleaning-card">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam,
-            sequi iure. Dolorem enim placeat, omnis assumenda quidem vitae
-            dolorum laboriosam vero excepturi animi, ea magnam.
-          </p>
+          <p>MAINGER'S HYDRAULIC & SERVICES evolué aussi dans le domaine</p>
         </div>
         <ul>
           {datas.map((data, index) => (

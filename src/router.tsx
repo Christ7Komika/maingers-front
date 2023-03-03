@@ -11,7 +11,7 @@ const Home = React.lazy(() => import("./pages/home/Home"));
 
 const NotFound = React.lazy(() => import("./pages/notFound/NotFound"));
 
-const Services = React.lazy(() => import("./pages/services/Services"));
+const Career = React.lazy(() => import("./pages/services/Career"));
 
 const IndustrialCleaning = React.lazy(
   () => import("./pages/industrialCleaning/IndustrialCleaning")
@@ -32,20 +32,20 @@ export const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/career" element={<Career />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/departement/flexibles" element={<Flexibles />} />
-        <Route path="/departement/flexibles/type" element={<FlexibleType />} />
+        <Route path="/services/flexibles" element={<Flexibles />} />
+        <Route path="/services/flexibles/type" element={<FlexibleType />} />
         <Route
-          path="/departement/flexibles/type/infos"
+          path="/services/flexibles/type/infos"
           element={<FlexibleInfos />}
         />
         <Route
-          path="/departement/industrial-cleaning"
+          path="/services/industrial-cleaning"
           element={<IndustrialCleaning />}
         />
-        <Route path="/departement/rent-engine" element={<RentEngine />} />
+        <Route path="/services/rent-engine" element={<RentEngine />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

@@ -1,28 +1,28 @@
 import React from "react";
 import "./product.css";
 import ProductCard from "../card/ProductCard";
-import bgTransparentImg1 from "../../assets/flexibles/flexibleImg.png";
-import bgTransparentImg2 from "../../assets/pictures/bg-transparent2.png";
-import bgTransparentImg3 from "../../assets/pictures/bg-transparent3.png";
+import Flexibles from "../../assets/pictures/flexible.svg";
+import Cleaning from "../../assets/pictures/pipe.svg";
+import Engine from "../../assets/pictures/truck.svg";
 
 const productData = [
   {
-    title: "Hydraulique",
-    text: "Conseil, inspection, confection, et pose flexible",
-    link: "#",
-    img: bgTransparentImg1,
+    title: "Confection & réparation de flexibles hydrauliques",
+    text: "Conseil, inspection, confection, et pose flexible...",
+    link: "/services/flexibles",
+    img: Flexibles,
   },
   {
-    title: "Néttoyage industriel",
+    title: "Maintenance & Nettoyage industriel",
     text: "Néttoyage des plateforme, des capacités, des pipes...",
-    link: "#",
-    img: bgTransparentImg2,
+    link: "/services/industrial-cleaning",
+    img: Cleaning,
   },
   {
-    title: "Location engin élévateur",
-    text: "Location des vehicules, grues, nacelle et chariot élévateur.",
-    link: "#",
-    img: bgTransparentImg3,
+    title: "Levage, manutention & transport",
+    text: "Location des vehicules, grues, nacelle et chariot élévateur...",
+    link: "/services/rent-engine",
+    img: Engine,
   },
 ];
 

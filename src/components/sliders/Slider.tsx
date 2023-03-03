@@ -20,11 +20,13 @@ const Slider = () => {
   return (
     <div className="slider">
       <div className="content">
-        <h1>MAINGER'S-HYDRAULIC & SERVICES.</h1>
+        <h1>
+          Bienvenue chez Mainger's Hydraulic, l'excellence à votre disposition!
+        </h1>
         <p>
-          Votre partenaire indiqué pour tous vos travaux de connexion de
-          flexibles hydrauliques, néttoyage industriel et de location d'engins
-          élévateurs et semi-remorques.
+          Votre partenaire indiqué pour tous vos travaux d'inspection , de
+          confection de flexibles hydrauliques, de maintenance industrielle, de
+          location d'engins élévateurs et semi-remorques.
         </p>
       </div>
       <Swiper

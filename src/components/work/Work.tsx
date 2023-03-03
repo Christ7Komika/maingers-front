@@ -2,6 +2,7 @@ import React from "react";
 import Img10 from "../../assets/pictures/img10.jpg";
 import { FaIndustry } from "react-icons/fa";
 import "./work.css";
+import Experience from "../../assets/pictures/experience.svg";
 
 const Work = () => {
   return (
@@ -9,10 +10,11 @@ const Work = () => {
       <div className="work-about">
         <div className="card-about">
           <span>
-            <FaIndustry />
+            {/* <FaIndustry /> */}
+            <img src={Experience} alt="" />
           </span>
           <div className="card-about-content">
-            <h3>Experience</h3>
+            <h3>Qualité</h3>
           </div>
         </div>
         <div className="card-about">
@@ -28,7 +30,7 @@ const Work = () => {
             <FaIndustry />
           </span>
           <div className="card-about-content">
-            <h3>Qualité</h3>
+            <h3>Durabilité</h3>
           </div>
         </div>
         <div className="card-about">
@@ -36,20 +38,22 @@ const Work = () => {
             <FaIndustry />
           </span>
           <div className="card-about-content">
-            <h3>satisfaction</h3>
+            <h3>Sécurité</h3>
           </div>
         </div>
       </div>
       <div className="work-content">
-        <h2>Nos objectifs</h2>
+        <h2>Notre objectif</h2>
         <h3>
-          Notre entreprise vise à atteindre plusieurs objectifs importants afin
-          de garantir le succès à long terme de l'entreprise et de répondre aux
-          besoins de nos clients. Ces objectifs incluent l'augmentation de la
-          productivité, l'amélioration de la qualité de nos produits, la
-          réduction de nos coûts de production, l'augmentation de nos ventes, la
-          diversification de notre gamme de produits et l'amélioration de la
-          satisfaction de nos clients.
+          Nos standards d'excellence relèvent d'une expertise fondée sur
+          l'expérience et d’une équipe dévouée qui a une vision commune : offrir
+          des services et produits en hydraulique qui répondent à vos besoins, à
+          vos attentes.
+          <br />
+          <br />
+          Augmentez la productivité de vos installations hydrauliques!
+          Bénéficiez de notre expertise et d’une large gamme de services et
+          produits offerts ! N'hésitez plus contactez nous.
         </h3>
       </div>
       <div className="work-img">

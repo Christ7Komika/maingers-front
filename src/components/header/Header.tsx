@@ -10,7 +10,7 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { v4 as uuidV4 } from "uuid";
 import "./header.css";
-import Logo from "../../assets/logo/Logo.svg";
+import Logo from "../../assets/logo/Logo.png";
 import ResponsiveMenu from "../menu/reponsiveMenu/ResponsiveMenu";
 
 const Header = () => {
@@ -66,7 +66,7 @@ const Header = () => {
               </div>
               <div
                 className={
-                  location.pathname.search("/departement") != -1
+                  location.pathname.search("/services") != -1
                     ? "link selected select-menu"
                     : "link select-menu"
                 }
@@ -78,7 +78,7 @@ const Header = () => {
                     setOpen(!open);
                   }}
                 >
-                  Département
+                  Services
                   <span>
                     <FaAngleDown />
                   </span>
@@ -89,36 +89,36 @@ const Header = () => {
                     <Link
                       className="element"
                       data-id={uuid}
-                      to={"/departement/flexibles"}
+                      to={"/services/flexibles"}
                       onClick={(e) => setOpen(false)}
                     >
-                      Flexible
+                      Confection & réparation de flexibles hydrauliques
                     </Link>
                     <Link
                       className="element"
                       data-id={uuid}
-                      to={"/departement/industrial-cleaning"}
+                      to={"/services/industrial-cleaning"}
                       onClick={(e) => setOpen(false)}
                     >
-                      Néttoyage industriel
+                      Maintenance & Nettoyage industriel
                     </Link>
                     <Link
                       className="element"
                       data-id={uuid}
-                      to={"/departement/rent-engine"}
+                      to={"/services/rent-engine"}
                       onClick={(e) => setOpen(false)}
                     >
-                      Location engins élevateurs
+                      Levage, manutention & transport
                     </Link>
                   </div>
                 )}
               </div>
               <div
                 className={
-                  location.pathname === "/services" ? "link selected" : "link"
+                  location.pathname === "/career" ? "link selected" : "link"
                 }
               >
-                <Link to="/services">Nos Services</Link>
+                <Link to="/career">Carrière</Link>
               </div>
               <div
                 className={

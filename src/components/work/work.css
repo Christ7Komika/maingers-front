@@ -1,5 +1,6 @@
 .work {
-  background: var(--bg-dark);
+  /* background: var(--bg-dark); */
+  background: var(--bg-orange3);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   position: relative;
@@ -16,7 +17,7 @@
 }
 
 .work .work-content h2 {
-  color: var(--text-orange);
+  color: var(--white);
   text-transform: uppercase;
 }
 
@@ -66,8 +67,28 @@
 }
 
 .work .work-about .card-about span {
-  color: var(--text-orange);
+  background-color: var(--text-orange);
   font-size: 2rem;
+  padding: 1.2rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work .work-about .card-about span > * {
+  color: var(--colo-blue);
+}
+
+.work .work-about .card-about span img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  color: var(--white);
+  font-weight: 700;
 }
 
 .work .work-about .card-about .card-about-content {
@@ -78,7 +99,7 @@
 
 .work .work-about .card-about .card-about-content h3 {
   font-size: 1.2rem;
-  color: var(--text-darkgrey);
+  color: var(--color-blue);
 }
 
 .work .work-about .card-about .card-about-content p {

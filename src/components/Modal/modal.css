@@ -9,12 +9,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000000;
 }
 
 .modal-container {
   padding: 1rem;
   border-radius: 5px;
-  width: 400px;
+  max-width: 700px;
+  width: 100%;
   background: var(--bg-white);
 }
 

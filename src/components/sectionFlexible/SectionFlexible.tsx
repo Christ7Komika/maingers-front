@@ -10,11 +10,8 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper";
 import Img4 from "../../assets/pictures/img4.jpg";
-import Img5 from "../../assets/pictures/img5.jpg";
 import Img6 from "../../assets/pictures/img6.jpg";
-import Img7 from "../../assets/pictures/img7.jpg";
-import Img8 from "../../assets/pictures/img8.jpg";
-
+import Brochure from "../../assets/pictures/brochure.png";
 const SectionFlexible = () => {
   return (
     <div className="section-flexible">
@@ -34,7 +31,7 @@ const SectionFlexible = () => {
           </p>
         </div>
         <div className="section-flexible-top-right">
-          <img src={Img4} alt="" />
+          <img src={Brochure} alt="" />
         </div>
       </div>
       <div className="section-flexible-bottom">

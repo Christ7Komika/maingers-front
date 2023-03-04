@@ -53,7 +53,8 @@ const Work = () => {
           <br />
           Augmentez la productivité de vos installations hydrauliques!
           Bénéficiez de notre expertise et d’une large gamme de services et
-          produits offerts ! N'hésitez plus contactez nous.
+          produits offerts ! N'hésitez plus{" "}
+          <a href="/contact">contactez nous</a>.
         </h3>
       </div>
       <div className="work-img">

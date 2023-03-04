@@ -1,22 +1,35 @@
 import React from "react";
 import "./sectionIndustrialCleaning.css";
 import { FaCheckCircle } from "react-icons/fa";
-import Img1 from "../../assets/pictures/img7.jpg";
+import Img1 from "../../assets/cleaning/image2.png";
 
 const SectionIndustrialCleaning = () => {
   return (
-    <div className="container industrial-cleaning">
-      <div className="industrial-cleaning-img">
-        <img src={Img1} alt="" />
-      </div>
-      <div className="industrial-cleaning-content">
-        <h2>Location d'engins</h2>
-        <div className="industrial-cleaning-card">
-          <p>MAINGER'S HYDRAULIC & SERVICES evolué aussi dans le domaine</p>
+    <div className="container rent-engine">
+      <div className="rent-engine-content">
+        <h2>Néttoyage industriel</h2>
+        <div className="rent-engine-card">
+          <p>
+            MAINGER'S - Néttoyage industriel est votre partenaire indiqué pour
+            tout vos travaux de néttoyage industriel OFF / ON SHORT. Spécialisé
+            dans les différents types de travaux et de prestations
+          </p>
         </div>
         <ul>
-          {datas.map((data, index) => (
-            <li key={`section-industrial-cleaning-${index}`}>
+          <h2>ON SHORT</h2>
+          {onShort.map((data, index) => (
+            <li key={`section-rent-engine-${index}`}>
+              <span>
+                <FaCheckCircle />
+              </span>
+              {data}
+            </li>
+          ))}
+        </ul>
+        <ul>
+          <h2>OFF SHORT</h2>
+          {offShort.map((data, index) => (
+            <li key={`section-rent-engine-${index}`}>
               <span>
                 <FaCheckCircle />
               </span>
@@ -25,18 +38,23 @@ const SectionIndustrialCleaning = () => {
           ))}
         </ul>
       </div>
+      <div className="rent-engine-img">
+        <img src={Img1} alt="" />
+      </div>
     </div>
   );
 };
 
-const datas = [
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Eum vel eaque, in eligendi cum quas!",
+const onShort = [
+  "Inspection & Maintenance des TUBINGS NEUFS",
+  "Inspection , Maintenance & Néttoyage des TUBINGS USAGES",
+];
+const offShort = [
+  "Néttoyage des plateformes",
+  "Néttoyage des capacités",
+  "Néttoyage des faisceaux",
+  "Néttoyage des bacs etc",
+  "Traitement et évacuation des boues...",
 ];
 
 export default SectionIndustrialCleaning;

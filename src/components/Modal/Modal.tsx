@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import "./modal.css";
+import CustomSelect from "../input/CustomSelect";
 type Props = {
   isOpen: boolean;
   handleOpen: Function;
@@ -8,6 +9,7 @@ type Props = {
 
 const Modal = ({ isOpen, handleOpen }: Props) => {
   const html = document.querySelector("html") as HTMLElement;
+  const [subject, setSubject] = useState("");
   if (isOpen) {
     html.style.overflowY = "hidden";
   } else {
@@ -19,40 +21,50 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
     <div className="modal">
       <div className="modal-container">
         <div className="modal-header">
-          <h2>Plan tarifaire</h2>
+          <h2>Mon projet</h2>
           <span onClick={() => handleOpen(false)}>
             <RxCross2 />
           </span>
         </div>
         <div className="modal-body">
-          <div className="row">
-            <h2 style={{ textTransform: "uppercase" }}>Désignation</h2>
-            <p>155</p>
+          <h2>Vous avez un projet concret ?</h2>
+          <p>Notre équipe vous rappelle dans les meilleurs délais !</p>
+
+          <div className="group-button">
+            <input type="text" placeholder="Entrer votre nom" />
+            <input type="text" placeholder="Entrer votre prénom" />
           </div>
-          <div className="row">
-            <h2 style={{ textTransform: "uppercase" }}>Capacité</h2>
-            <p>155</p>
+
+          <div className="group-button">
+            <input type="text" placeholder="Nom de la socité" />
+            <input type="text" placeholder="Code postal de la société" />
           </div>
-          <div className="row">
-            <h2>HEURE à P/N</h2>
-            <p>155</p>
-          </div>
-          <div className="row">
-            <h2>JOURS (8H) à P/N</h2>
-            <p>155</p>
-          </div>
-          <div className="row">
-            <h2>SEMAINE (6J) à P/N</h2>
-            <p>155</p>
-          </div>
-          <div className="row">
-            <h2>MOIS (26J) à P/N</h2>
-            <p>155</p>
-          </div>
+          <CustomSelect
+            placeholder="Sujet a aborder au téléphone ?"
+            data={data}
+            getValue={setSubject}
+            labelExtractor={(item: { name: string }) => item.name}
+            keyExtractor={(item: { id: number }) => item.id}
+            valueExtractor={(item: { id: number }) => item.id}
+          />
         </div>
       </div>
     </div>
   );
 };
 
+const data = [
+  {
+    id: 1,
+    name: "Congo",
+  },
+  {
+    id: 2,
+    name: "Gabon",
+  },
+  {
+    id: 3,
+    name: "Cameroun",
+  },
+];
 export default Modal;

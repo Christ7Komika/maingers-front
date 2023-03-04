@@ -1,0 +1,37 @@
+.fileContainer {
+  height: 45px;
+  border-radius: 5px;
+  background: var(--bg-white);
+  box-shadow: var(--shadow);
+  max-width: 100%;
+  min-width: 80%;
+  overflow: hidden;
+  display: flex;
+}
+
+.fileContainer label {
+  background: var(--bg-white);
+  width: fit-content;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.5rem;
+}
+
+.fileContainer label span {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--bg-light);
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.fileContainer p {
+  width: auto;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-darkgrey);
+  overflow: hidden;
+}

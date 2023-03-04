@@ -1,40 +1,46 @@
-.industrial-cleaning {
+.rent-engine {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  background: var(--bg-light);
+  height: 650px;
 }
 
-.industrial-cleaning .industrial-cleaning-content {
+.rent-engine .rent-engine-content {
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.industrial-cleaning .industrial-cleaning-content h2 {
+.rent-engine .rent-engine-content h2 {
   color: var(--text-orange);
   text-transform: uppercase;
 }
 
-.industrial-cleaning .industrial-cleaning-content .industrial-cleaning-card {
+.rent-engine .rent-engine-content .rent-engine-card {
+  background: var(--bg-white);
   padding: 1rem;
   border-radius: 5px;
   box-shadow: var(--shadow);
 }
 
-.industrial-cleaning .industrial-cleaning-content .industrial-cleaning-card p {
+.rent-engine .rent-engine-content .rent-engine-card p {
   font-weight: 400;
   font-size: 0.9rem;
 }
 
-.industrial-cleaning .industrial-cleaning-content ul {
+.rent-engine .rent-engine-content ul {
   padding: 1rem;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
 }
+.rent-engine .rent-engine-content ul h2 {
+  text-decoration: underline;
+}
 
-.industrial-cleaning .industrial-cleaning-content li {
+.rent-engine .rent-engine-content li {
   font-weight: 400;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
@@ -43,7 +49,7 @@
   gap: 0.5rem;
 }
 
-.industrial-cleaning .industrial-cleaning-content li span {
+.rent-engine .rent-engine-content li span {
   display: flex;
   align-items: center;
   color: var(--bg-orange);
@@ -51,42 +57,45 @@
   font-size: 1rem;
 }
 
-.industrial-cleaning .industrial-cleaning-img {
+.rent-engine .rent-engine-img {
   padding: 2rem;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 650px;
 }
-.industrial-cleaning .industrial-cleaning-img img {
+
+.rent-engine .rent-engine-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
-  border-radius: 4px;
+  object-position: center;
+  border-radius: 5px;
   box-shadow: var(--shadow);
 }
 
 @media (max-width: 1050px) {
-  .industrial-cleaning .industrial-cleaning-content {
+  .rent-engine .rent-engine-content {
     padding: 4rem 1rem;
   }
 
-  .industrial-cleaning .industrial-cleaning-img {
+  .rent-engine .rent-engine-img {
     padding: 1rem;
   }
 }
 @media (max-width: 950px) {
-  .industrial-cleaning .industrial-cleaning-content {
+  .rent-engine .rent-engine-content {
     padding: 2rem 1rem;
   }
 }
 @media (max-width: 950px) {
-  .industrial-cleaning {
-    display: flex;
-    flex-direction: column-reverse;
+  .rent-engine {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
   }
 
-  .industrial-cleaning .industrial-cleaning-img {
+  .rent-engine .rent-engine-img {
     height: 400px;
   }
 }

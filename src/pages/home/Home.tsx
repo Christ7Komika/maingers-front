@@ -8,6 +8,7 @@ import Work from "../../components/work/Work";
 import Projects from "../../components/projects/Projects";
 import Partner from "../../components/partner/Partner";
 import Footer from "../../components/footer/Footer";
+import FloatingButton from "../../components/floatingBotton/FloatingButton";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <Projects />
       <Partner />
       <Footer />
+      <FloatingButton />
     </>
   );
 };

@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./careerForm.css";
 import CustomSelect from "../input/CustomSelect";
 import CustomFile from "../input/CustomFile";
+import CustomImageFile from "../input/CustomImageFile";
 
 const CareerForm = () => {
+  const [photo, setPhoto] = useState();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -16,8 +18,8 @@ const CareerForm = () => {
   const [motivation, setMotivation] = useState<File>();
   const [condition, setCondition] = useState(false);
   return (
-    <div className="careerFormCintainer">
-      <form className="container form-contact">
+    <div className="careerFormContainer">
+      <form className="form-contact">
         <div className="form-contact-content">
           <h2>Déposer une candidature spontanée</h2>
           <p>
@@ -26,6 +28,7 @@ const CareerForm = () => {
             ipsam voluptatem accusamus.
           </p>
           <form action="" className="form-contact-form">
+            <CustomImageFile getValue={setPhoto} />
             <input
               type="text"
               placeholder="Veuillez saisir votre nom"

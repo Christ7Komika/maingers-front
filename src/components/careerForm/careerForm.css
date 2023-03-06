@@ -1,4 +1,4 @@
-.careerFormCintainer {
+.careerFormContainer {
   width: 100%;
   padding: 2rem;
   display: flex;
@@ -7,37 +7,38 @@
   background: var(--bg-light);
 }
 
-.form-contact {
+.careerFormContainer .form-contact {
   height: auto;
-  max-width: 550px;
+  max-width: 600px;
+  width: 100%;
+  display: block;
+}
+
+.careerFormContainer .form-contact-content {
   width: 100%;
 }
 
-.form-contact-content {
-  width: 100%;
-}
-
-.form-contact .form-contact-content h2 {
+.careerFormContainer .form-contact .form-contact-content h2 {
   color: var(--text-orange);
   text-transform: uppercase;
   margin-bottom: 1rem;
   text-align: center;
 }
-.form-contact .form-contact-content p {
+.careerFormContainer .form-contact .form-contact-content p {
   color: var(--text-darkgrey);
   margin-bottom: 1rem;
   text-align: center;
 }
 
-.form-contact .form-contact-form {
+.careerFormContainer .form-contact .form-contact-form {
   display: flex;
   width: 100%;
   flex-direction: column;
   gap: 1rem;
 }
 
-.form-contact .form-contact-form input,
-.form-contact .form-contact-form textarea {
+.careerFormContainer .form-contact .form-contact-form input,
+.careerFormContainer .form-contact .form-contact-form textarea {
   height: 45px;
   border-radius: 5px;
   background: var(-bg-white);
@@ -49,16 +50,16 @@
   max-height: 120px;
 }
 
-.form-contact .form-contact-form textarea {
+.careerFormContainer .form-contact .form-contact-form textarea {
   height: 80px;
 }
-.form-contact .form-contact-form input[type="file"] {
+.careerFormContainer .form-contact .form-contact-form input[type="file"] {
   background-color: var(--bg-white);
   display: flex;
   align-items: center;
 }
 
-.form-contact .form-contact-form button {
+.careerFormContainer .form-contact .form-contact-form button {
   height: 40px;
   border-radius: 5px;
   background: var(--bg-nice-orange);
@@ -71,7 +72,7 @@
   transition: linear 0.4s;
 }
 
-.form-contact .form-contact-form button:hover {
+.careerFormContainer .form-contact .form-contact-form button:hover {
   background: var(--bg-white);
   color: var(--bg-nice-orange);
 }

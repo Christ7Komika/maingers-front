@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
-import "./modal.css";
+import "./invoiceModal.css";
 import CustomSelect from "../input/CustomSelect";
+import CustomFile from "../input/CustomFile";
 type Props = {
   isOpen: boolean;
   handleOpen: Function;
 };
 
-const Modal = ({ isOpen, handleOpen }: Props) => {
+const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
   const html = document.querySelector("html") as HTMLElement;
   const [subject, setSubject] = useState("");
   if (isOpen) {
@@ -19,17 +20,19 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
 
   return (
     <div className="modal">
-      <div className="modal-container">
+      <div className="invoice-modal-container">
         <div className="modal-header">
-          <h2>Mon projet</h2>
+          <h2>Demande de devis</h2>
           <span onClick={() => handleOpen(false)}>
             <RxCross2 />
           </span>
         </div>
         <div className="modal-body">
-          <h2>Être rappelé </h2>
-          <p>Vous avez un projet concret ?</p>
-          <p>Notre équipe vous rappelle dans les meilleurs délais !</p>
+          <h2>Demander un devis</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+            officiis velit laudantium aut, expedita enim.
+          </p>
           <form>
             <div className="form-group">
               <input type="text" placeholder="Entrer votre nom" required />
@@ -44,18 +47,32 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
                 required
               />
             </div>
+            <div className="form-group">
+              <input type="text" placeholder="Email" required />
+              <input type="text" placeholder="Numéro de téléphone" required />
+            </div>
             <CustomSelect
-              placeholder="Sujet a aborder au téléphone ?"
+              placeholder="Pays"
               data={data}
               getValue={setSubject}
               labelExtractor={(item: { name: string }) => item.name}
               keyExtractor={(item: { id: number }) => item.id}
               valueExtractor={(item: { id: number }) => item.id}
             />
-            <div className="form-group">
-              <input type="text" placeholder="Email" required />
-              <input type="text" placeholder="Numéro de téléphone" required />
-            </div>
+            <CustomSelect
+              placeholder="Demander un devis sur"
+              data={data}
+              getValue={setSubject}
+              labelExtractor={(item: { name: string }) => item.name}
+              keyExtractor={(item: { id: number }) => item.id}
+              valueExtractor={(item: { id: number }) => item.id}
+            />
+            <CustomFile
+              placeholder="Soumettre un fichier"
+              getValue={setSubject}
+            />
+            <textarea placeholder="Information supplémentaire"></textarea>
+
             <p>
               MAINGER'S-HYDRAULIC s'engage à protéger et à respecter vos
               données.
@@ -82,4 +99,4 @@ const data = [
     name: "Cameroun",
   },
 ];
-export default Modal;
+export default InvoiceModal;

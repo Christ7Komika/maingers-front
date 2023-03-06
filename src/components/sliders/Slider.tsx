@@ -21,7 +21,7 @@ const Slider = () => {
     <div className="slider">
       <div className="content">
         <h1>
-          Bienvenue chez Mainger's Hydraulic, l'excellence à votre disposition!
+          Bienvenue chez MAINGER'S-HYDRAULIC, l'excellence à votre disposition!
         </h1>
         <p>
           Votre partenaire indiqué pour tous vos travaux d'inspection , de

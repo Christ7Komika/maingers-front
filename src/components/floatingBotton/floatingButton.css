@@ -54,6 +54,7 @@
   transform: translateY(-50%);
   background-color: var(--white);
   display: none;
+  box-shadow: var(--shadow);
 }
 
 .floatingButtonContainer .main-sub-button .tooltip span {

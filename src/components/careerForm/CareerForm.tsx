@@ -28,17 +28,34 @@ const CareerForm = () => {
             ipsam voluptatem accusamus.
           </p>
           <form action="" className="form-contact-form">
-            <CustomImageFile getValue={setPhoto} />
-            <input
-              type="text"
-              placeholder="Veuillez saisir votre nom"
-              onChange={(e) => setLastName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Veuillez saisir votre prénom"
-              onChange={(e) => setFirstName(e.target.value)}
-            />
+            <div className="form-group-x2">
+              <div className="form-group-content">
+                <input
+                  type="text"
+                  placeholder="Veuillez saisir votre nom"
+                  onChange={(e) => setLastName(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="Veuillez saisir votre prénom"
+                  onChange={(e) => setFirstName(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="Veuillez saisir adresse mail"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="Veuillez saisir numéro de téléphone"
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+              </div>
+              <div className="form-group-img">
+                <CustomImageFile getValue={setPhoto} />
+              </div>
+            </div>
+
             <CustomSelect
               data={genre}
               getValue={setTargetPosition}
@@ -47,16 +64,7 @@ const CareerForm = () => {
               keyExtractor={(item: { id: number }) => item.id}
               valueExtractor={(item: { id: number }) => item.id}
             />
-            <input
-              type="text"
-              placeholder="Veuillez saisir adresse mail"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Veuillez saisir numéro de téléphone"
-              onChange={(e) => setPhone(e.target.value)}
-            />
+
             <CustomSelect
               data={data}
               getValue={setCountry}

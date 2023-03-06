@@ -36,6 +36,18 @@
   flex-direction: column;
   gap: 1rem;
 }
+.careerFormContainer .form-contact .form-contact-form .form-group-x2 {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 1rem;
+}
+
+.careerFormContainer .form-contact .form-group-x2 .form-group-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
 
 .careerFormContainer .form-contact .form-contact-form input,
 .careerFormContainer .form-contact .form-contact-form textarea {

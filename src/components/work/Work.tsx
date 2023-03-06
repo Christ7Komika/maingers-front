@@ -10,6 +10,14 @@ const Work = () => {
       <div className="work-about">
         <div className="card-about">
           <span>
+            <FaIndustry />
+          </span>
+          <div className="card-about-content">
+            <h3>Sécurité</h3>
+          </div>
+        </div>
+        <div className="card-about">
+          <span>
             {/* <FaIndustry /> */}
             <img src={Experience} alt="" />
           </span>
@@ -31,14 +39,6 @@ const Work = () => {
           </span>
           <div className="card-about-content">
             <h3>Durabilité</h3>
-          </div>
-        </div>
-        <div className="card-about">
-          <span>
-            <FaIndustry />
-          </span>
-          <div className="card-about-content">
-            <h3>Sécurité</h3>
           </div>
         </div>
       </div>

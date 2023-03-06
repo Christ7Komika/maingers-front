@@ -1,4 +1,4 @@
-.modal {
+.modal-invoice {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,13 +6,34 @@
   bottom: 0;
   background: rgba(99, 97, 97, 0.205);
   backdrop-filter: blur(4px);
+  z-index: 1000000;
+  overflow-y: auto;
+}
+
+.modal-invoice .modal-all-container {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000000;
+  padding: 2rem;
+  overflow-y: auto;
+}
+/* 
+.modal-invoice::-webkit-scrollbar {
+  background: var(--bg-light);
+  width: 8px;
+  border-radius: 4px;
 }
 
-.invoice-modal-container {
+.modal-invoice::-webkit-scrollbar-thumb {
+  background: silver;
+  border-radius: 8px;
+  height: 50%;
+} */
+
+.modal-invoice .invoice-modal-container {
   padding: 1rem;
   border-radius: 5px;
   max-width: 700px;
@@ -20,52 +41,57 @@
   background: var(--bg-white);
 }
 
-.invoice-modal-container .modal-header {
+.modal-invoice .invoice-modal-container .modal-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
 
-.invoice-modal-container .modal-header h2 {
+.modal-invoice .invoice-modal-container .modal-header h2 {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--bg-nice-orange);
   text-transform: uppercase;
 }
-.invoice-modal-container .modal-header span {
+.modal-invoice .invoice-modal-container .modal-header span {
   cursor: pointer;
 }
 
-.invoice-modal-container .modal-body {
+.modal-invoice .invoice-modal-container .modal-body {
   display: flex;
   flex-direction: column;
+  /* height: 100%;
+  overflow-y: auto;
+  height: 100%;
+  max-height: 600px;
+  padding: 0.5rem; */
 }
 
-.invoice-modal-container .modal-body h2 {
+.modal-invoice .invoice-modal-container .modal-body h2 {
   color: var(--bg-nice-orange);
   text-transform: uppercase;
 }
 
-.invoice-modal-container .modal-body p {
+.modal-invoice .invoice-modal-container .modal-body p {
   font-size: 0.9rem;
   color: var(--text-darkgrey);
 }
 
-.invoice-modal-container .modal-body form {
+.modal-invoice .invoice-modal-container .modal-body form {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.invoice-modal-container .modal-body .form-group {
+.modal-invoice .invoice-modal-container .modal-body .form-group {
   display: flex;
   gap: 0.7rem;
   width: 100%;
 }
 
-.invoice-modal-container .modal-body input,
-.invoice-modal-container .modal-body textarea {
+.modal-invoice .invoice-modal-container .modal-body input,
+.modal-invoice .invoice-modal-container .modal-body textarea {
   height: 45px;
   border-radius: 5px;
   background: var(-bg-white);
@@ -75,11 +101,11 @@
   width: 100%;
 }
 
-.invoice-modal-container .modal-body textarea {
+.modal-invoice .invoice-modal-container .modal-body textarea {
   height: 80px;
 }
 
-.invoice-modal-container .modal-body button {
+.modal-invoice .invoice-modal-container .modal-body button {
   height: 40px;
   border-radius: 5px;
   background: var(--bg-nice-orange);
@@ -92,7 +118,7 @@
   transition: linear 0.4s;
 }
 
-.invoice-modal-container .modal-body button:hover {
+.modal-invoice .invoice-modal-container .modal-body button:hover {
   background: var(--bg-white);
   color: var(--bg-nice-orange);
 }

@@ -19,67 +19,70 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
   }
 
   return (
-    <div className="modal">
-      <div className="invoice-modal-container">
-        <div className="modal-header">
-          <h2>Demande de devis</h2>
-          <span onClick={() => handleOpen(false)}>
-            <RxCross2 />
-          </span>
-        </div>
-        <div className="modal-body">
-          <h2>Demander un devis</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
-            officiis velit laudantium aut, expedita enim.
-          </p>
-          <form>
-            <div className="form-group">
-              <input type="text" placeholder="Entrer votre nom" required />
-              <input type="text" placeholder="Entrer votre prénom" required />
-            </div>
-
-            <div className="form-group">
-              <input type="text" placeholder="Nom de la socité" required />
-              <input
-                type="text"
-                placeholder="Code postal de la société"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <input type="text" placeholder="Email" required />
-              <input type="text" placeholder="Numéro de téléphone" required />
-            </div>
-            <CustomSelect
-              placeholder="Pays"
-              data={data}
-              getValue={setSubject}
-              labelExtractor={(item: { name: string }) => item.name}
-              keyExtractor={(item: { id: number }) => item.id}
-              valueExtractor={(item: { id: number }) => item.id}
-            />
-            <CustomSelect
-              placeholder="Demander un devis sur"
-              data={data}
-              getValue={setSubject}
-              labelExtractor={(item: { name: string }) => item.name}
-              keyExtractor={(item: { id: number }) => item.id}
-              valueExtractor={(item: { id: number }) => item.id}
-            />
-            <CustomFile
-              placeholder="Soumettre un fichier"
-              getValue={setSubject}
-            />
-            <textarea placeholder="Information supplémentaire"></textarea>
-
+    <div className="modal-invoice" onClick={() => handleOpen(false)}>
+      <div className="modal-all-container" onClick={() => handleOpen(false)}>
+        <div className="invoice-modal-container">
+          <div className="modal-header">
+            <h2>Demande de devis</h2>
+            <span onClick={() => handleOpen(false)}>
+              <RxCross2 />
+            </span>
+          </div>
+          <div className="modal-body">
+            <h2>Demander un devis</h2>
             <p>
-              MAINGER'S-HYDRAULIC s'engage à protéger et à respecter vos
-              données.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+              officiis velit laudantium aut, expedita enim.
             </p>
-            <button>Soumettre</button>
-          </form>
-        </div>
+            <form>
+              <div className="form-group">
+                <input type="text" placeholder="Entrer votre nom" required />
+                <input type="text" placeholder="Entrer votre prénom" required />
+              </div>
+              <div className="form-group">
+                <input type="text" placeholder="Nom de la socité" required />
+                <input
+                  type="text"
+                  placeholder="Code postal de la société"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <input type="text" placeholder="Email" required />
+                <input type="text" placeholder="Numéro de téléphone" required />
+              </div>
+              <CustomSelect
+                placeholder="Pays"
+                data={data}
+                getValue={setSubject}
+                labelExtractor={(item: { name: string }) => item.name}
+                keyExtractor={(item: { id: number }) => item.id}
+                valueExtractor={(item: { id: number }) => item.id}
+              />
+              <CustomSelect
+                placeholder="Demander un devis sur"
+                data={data}
+                getValue={setSubject}
+                labelExtractor={(item: { name: string }) => item.name}
+                keyExtractor={(item: { id: number }) => item.id}
+                valueExtractor={(item: { id: number }) => item.id}
+              />
+              <CustomFile
+                placeholder="Soumettre un fichier"
+                getValue={setSubject}
+              />
+              <textarea placeholder="Information supplémentaire"></textarea>
+
+              <p>
+                MAINGER'S-HYDRAULIC s'engage à protéger et à respecter vos
+                données.
+              </p>
+              <button>Soumettre</button>
+            </form>
+          </div>
+        </div>{" "}
+        *
       </div>
     </div>
   );

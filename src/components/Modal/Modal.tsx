@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
+import { BsTelephoneFill } from "react-icons/bs";
 import "./modal.css";
 import CustomSelect from "../input/CustomSelect";
 type Props = {
@@ -18,7 +19,7 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
   }
 
   return (
-    <div className="modal">
+    <div className="modal-normal">
       <div className="modal-container">
         <div className="modal-header">
           <h2>Mon projet</h2>
@@ -28,7 +29,7 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
         </div>
         <div className="modal-body">
           <h2>Être rappelé </h2>
-          <p>Vous avez un projet concret ?</p>
+          <p>Vous avez un projet concret ? Un cahier des charges ?</p>
           <p>Notre équipe vous rappelle dans les meilleurs délais !</p>
           <form>
             <div className="form-group">
@@ -60,7 +61,7 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
               MAINGER'S-HYDRAULIC s'engage à protéger et à respecter vos
               données.
             </p>
-            <button>Soumettre</button>
+            <button>Être Rappelé</button>
           </form>
         </div>
       </div>

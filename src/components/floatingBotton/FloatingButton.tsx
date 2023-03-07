@@ -42,8 +42,11 @@ const FloatingButton = () => {
               <span>
                 <AiOutlineFundProjectionScreen />
               </span>
-              <small className="tooltip">
-                Lancer un projet <span></span>
+              <small
+                className="tooltip"
+                style={{ textTransform: "capitalize" }}
+              >
+                être rappelé <span></span>
               </small>
             </a>
             <a

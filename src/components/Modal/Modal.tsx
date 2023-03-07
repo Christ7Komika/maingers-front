@@ -28,9 +28,11 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
           </span>
         </div>
         <div className="modal-body">
-          <h2 style={{ display: "flex", gap: ".5rem", alignItems: "center" }}>
-            <BsTelephoneFill />
-            Être rappelé{" "}
+          <h2>
+            <span>
+              <BsTelephoneFill />
+            </span>
+            Être rappelé
           </h2>
           <p>Vous avez un projet concret ? Un cahier des charges ?</p>
           <p>Notre équipe vous rappelle dans les meilleurs délais !</p>

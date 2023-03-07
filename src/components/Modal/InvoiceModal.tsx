@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import "./invoiceModal.css";
 import CustomSelect from "../input/CustomSelect";
@@ -11,6 +11,16 @@ type Props = {
 const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
   const html = document.querySelector("html") as HTMLElement;
   const [subject, setSubject] = useState("");
+
+  useEffect(() => {
+    document.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement;
+      if (target.className === "modal-all-container") {
+        handleOpen(false);
+      }
+    });
+  }, []);
+
   if (isOpen) {
     html.style.overflowY = "hidden";
   } else {
@@ -19,8 +29,8 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
   }
 
   return (
-    <div className="modal-invoice" onClick={() => handleOpen(false)}>
-      <div className="modal-all-container" onClick={() => handleOpen(false)}>
+    <div className="modal-invoice">
+      <div className="modal-all-container">
         <div className="invoice-modal-container">
           <div className="modal-header">
             <h2>Demande de devis</h2>

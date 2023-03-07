@@ -44,9 +44,31 @@
   flex-direction: column;
 }
 
-.modal-normal .modal-container .modal-body h2 {
+.modal-normal .modal-container .modal-body > h2 {
   color: var(--bg-nice-orange);
-  text-transform: uppercase;
+  text-transform: capitalize;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 600;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-normal .modal-container .modal-body > h2 span {
+  font-size: 1rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background: var(--bg-nice-orange);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-normal .modal-container .modal-body > h2 span > * {
+  font-size: 2rem;
 }
 
 .modal-normal .modal-container .modal-body p {

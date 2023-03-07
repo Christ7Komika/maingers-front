@@ -46,9 +46,8 @@ const Work = () => {
         <h2>Notre objectif</h2>
         <h3>
           Nos standards d'excellence relèvent d'une expertise fondée sur
-          l'expérience et d’une équipe dévouée qui a une vision commune : offrir
-          des services et produits en hydraulique qui répondent à vos besoins, à
-          vos attentes.
+          l'expérience et d’une équipe dévouée ayant une vision commune : offrir
+          des produits services en hydraulique qui répondent à vos besoins.
           <br />
           <br />
           Augmentez la productivité de vos installations hydrauliques!

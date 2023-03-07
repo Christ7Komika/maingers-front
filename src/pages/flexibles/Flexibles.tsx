@@ -10,7 +10,7 @@ const Flexibles = () => {
   return (
     <>
       <Header />
-      <Banner title="FLEXIBLE" />
+      <Banner title="Flexibles hydrauliques" />
       <SectionFlexible />
       <FlexiblesCategories />
       <Partner />

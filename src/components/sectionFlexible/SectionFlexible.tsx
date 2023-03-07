@@ -24,10 +24,12 @@ const SectionFlexible = () => {
             performante.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-            non eaque facere voluptatum, nulla aliquid iusto debitis nisi
-            voluptates minus est! Accusantium fugit fuga maxime expedita.
-            Aliquid sapiente quis magni vel in nulla velit fuga.
+            MH présente actuellement sur le marché des E.P.I, elle vont une
+            gamme complète de produits hydrauliques.
+            <br />
+            Et rassemble des compétences variées, et met à votre disposition un
+            atelier moderne de confection de flexibles aux normes de sécurités
+            modernes , performants et aux prix abordables.
           </p>
         </div>
         <div className="section-flexible-top-right">

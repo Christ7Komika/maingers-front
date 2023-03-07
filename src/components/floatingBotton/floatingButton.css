@@ -34,6 +34,11 @@
   transition: linear 0.4s;
   box-shadow: var(--shadow);
 }
+
+.floatingButtonContainer .main-button {
+  font-size: 2rem;
+}
+
 .floatingButtonContainer .main-sub-button > span:hover,
 .floatingButtonContainer .main-button:hover {
   background-color: var(--bg-orange3);

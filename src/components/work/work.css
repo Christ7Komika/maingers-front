@@ -22,7 +22,9 @@
 }
 
 .work .work-content h3 {
-  color: var(--text-lightgrey);
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1.2rem;
   /* display: flex; */
 }
 

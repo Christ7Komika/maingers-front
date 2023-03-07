@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./floatingButton.css";
 import { MdSupportAgent } from "react-icons/md";
-import { FiMail } from "react-icons/fi";
+import { FiPhoneCall, FiMail } from "react-icons/fi";
 import { MdWork } from "react-icons/md";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { FaFileInvoice } from "react-icons/fa";
@@ -40,7 +40,7 @@ const FloatingButton = () => {
             </a>
             <a className="main-sub-button" onClick={() => setModal(!modal)}>
               <span>
-                <AiOutlineFundProjectionScreen />
+                <FiPhoneCall />
               </span>
               <small
                 className="tooltip"

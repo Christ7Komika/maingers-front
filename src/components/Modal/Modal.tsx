@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { BsTelephoneFill } from "react-icons/bs";
 import "./modal.css";
@@ -11,6 +11,15 @@ type Props = {
 const Modal = ({ isOpen, handleOpen }: Props) => {
   const html = document.querySelector("html") as HTMLElement;
   const [subject, setSubject] = useState("");
+
+  useEffect(() => {
+    document.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement;
+      if (target.className === "modal-all-container") {
+        handleOpen(false);
+      }
+    });
+  }, []);
   if (isOpen) {
     html.style.overflowY = "hidden";
   } else {

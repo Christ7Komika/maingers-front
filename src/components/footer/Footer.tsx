@@ -1,16 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footer.css";
 import { FaArrowRight } from "react-icons/fa";
+import toast, { Toaster } from "react-hot-toast";
+import axios, { AxiosError } from "axios";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const submit = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      return toast.error("Votre adresse mail est invalide");
+    }
+
+    const config = {
+      method: "post",
+      maxBodyLength: Infinity,
+      url: "http://127.0.0.1:3000/newsletter",
+      data: { email: email },
+    };
+
+    axios(config)
+      .then(function () {
+        setEmail("");
+        return toast.success("Votre demande a été envoyé avec succès");
+      })
+      .catch(function (e: AxiosError) {
+        //@ts-ignore
+        const error = e.response?.data.status;
+
+        if (error === 4000) {
+          return toast.error(
+            "Vous êtes déjà souscrit à notre service de newsletter "
+          );
+        }
+        return toast.error(
+          "Une erreur est survenue lors de l'envoi de vos données, veuillez réessayer."
+        );
+      });
+  };
+
   return (
     <div className="container footer">
+      <Toaster />
       <div className="footer-top">
         <div className="newsletter">
           <form className="newsletter-form">
             <p style={{ fontSize: 20 }}>Newsletter</p>
-            <input type="email" placeholder="Saisir votre email" />
-            <button>Souscrire</button>
+            <input
+              type="email"
+              placeholder="Saisir votre email"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+            />
+            <button onClick={(e) => submit(e)}>Souscrire</button>
           </form>
         </div>
         <div className="company-infos">

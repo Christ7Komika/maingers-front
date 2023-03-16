@@ -1,0 +1,207 @@
+.floatingMessage {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 320px;
+  height: 400px;
+  background-color: var(--bg-white);
+  box-shadow: var(--shadow);
+  z-index: 50000000;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.floatingMessage .floating-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-light);
+  padding: 0.5rem;
+}
+
+.floatingMessage .floating-header h2 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.floatingMessage .floating-header span {
+  color: var(--red-2);
+  background-color: var(--red-2-opacity-2);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.floatingMessage .floating-body {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.floatingMessage .floating-body h3 {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-blue);
+  line-height: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.floatingMessage .floating-body p {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.floatingMessage .floating-body input {
+  height: 40px;
+  border-radius: 5px;
+  padding-inline: 0.5rem;
+  border: 1px solid var(--bg-light3);
+  margin-bottom: 0.5rem;
+}
+
+.floatingMessage .floating-body button {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid var(--bg-nice-orange);
+  background-color: var(--bg-nice-orange);
+  color: var(--white);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: linear 0.4s;
+}
+.floatingMessage .floating-body button:hover {
+  color: var(--bg-nice-orange);
+  background-color: var(--white);
+}
+
+.floatingMessage .message-body {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.floatingMessage .message-body .message-content {
+  width: 100%;
+  height: 270px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  /* background: var(--bg-light); */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+}
+
+.floatingMessage .message-body .message-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.floatingMessage .message-body .message-content::-webkit-scrollbar-thumb {
+  width: 5px;
+  border-radius: 5px;
+  background-color: var(--bg-light3);
+}
+
+.floatingMessage .message-body .message-content > div {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  background-color: rgba(21, 130, 255, 0.068);
+  padding: 0.5rem;
+  display: grid;
+  justify-content: flex-start;
+}
+
+.floatingMessage .message-body .message-content .client-message {
+  grid-template-columns: 30px 1fr;
+}
+
+.floatingMessage .message-body .message-content .admin-message {
+  grid-template-columns: 1fr 30px;
+}
+
+.floatingMessage .message-body .message-content > div p {
+  font-size: 0.85rem;
+  color: var(--text-darkgrey);
+  display: flex;
+  align-items: center;
+}
+
+.floatingMessage .message-body .message-content > div .bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  border: 1px solid transparent;
+  color: var(--text-blue);
+}
+
+.floatingMessage .message-body .message-content .client-message .bubble {
+  background-color: rgba(19, 119, 250, 0.178);
+}
+.floatingMessage .message-body .message-content .admin-message .bubble {
+  background-color: rgba(250, 19, 31, 0.178);
+}
+
+.floatingMessage .message-body .message-send {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  grid-area: 0.5rem;
+}
+
+.floatingMessage .message-body .message-send input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--focus);
+  background-color: var(--white);
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  padding-inline: 0.5rem;
+}
+
+.floatingMessage .message-body .message-send input:focus {
+  outline: 1px solid var(--bg-nice-orange);
+}
+
+.floatingMessage .message-body .message-send input:focus + button {
+  outline: 1px solid var(--bg-nice-orange);
+}
+
+.floatingMessage .message-body .message-send button {
+  width: 40px;
+  height: 100%;
+  border: 1px solid var(--focus);
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  background: var(--bg-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bg-nice-orange);
+  font-size: 1.2rem;
+}

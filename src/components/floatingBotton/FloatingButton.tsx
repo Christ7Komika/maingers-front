@@ -1,27 +1,44 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./floatingButton.css";
 import { MdSupportAgent } from "react-icons/md";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
 import { MdWork } from "react-icons/md";
-import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { AiFillMessage } from "react-icons/ai";
 import { FaFileInvoice } from "react-icons/fa";
 import Modal from "../Modal/Modal";
 import InvoiceModal from "../Modal/InvoiceModal";
+import FloatingMessage from "../floatingMessage/FloatingMessage";
 
 const FloatingButton = () => {
   const [show, setShow] = useState(false);
   const [modal, setModal] = useState(false);
   const [invoiceModal, setInvoiceModal] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
   return (
     <>
       <Modal isOpen={modal} handleOpen={setModal} />
       <InvoiceModal isOpen={invoiceModal} handleOpen={setInvoiceModal} />
+      <FloatingMessage isShow={showMessage} handleShow={setShowMessage} />
       <div className="floatingButtonContainer">
         <button className="main-button" onClick={() => setShow(!show)}>
           <MdSupportAgent />
         </button>
         {show && (
           <div className="option-container">
+            <a
+              className="main-sub-button"
+              onClick={() => {
+                setShowMessage(true);
+                setShow(false);
+              }}
+            >
+              <span>
+                <AiFillMessage />
+              </span>
+              <small className="tooltip">
+                Message <span></span>
+              </small>
+            </a>
             <a className="main-sub-button" href="/contact">
               <span>
                 <FiMail />

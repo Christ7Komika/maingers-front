@@ -4,9 +4,10 @@ import "./customFile.css";
 type Props = {
   placeholder: string;
   getValue: Function;
+  css?: React.CSSProperties;
 };
 
-const CustomFile = ({ placeholder, getValue }: Props) => {
+const CustomFile = ({ placeholder, getValue, css }: Props) => {
   const [file, setFile] = useState<File>();
   const [text, setText] = useState(file && file.name);
   const uuid = v4();
@@ -15,11 +16,8 @@ const CustomFile = ({ placeholder, getValue }: Props) => {
     getValue(file);
   }, [file]);
 
-  // useEffect(() => {
-  //   if()
-  // }, [file]);
   return (
-    <div className="fileContainer">
+    <div className="fileContainer" style={css}>
       <label htmlFor={uuid}>
         <span>{placeholder}</span>
       </label>

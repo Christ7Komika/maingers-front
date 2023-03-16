@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./customImageFile.css";
 import { RiImageAddLine } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
+import toast, { Toaster } from "react-hot-toast";
 
 type Props = {
   getValue: Function;
@@ -24,7 +25,7 @@ const CustomImageFile = ({ getValue }: Props) => {
         }
       });
     } else {
-      return alert("Le fichier charger doit être une image");
+      return toast.error("Le fichier charger doit être une image");
     }
   };
 
@@ -39,6 +40,7 @@ const CustomImageFile = ({ getValue }: Props) => {
   }, [imageFile]);
   return (
     <div className="custom-image-file-container">
+      <Toaster />
       <label htmlFor="custom-image">
         {image ? (
           <>

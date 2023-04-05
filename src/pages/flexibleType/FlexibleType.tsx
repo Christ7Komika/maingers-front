@@ -10,7 +10,6 @@ const FlexibleType = () => {
       <Header />
       <Banner title="Type flexible" />
       <TypeFlexible />
-      <Partner />
       <Footer />
     </>
   );

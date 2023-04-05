@@ -11,7 +11,6 @@ const FlexibleInfos = () => {
       <Header />
       <Banner title="Flexible infos" />
       <InfosFlexible />
-      <Partner />
       <Footer />
     </>
   );

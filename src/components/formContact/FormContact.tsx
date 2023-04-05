@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./formcontact.css";
 import toast, { Toaster } from "react-hot-toast";
 import ContactImg from "../../assets/pictures/img15.jpg";
 import CustomFile from "../input/CustomFile";
 import axios, { AxiosError } from "axios";
 import CircularSpinner from "../spinner/CircularSpinner";
+import { host } from "../../host";
+import CustomSelectNumber from "../input/CustomSelectNumber";
+import { countryList } from "../../countryList";
+import _ from "lodash";
 
 const FormContact = () => {
   const [name, setName] = useState<string>();
@@ -14,6 +18,10 @@ const FormContact = () => {
   const [message, setMessage] = useState<string>();
   const [file, setFile] = useState<File | null>();
   const [isLoad, setIsLoad] = useState(false);
+  const [initFile, setInitFile] = useState(false);
+  const [initCustom, setInitCustom] = useState(false);
+  const [countryNum, setCountryNum] = useState("");
+  const [dial, setDial] = useState("");
 
   const init = () => {
     setName("");
@@ -21,8 +29,21 @@ const FormContact = () => {
     setPhone("");
     setObject("");
     setMessage("");
-    setFile(null);
+    setInitFile(true);
+    setInitCustom(false);
+    setCountryNum("");
   };
+
+  useEffect(() => {
+    if (countryNum) {
+      countryList.map((item) => {
+        if (item.name === countryNum) {
+          setDial(item.dial_code);
+          return;
+        }
+      });
+    }
+  }, [countryNum]);
 
   const submit = (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -43,6 +64,12 @@ const FormContact = () => {
     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       return toast.error("Votre adresse mail est invalide");
     }
+    if (!countryNum) {
+      return toast.error(
+        "Veuillez selectionner le code de téléphone de votre pays"
+      );
+    }
+
     if (!phone) {
       return toast.error("Veuillez inserer votre numéro de téléphone");
     }
@@ -60,7 +87,7 @@ const FormContact = () => {
 
     data.append("name", name);
     data.append("email", email.toLowerCase());
-    data.append("phone", phone);
+    data.append("phone", `${countryNum} ${phone}`);
     if (file) {
       data.append("contact", file);
     }
@@ -70,7 +97,7 @@ const FormContact = () => {
     const config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://127.0.0.1:3000/contact",
+      url: host + "/contact",
       data: data,
     };
 
@@ -113,13 +140,27 @@ const FormContact = () => {
             value={email}
             required
           />
-          <input
-            type="text"
-            placeholder="Veuillez saisir numéro de téléphone *"
-            onChange={(e) => setPhone(e.target.value)}
-            value={phone}
-            required
-          />
+          <div className="contact__country__number">
+            <CustomSelectNumber
+              init={initCustom}
+              setInit={setInitCustom}
+              data={_.sortBy(countryList, "dial_code")}
+              getValue={(country: string) => setCountryNum(country)}
+              placeholder="Code"
+              labelExtractor={(item: { name: string }) => item.name}
+              keyExtractor={(item: { name: number }) => item.name}
+              valueExtractor={(item: { name: number }) => item.name}
+            />
+            <div className="number__phone">
+              <small className="dial__number">{dial}</small>
+              <input
+                type="text"
+                placeholder="Veuillez saisir numéro de téléphone *"
+                onChange={(e) => setPhone(`${dial} ${e.target.value}`)}
+                value={phone || ""}
+              />
+            </div>
+          </div>
           <input
             type="text"
             placeholder="Veuillez saisir l'objet de votre message *"
@@ -128,9 +169,11 @@ const FormContact = () => {
             required
           />
           <CustomFile
+            init={initFile}
+            setInit={setInitFile}
             placeholder="Soumêtre un fichier "
             getValue={setFile}
-            css={{ maxWidth: "80%" }}
+            css={{ maxWidth: "100%" }}
           />
           <textarea
             placeholder="Veuillez saisir votre message"

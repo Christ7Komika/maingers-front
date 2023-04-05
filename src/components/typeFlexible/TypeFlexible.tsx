@@ -17,6 +17,7 @@ const TypeFlexible = () => {
   const [norme, setNorme] = useState(null);
   const [name, setName] = useState(null);
   const id = sessionStorage.getItem("idFlexibleType");
+  const [init, setInit] = useState(false);
 
   useEffect(() => {
     const flexible = flexibleList.filter(
@@ -34,23 +35,6 @@ const TypeFlexible = () => {
     <div className="container type-flexible">
       <div className="flexible-type-header">
         <h2>Flexibles type {data?.type} </h2>
-        <form className="flexible-type-filter">
-          <div className="search-bar">
-            <span>
-              <FaSearch />
-            </span>
-            <input type="text" />
-          </div>
-          <CustomSelect
-            placeholder="Norme ISO"
-            labelExtractor={(item: { name: string }) => item.name}
-            keyExtractor={(item: { id: number }) => item.id}
-            valueExtractor={(item: { id: number }) => item.id}
-            data={filterData}
-            getValue={setNorme}
-          />
-          <button>Filtrer</button>
-        </form>
       </div>
       <div className="flexible-type-cards">
         {data?.data.map((flexibleInfos, index) => (
@@ -61,7 +45,7 @@ const TypeFlexible = () => {
             <div className="flexible-type-card-content">
               <h3>{flexibleInfos?.name}</h3>
               <Link
-                to={`/departement/flexibles/type/infos`}
+                to={`/services/flexibles/type/infos`}
                 onClick={() =>
                   sendFlexibleData(
                     flexibleInfos?.IdTableau?.toString(),

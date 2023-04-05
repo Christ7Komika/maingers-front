@@ -122,47 +122,60 @@
   background-color: var(--bg-light3);
 }
 
-.floatingMessage .message-body .message-content > div {
+.floatingMessage .message-body .message-content .messages {
   width: 100%;
   height: auto;
   border-radius: 5px;
   background-color: rgba(21, 130, 255, 0.068);
   padding: 0.5rem;
-  display: grid;
-  justify-content: flex-start;
-}
-
-.floatingMessage .message-body .message-content .client-message {
-  grid-template-columns: 30px 1fr;
-}
-
-.floatingMessage .message-body .message-content .admin-message {
-  grid-template-columns: 1fr 30px;
-}
-
-.floatingMessage .message-body .message-content > div p {
-  font-size: 0.85rem;
-  color: var(--text-darkgrey);
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.floatingMessage .message-body .message-content .messages.admin {
+  background: rgba(1, 141, 255, 0.253);
+}
+
+.floatingMessage .message-body .message-content .messages .messages__header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.floatingMessage .message-body .message-content > div .bubble {
+.floatingMessage
+  .message-body
+  .message-content
+  .messages
+  .messages__header
+  span {
   display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
   justify-content: center;
   align-items: center;
-  width: 25px;
-  height: 25px;
-  border-radius: 25px;
-  border: 1px solid transparent;
-  color: var(--text-blue);
+  background-color: rgba(16, 45, 75, 0.171);
 }
 
-.floatingMessage .message-body .message-content .client-message .bubble {
-  background-color: rgba(19, 119, 250, 0.178);
+.floatingMessage .message-body .message-content .messages .messages__header p {
+  font-size: 0.8rem;
 }
-.floatingMessage .message-body .message-content .admin-message .bubble {
-  background-color: rgba(250, 19, 31, 0.178);
+
+.floatingMessage .message-body .message-content .messages > p {
+  font-size: 0.8rem;
+  background: rgba(40, 114, 194, 0.171);
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: var(--text-dark);
+}
+
+.floatingMessage .message-body .message-content .messages > a {
+  display: block;
+  width: 100% !important;
+  color: dodgerblue;
+  text-decoration: underline;
+  font-size: 0.8rem;
 }
 
 .floatingMessage .message-body .message-send {

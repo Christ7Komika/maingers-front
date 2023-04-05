@@ -8,8 +8,8 @@
 
 .type-flexible .flexible-type-header {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  justify-content: space-between;
+  grid-template-columns: 1fr;
+  justify-content: center;
   align-items: center;
 }
 

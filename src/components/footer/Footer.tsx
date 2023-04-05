@@ -3,7 +3,7 @@ import "./footer.css";
 import { FaArrowRight } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import axios, { AxiosError } from "axios";
-
+import { host } from "../../host";
 const Footer = () => {
   const [email, setEmail] = useState("");
 
@@ -16,7 +16,7 @@ const Footer = () => {
     const config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://127.0.0.1:3000/newsletter",
+      url: host + "/newsletter",
       data: { email: email },
     };
 

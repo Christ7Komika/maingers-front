@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./careerForm.css";
 import CustomSelect from "../input/CustomSelect";
 import CustomFile from "../input/CustomFile";
 import CustomImageFile from "../input/CustomImageFile";
 import { countryList } from "../../countryList";
 import toast, { Toaster } from "react-hot-toast";
-import axios, { Axios, AxiosError } from "axios";
+import axios, { AxiosError } from "axios";
+import { host } from "../../host";
 
 interface CareerType {
   photo: File | null;
@@ -38,7 +39,9 @@ const fields = {
 };
 
 const CareerForm = () => {
-  const [condition, setCondition] = useState(false);
+  const [initPhoto, setInitPhoto] = useState(false);
+  const [initCustom, setInitCustom] = useState(false);
+  const [dial, setDial] = useState("");
   const [career, setCareer] = useState<CareerType>({
     photo: null,
     firstName: null,
@@ -55,6 +58,8 @@ const CareerForm = () => {
   });
 
   const init = () => {
+    setInitPhoto(true);
+    setInitCustom(true);
     setCareer({
       photo: null,
       firstName: null,
@@ -70,6 +75,17 @@ const CareerForm = () => {
       searchFunction: null,
     });
   };
+
+  useEffect(() => {
+    if (career.country) {
+      countryList.map((item) => {
+        if (item.name === career.country) {
+          setDial(item.dial_code);
+          return;
+        }
+      });
+    }
+  }, [career.country]);
 
   const submit = (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -99,7 +115,7 @@ const CareerForm = () => {
     form.append("firstname", career.firstName as string);
     form.append("lastname", career.lastName as string);
     form.append("email", career.email as string);
-    form.append("phone", career.phone as string);
+    form.append("phone", dial + " " + (career.phone as string));
     form.append("civility", career.civility as string);
     form.append("country", career.country as string);
     form.append("cv", career.cv as File);
@@ -111,7 +127,7 @@ const CareerForm = () => {
     const config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://127.0.0.1:3000/career",
+      url: host + "/career",
       data: form,
     };
 
@@ -171,36 +187,32 @@ const CareerForm = () => {
                   }
                   value={career.email || ""}
                 />
-                <input
-                  type="text"
-                  placeholder="Veuillez saisir numéro de téléphone *"
-                  onChange={(e) =>
-                    setCareer({ ...career, phone: e.target.value })
+
+                <CustomSelect
+                  init={initCustom}
+                  setInit={setInitCustom}
+                  data={genre}
+                  getValue={(civility: string) =>
+                    setCareer({ ...career, civility: civility })
                   }
-                  value={career.phone || ""}
+                  placeholder="Civilité"
+                  labelExtractor={(item: { name: string }) => item.name}
+                  keyExtractor={(item: { name: number }) => item.name}
+                  valueExtractor={(item: { name: number }) => item.name}
                 />
               </div>
               <div className="form-group-img">
                 <CustomImageFile
+                  init={initPhoto}
                   getValue={(picture: File) =>
                     setCareer({ ...career, photo: picture })
                   }
                 />
               </div>
             </div>
-
             <CustomSelect
-              data={genre}
-              getValue={(civility: string) =>
-                setCareer({ ...career, civility: civility })
-              }
-              placeholder="Civilité"
-              labelExtractor={(item: { name: string }) => item.name}
-              keyExtractor={(item: { name: number }) => item.name}
-              valueExtractor={(item: { name: number }) => item.name}
-            />
-
-            <CustomSelect
+              init={initCustom}
+              setInit={setInitCustom}
               data={countryList}
               getValue={(country: string) =>
                 setCareer({ ...career, country: country })
@@ -210,17 +222,35 @@ const CareerForm = () => {
               keyExtractor={(item: { name: number }) => item.name}
               valueExtractor={(item: { name: number }) => item.name}
             />
+            <div className="number__phone">
+              <small className="dial__number">{dial}</small>
+              <input
+                type="text"
+                placeholder="Veuillez saisir numéro de téléphone *"
+                onChange={(e) =>
+                  setCareer({ ...career, phone: e.target.value })
+                }
+                value={career.phone || ""}
+              />
+            </div>
+
             <CustomFile
+              init={initCustom}
+              setInit={setInitCustom}
               placeholder="Insérez votre CV"
               getValue={(cv: File) => setCareer({ ...career, cv: cv })}
             />
             <CustomFile
+              init={initCustom}
+              setInit={setInitCustom}
               placeholder="Insérez une lettre de motivation"
               getValue={(motivation: File) =>
                 setCareer({ ...career, motivation: motivation })
               }
             />
             <CustomSelect
+              init={initCustom}
+              setInit={setInitCustom}
               data={data}
               getValue={(post: string) =>
                 setCareer({ ...career, targetPosition: post })
@@ -231,6 +261,8 @@ const CareerForm = () => {
               valueExtractor={(item: { name: number }) => item.name}
             />
             <CustomSelect
+              init={initCustom}
+              setInit={setInitCustom}
               data={data}
               getValue={(contract: string) =>
                 setCareer({ ...career, contractType: contract })
@@ -241,6 +273,8 @@ const CareerForm = () => {
               valueExtractor={(item: { name: number }) => item.name}
             />
             <CustomSelect
+              init={initCustom}
+              setInit={setInitCustom}
               data={data}
               getValue={(func: string) =>
                 setCareer({ ...career, searchFunction: func })

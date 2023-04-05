@@ -65,6 +65,7 @@ const data = [
 const FlexiblesCategories = () => {
   const [flexibleData, setFlexibleData] = useState(data);
   const [typeFilter, setTypeFilter] = useState(null);
+  const [init, setInit] = useState(false);
 
   const sendIdFlexible = (id: number) => {
     sessionStorage.setItem("idFlexibleType", id.toString());
@@ -81,6 +82,8 @@ const FlexiblesCategories = () => {
             valueExtractor={(item: { id: number }) => item.id}
             data={data}
             getValue={setTypeFilter}
+            init={init}
+            setInit={setInit}
           />
         </div>
       </div>
@@ -96,7 +99,7 @@ const FlexiblesCategories = () => {
             </div>
             <div className="flexible-ctg-card-content">
               <Link
-                to={`/departement/flexibles/type`}
+                to={`/services/flexibles/type`}
                 onClick={() => sendIdFlexible(value.id)}
               >
                 VOIR

@@ -5,6 +5,8 @@ import CustomSelect from "../input/CustomSelect";
 import CustomFile from "../input/CustomFile";
 import toast, { Toaster } from "react-hot-toast";
 import axios, { AxiosError } from "axios";
+import { host } from "../../host";
+import { countryList } from "../../countryList";
 type Props = {
   isOpen: boolean;
   handleOpen: Function;
@@ -38,7 +40,8 @@ const fields = {
 
 const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
   const html = document.querySelector("html") as HTMLElement;
-
+  const [initCustom, setInitCustom] = useState(false);
+  const [dial, setDial] = useState("");
   const [invoice, setInvoice] = useState<InvoiceType>({
     lastname: null,
     firstname: null,
@@ -53,6 +56,7 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
   });
 
   const init = () => {
+    setInitCustom(true);
     setInvoice({
       lastname: null,
       firstname: null,
@@ -66,6 +70,16 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
       infos: null,
     });
   };
+  useEffect(() => {
+    if (invoice.country) {
+      countryList.map((item) => {
+        if (item.name === invoice.country) {
+          setDial(item.dial_code);
+          return;
+        }
+      });
+    }
+  }, [invoice.country]);
 
   useEffect(() => {
     document.addEventListener("click", (e) => {
@@ -130,7 +144,7 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
     const config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://127.0.0.1:3000/estimate",
+      url: host + "/estimate",
       data: form,
     };
 
@@ -210,27 +224,20 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
                 />
               </div>
 
-              <div className="form-group">
-                <input
-                  type="text"
-                  placeholder="Email"
-                  required
-                  onChange={(e) =>
-                    setInvoice({ ...invoice, email: e.target.value })
-                  }
-                />
-                <input
-                  type="text"
-                  placeholder="Numéro de téléphone"
-                  required
-                  onChange={(e) =>
-                    setInvoice({ ...invoice, phone: e.target.value })
-                  }
-                />
-              </div>
+              <input
+                type="text"
+                placeholder="Email"
+                required
+                onChange={(e) =>
+                  setInvoice({ ...invoice, email: e.target.value })
+                }
+              />
+
               <CustomSelect
+                init={initCustom}
+                setInit={setInitCustom}
                 placeholder="Pays"
-                data={data}
+                data={countryList}
                 getValue={(country: string) =>
                   setInvoice({ ...invoice, country: country })
                 }
@@ -238,7 +245,23 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
                 keyExtractor={(item: { name: number }) => item.name}
                 valueExtractor={(item: { name: number }) => item.name}
               />
+              <div className="number__phone">
+                <small className="dial__number">{dial}</small>
+                <input
+                  type="text"
+                  placeholder="Veuillez saisir numéro de téléphone *"
+                  onChange={(e) =>
+                    setInvoice({
+                      ...invoice,
+                      phone: `${dial} ${e.target.value}`,
+                    })
+                  }
+                  value={invoice.phone || ""}
+                />
+              </div>
               <CustomSelect
+                init={initCustom}
+                setInit={setInitCustom}
                 placeholder="Demander un devis sur"
                 data={data}
                 getValue={(devis: string) =>
@@ -249,6 +272,8 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
                 valueExtractor={(item: { id: number }) => item.id}
               />
               <CustomFile
+                init={initCustom}
+                setInit={setInitCustom}
                 placeholder="Soumettre un fichier"
                 getValue={(file: File) =>
                   setInvoice({ ...invoice, file: file })

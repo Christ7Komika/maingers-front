@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { v4 as uuid } from "uuid";
 import "./customSelect.css";
+import _ from "lodash";
 
 interface Props {
   placeholder: string;
@@ -12,10 +13,9 @@ interface Props {
   valueExtractor: Function;
   init: boolean;
   setInit: Function;
-  def?: string;
 }
 
-const CustomSelect = ({
+const CustomSelectNumber = ({
   placeholder,
   data = [],
   getValue,
@@ -24,11 +24,10 @@ const CustomSelect = ({
   valueExtractor,
   init,
   setInit,
-  def,
 }: Props) => {
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState<null | string>(null);
-  const [native, setNative] = useState<any>(null);
+  const [selected, setSelected] = useState(null);
+  const [native, setNative] = useState(null);
   const selectRef = useRef<HTMLDivElement>(null);
 
   document.body.addEventListener("click", (e: any) => {
@@ -60,12 +59,6 @@ const CustomSelect = ({
       setInit(false);
     }
   }, [init]);
-  useEffect(() => {
-    if (def) {
-      setSelected(def);
-      setNative(def);
-    }
-  }, [def]);
 
   useEffect(() => {
     if (getValue) {
@@ -73,7 +66,7 @@ const CustomSelect = ({
     }
   }, [selected]);
   return (
-    <div className="custom-select" ref={selectRef}>
+    <div className="custom-select" ref={selectRef} style={{ width: 145 }}>
       <div
         className="select"
         id={uuid()}
@@ -120,4 +113,4 @@ const CustomSelect = ({
   );
 };
 
-export default CustomSelect;
+export default CustomSelectNumber;

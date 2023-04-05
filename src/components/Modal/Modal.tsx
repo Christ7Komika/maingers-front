@@ -5,7 +5,8 @@ import "./modal.css";
 import CustomSelect from "../input/CustomSelect";
 import toast, { Toaster } from "react-hot-toast";
 import axios, { AxiosError } from "axios";
-
+import { host } from "../../host";
+import { countryList } from "../../countryList";
 type Props = {
   isOpen: boolean;
   handleOpen: Function;
@@ -37,6 +38,8 @@ const fields = {
 
 const Modal = ({ isOpen, handleOpen }: Props) => {
   const html = document.querySelector("html") as HTMLElement;
+  const [initCustom, setInitCustom] = useState(false);
+  const [dial, setDial] = useState("");
   const [project, setProject] = useState<ProjectType>({
     lastname: null,
     firstname: null,
@@ -50,6 +53,7 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
   });
 
   const init = () => {
+    setInitCustom(true);
     setProject({
       lastname: null,
       firstname: null,
@@ -62,6 +66,17 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
       subject: null,
     });
   };
+
+  useEffect(() => {
+    if (project.country) {
+      countryList.map((item) => {
+        if (item.name === project.country) {
+          setDial(item.dial_code);
+          return;
+        }
+      });
+    }
+  }, [project.country]);
 
   useEffect(() => {
     document.addEventListener("click", (e) => {
@@ -111,7 +126,7 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
     const config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://127.0.0.1:3000/project",
+      url: host + "/project",
       data: project,
     };
 
@@ -182,18 +197,18 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
               />
               <input
                 type="text"
-                placeholder="Numéro de téléphone"
+                placeholder="Nom de la societé"
                 onChange={(e) =>
-                  setProject({ ...project, phone: e.target.value })
+                  setProject({ ...project, society: e.target.value })
                 }
               />
             </div>
             <div className="form-group">
               <input
                 type="text"
-                placeholder="Nom de la socité"
+                placeholder="Fonction au sein de la société"
                 onChange={(e) =>
-                  setProject({ ...project, society: e.target.value })
+                  setProject({ ...project, func: e.target.value })
                 }
               />
               <input
@@ -204,14 +219,12 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
                 }
               />
             </div>
-            <input
-              type="text"
-              placeholder="Fonction au sein de la société"
-              onChange={(e) => setProject({ ...project, func: e.target.value })}
-            />
+
             <CustomSelect
+              init={initCustom}
+              setInit={setInitCustom}
               placeholder="Pays"
-              data={data}
+              data={countryList}
               getValue={(country: string) =>
                 setProject({ ...project, country: country })
               }
@@ -219,7 +232,21 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
               keyExtractor={(item: { name: number }) => item.name}
               valueExtractor={(item: { name: number }) => item.name}
             />
+            <div className="number__phone">
+              <small className="dial__number">{dial}</small>
+              <input
+                type="text"
+                placeholder="Veuillez saisir numéro de téléphone *"
+                onChange={(e) =>
+                  setProject({ ...project, phone: `${dial} ${e.target.value}` })
+                }
+                value={project.phone || ""}
+              />
+            </div>
+
             <CustomSelect
+              init={initCustom}
+              setInit={setInitCustom}
               placeholder="Sujet a aborder au téléphone ?"
               data={data}
               getValue={(subject: string) =>

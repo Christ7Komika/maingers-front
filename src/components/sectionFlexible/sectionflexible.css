@@ -20,13 +20,11 @@
 }
 .section-flexible .section-flexible-top-left h2 {
   color: var(--text-orange);
-  text-transform: uppercase;
 }
 .section-flexible .section-flexible-top-left p {
   font-size: 0.9rem;
   font-weight: 400;
   color: var(--text-darkgrey);
-  text-transform: uppercase;
 }
 
 .section-flexible .section-flexible-top-right {

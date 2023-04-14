@@ -1,0 +1,81 @@
+.slide__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(7, 7, 7, 0.253);
+  backdrop-filter: blur(10px);
+  z-index: 1000000;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: visibleStroke;
+}
+
+.slide__modal .slide__modal__container {
+  width: 100vw;
+  height: 100vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 10000;
+}
+
+.slide__modal .slide__modal__container .slider-img {
+  max-width: 100%;
+  height: calc(100vh - 8rem);
+  object-fit: cover;
+  object-position: center center;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.swiper-slide img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background: #000;
+}
+
+.swiper-slide .swiper-button-prev {
+  background: #000 !important;
+}

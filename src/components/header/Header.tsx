@@ -122,11 +122,21 @@ const Header = () => {
               </div>
               <div
                 className={
+                  location.pathname === "/actualities"
+                    ? "link selected"
+                    : "link"
+                }
+              >
+                <Link to="/actualities">Actualités</Link>
+              </div>
+              <div
+                className={
                   location.pathname === "/about" ? "link selected" : "link"
                 }
               >
                 <Link to="/about">A Propos</Link>
               </div>
+
               <div
                 className={
                   location.pathname === "/contact" ? "link selected" : "link"

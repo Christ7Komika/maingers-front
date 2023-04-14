@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import "./footer.css";
-import { FaArrowRight } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaFacebook,
+  FaLinkedin,
+  FaInstagram,
+} from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import axios, { AxiosError } from "axios";
 import { host } from "../../host";
@@ -89,6 +94,17 @@ const Footer = () => {
             Retrouvez toutes les informations pour nous joindre sur la page
             contact de notre site.
           </p>
+          <div className="contact__infos__icon">
+            <a href="#">
+              <FaFacebook size={24} />
+            </a>
+            <a href="#">
+              <FaLinkedin size={24} />
+            </a>
+            <a href="#">
+              <FaInstagram size={24} />
+            </a>
+          </div>
         </div>
       </div>
       <div className="footer-bottom">

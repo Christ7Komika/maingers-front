@@ -1,5 +1,6 @@
 import React from "react";
 import "./banner.css";
+import BreakComb from "../breakcomb/BreakComb";
 type Props = {
   title: string;
 };

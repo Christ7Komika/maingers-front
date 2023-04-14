@@ -21,12 +21,15 @@ const Slider = () => {
     <div className="slider">
       <div className="content">
         <h1>
-          Bienvenue chez MAINGER'S-HYDRAULIC, l'excellence à votre disposition!
+          MAINGER'S-HYDRAULIC
+          <br />
+          La qualité, la sécurité et l'efficacité, c'est notre engagement
         </h1>
         <p>
-          Votre partenaire indiqué pour tous vos travaux d'inspection , de
-          confection de flexibles hydrauliques, de maintenance industrielle, de
-          location d'engins élévateurs et semi-remorques.
+          ue vous ayez besoin de flexibles hydrauliques sur mesure, de solutions
+          de nettoyage industriel ou de location d'engins élévateurs, Mainger's
+          Hydraulic a ce qu'il vous faut. Nous sommes votre partenaire de
+          confiance pour des projets réussis.
         </p>
       </div>
       <Swiper

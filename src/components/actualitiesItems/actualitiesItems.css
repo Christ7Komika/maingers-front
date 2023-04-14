@@ -1,0 +1,96 @@
+.actualities__items__container {
+  min-height: 200px;
+  height: auto;
+  width: 100%;
+}
+
+.actualities__items__container .actualities__items__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+.actualities__items__container .actualities__item {
+  height: auto;
+}
+
+.actualities__items__container .actualities__item .actualities__img {
+  height: 250px;
+  width: 100%;
+}
+
+.actualities__items__container .actualities__item img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 5px;
+}
+
+.actualities__items__container .actialities__infos h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-darkgrey);
+}
+
+.actualities__items__container .actialities__infos p {
+  font-size: 0.9rem;
+  color: var(--text-darkgrey);
+}
+
+.actualities__items__container .actualities__footer {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.actualities__items__container .actualities__footer a {
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: ease 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.actualities__items__container .actualities__footer a:hover {
+  background-color: var(--orange);
+  color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  .actualities__items__container .actualities__items__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 950px) {
+  .actualities__items__container .actualities__items__grid {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .actualities__items__container .actualities__items__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 650px) {
+  .actualities__items__container .actualities__items__grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 450px) {
+  .actualities__items__container .actualities__items__grid {
+    padding: 0;
+  }
+}

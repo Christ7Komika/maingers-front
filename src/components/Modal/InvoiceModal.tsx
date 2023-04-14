@@ -294,7 +294,6 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
             </form>
           </div>
         </div>{" "}
-        *
       </div>
     </div>
   );

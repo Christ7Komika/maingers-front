@@ -28,7 +28,8 @@
 }
 
 .partner .partner-list .partner-card .logo {
-  height: 50px;
+  width: 160px;
+  height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -144,7 +144,7 @@ const FormContact = () => {
             <CustomSelectNumber
               init={initCustom}
               setInit={setInitCustom}
-              data={_.sortBy(countryList, "dial_code")}
+              data={_.sortBy(countryList, "name")}
               getValue={(country: string) => setCountryNum(country)}
               placeholder="Code"
               labelExtractor={(item: { name: string }) => item.name}
@@ -155,7 +155,7 @@ const FormContact = () => {
               <small className="dial__number">{dial}</small>
               <input
                 type="text"
-                placeholder="Veuillez saisir numéro de téléphone *"
+                placeholder="Téléphone *"
                 onChange={(e) => setPhone(`${dial} ${e.target.value}`)}
                 value={phone || ""}
               />

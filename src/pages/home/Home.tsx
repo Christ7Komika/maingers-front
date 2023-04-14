@@ -1,5 +1,3 @@
-import React from "react";
-
 import Header from "../../components/header/Header";
 import Slider from "../../components/sliders/Slider";
 import Company from "../../components/company/Company";

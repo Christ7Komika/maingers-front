@@ -15,10 +15,12 @@ const Valor = () => {
             <h3>Why do we use it?</h3>
           </div>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            En outre, Mainger’s Hydraulic dispose d'un parc de location d'engins
+            élévateurs de haute qualité pour répondre aux besoins de ses
+            clients. Les clients peuvent louer des engins élévateurs pour des
+            projets à court ou long terme, avec la garantie de recevoir des
+            équipements de haute qualité et une assistance technique
+            professionnelle.
           </p>
         </div>
         <div className="valor-card">
@@ -29,8 +31,12 @@ const Valor = () => {
             <h3>Why do we use it?</h3>
           </div>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            Grâce à son expertise de pointe, Mainger’s Hydraulic a réussi à se
+            différencier de ses concurrents et à établir un réseau de clients
+            satisfaits à travers la République du Congo et au-delà. En plus de
+            son siège social à Pointe Noire, Mainger’s Hydraulic possède
+            également un pôle à Dakar, au Sénégal, pour servir ses clients de la
+            région de l'Afrique de l'Ouest.
           </p>
         </div>
         <div className="valor-card">
@@ -41,12 +47,10 @@ const Valor = () => {
             <h3>Why do we use it?</h3>
           </div>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            Avec son engagement envers l'excellence, Mainger’s Hydraulic est
+            fière de servir ses clients avec des solutions hydrauliques de
+            qualité supérieure, une assistance technique professionnelle et une
+            expérience de location d'engins élévateurs sans faille.
           </p>
         </div>
       </div>

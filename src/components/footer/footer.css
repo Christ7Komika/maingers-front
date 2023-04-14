@@ -141,6 +141,11 @@
   font-size: 0.9rem;
 }
 
+.footer .contact__infos__icon {
+  display: flex;
+  gap: 0.5rem;
+}
+
 /*
 ********************************
 ************** FOOTER BOTTOM

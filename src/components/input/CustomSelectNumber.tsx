@@ -65,8 +65,15 @@ const CustomSelectNumber = ({
       getValue(selected);
     }
   }, [selected]);
+
+  const limitText = (text: string) => {
+    if (text.length > 15) {
+      return text.substring(0, 15) + "...";
+    }
+  };
+
   return (
-    <div className="custom-select" ref={selectRef} style={{ width: 145 }}>
+    <div className="custom-select" ref={selectRef} style={{ width: 130 }}>
       <div
         className="select"
         id={uuid()}
@@ -85,7 +92,9 @@ const CustomSelectNumber = ({
             : {}
         }
       >
-        <small>{selected ? labelExtractor(native) : placeholder}</small>
+        <small>
+          {selected ? labelExtractor(native) : limitText(placeholder)}
+        </small>
         <span>
           <FiChevronDown />
         </span>
@@ -104,7 +113,7 @@ const CustomSelectNumber = ({
                   : {}
               }
             >
-              {labelExtractor(item)}
+              <p>{labelExtractor(item)}</p>
             </div>
           ))}
         </div>

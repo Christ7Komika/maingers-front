@@ -7,6 +7,8 @@ const Contact = React.lazy(() => import("./pages/contact/Contact"));
 
 const Flexibles = React.lazy(() => import("./pages/flexibles/Flexibles"));
 
+const Actuality = React.lazy(() => import("./pages/actuality/Actuality"));
+
 const Home = React.lazy(() => import("./pages/home/Home"));
 
 const NotFound = React.lazy(() => import("./pages/notFound/NotFound"));
@@ -25,6 +27,9 @@ const FlexibleType = React.lazy(
 
 const FlexibleInfos = React.lazy(
   () => import("./pages/flexibleInfos/FlexibleInfos")
+);
+const ActualityInfos = React.lazy(
+  () => import("./pages/actualityInfos/ActualityInfos")
 );
 
 export const Router = () => {
@@ -46,6 +51,11 @@ export const Router = () => {
           element={<IndustrialCleaning />}
         />
         <Route path="/services/rent-engine" element={<RentEngine />} />
+        <Route path="/actualities" element={<Actuality />} />
+        <Route
+          path="/actualities/infos/:name/:id"
+          element={<ActualityInfos />}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

@@ -6,24 +6,22 @@ const Story = () => {
     <div className="container story">
       <div className="story-content">
         <h2>NOTRE HISTOIRE</h2>
-        <h3>What is Lorem Ipsum?</h3>
+        <h3></h3>
         <div className="story-text-content">
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
-          <hr />
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            Depuis plus de 15 ans, Mainger’s Hydraulic  s'est établie comme un
+            leader dans le domaine de l'hydraulique en République du Congo.
+            Fondée en 2015, l'entreprise s'est rapidement imposée comme un
+            acteur incontournable dans la conception et la fabrication de
+            flexibles hydrauliques sur mesure pour une variété d'applications.
+            En plus de sa gamme complète de flexibles hydrauliques, Mainger’s
+            Hydraulic  propose également des services de nettoyage industriel
+            haut de gamme pour une variété d'industries, notamment les mines,
+            les centrales électriques, les usines de fabrication et les
+            raffineries. Les équipes hautement qualifiées de Mainger’s
+            Hydraulic  utilisent des technologies de pointe pour fournir des
+            solutions de nettoyage efficaces et respectueuses de
+            l'environnement.
           </p>
         </div>
       </div>

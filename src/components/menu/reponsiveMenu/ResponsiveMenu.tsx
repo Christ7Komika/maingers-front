@@ -32,7 +32,7 @@ const ResponsiveMenu = () => {
             <div className="sub-menu drop-menu">
               <small
                 className={
-                  location.pathname.search("/departement") != -1
+                  location.pathname.search("/services") != -1
                     ? "drop-select"
                     : submenu
                     ? "drop-select"
@@ -40,55 +40,61 @@ const ResponsiveMenu = () => {
                 }
                 onClick={() => setSubmenu(!submenu)}
               >
-                Département
+                Services
               </small>
               {submenu && (
                 <div className="drop-submenu">
                   <Link
                     className={
-                      location.pathname == "/departement/flexibles"
-                        ? "select"
-                        : ""
+                      location.pathname == "/services/flexibles" ? "select" : ""
                     }
                     data-id={uuid}
-                    to={"/departement/flexibles"}
+                    to={"/services/flexibles"}
                     onClick={(e) => setMenu(false)}
                   >
-                    Flexible
+                    Confection & réparation de flexibles hydrauliques
                   </Link>
                   <Link
                     className={
-                      location.pathname == "/departement/industrial-cleaning"
+                      location.pathname == "/services/industrial-cleaning"
                         ? "select"
                         : ""
                     }
                     data-id={uuid}
-                    to={"/departement/industrial-cleaning"}
+                    to={"/services/industrial-cleaning"}
                     onClick={(e) => setMenu(false)}
                   >
-                    Néttoyage industriel
+                    Maintenance & Nettoyage industriel
                   </Link>
                   <Link
                     className={
-                      location.pathname == "/departement/rent-engine"
+                      location.pathname == "/services/rent-engine"
                         ? "select"
                         : ""
                     }
                     data-id={uuid}
-                    to={"/departement/rent-engine"}
+                    to={"/services/rent-engine"}
                     onClick={(e) => setMenu(false)}
                   >
-                    Location engins élevateurs
+                    Levage, manutention & transport
                   </Link>
                 </div>
               )}
             </div>
             <div className="sub-menu">
               <Link
-                to="/services"
-                className={location.pathname == "/services" ? "select" : ""}
+                to="/career"
+                className={location.pathname == "/career" ? "select" : ""}
               >
-                Nos Services
+                Carrières
+              </Link>
+            </div>
+            <div className="sub-menu">
+              <Link
+                to="/actualities"
+                className={location.pathname == "/actualities" ? "select" : ""}
+              >
+                Actualités
               </Link>
             </div>
             <div className="sub-menu">

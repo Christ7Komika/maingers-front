@@ -45,14 +45,8 @@ const Header = () => {
                 </div>
               </div>
               <div className="header--contact">
-                <a href="#" className="social-network">
-                  <FaFacebook />
-                </a>
-                <a href="#" className="social-network">
-                  <FaEnvelope />
-                </a>
                 <a href="#" className="phone-number">
-                  <FaPhone /> 06 XXX XX XX
+                  <FaPhone /> 06 629 4230
                 </a>
               </div>
             </div>

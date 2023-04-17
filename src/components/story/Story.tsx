@@ -9,9 +9,9 @@ const Story = () => {
         <h3></h3>
         <div className="story-text-content">
           <p>
-            Depuis plus de 15 ans, Mainger’s Hydraulic  s'est établie comme un
+            Depuis plus de 18 ans, Mainger’s Hydraulic  s'est établie comme un
             leader dans le domaine de l'hydraulique en République du Congo.
-            Fondée en 2015, l'entreprise s'est rapidement imposée comme un
+            Fondée en 2005, l'entreprise s'est rapidement imposée comme un
             acteur incontournable dans la conception et la fabrication de
             flexibles hydrauliques sur mesure pour une variété d'applications.
             En plus de sa gamme complète de flexibles hydrauliques, Mainger’s

@@ -15,21 +15,19 @@ import "./slider.css";
 
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   return (
     <div className="slider">
       <div className="content">
         <h1>
-          MAINGER'S-HYDRAULIC
-          <br />
-          La qualité, la sécurité et l'efficacité, c'est notre engagement
+          Bienvenue chez MAINGER'S-HYDRAULIC, l'excellence à votre disposition!
         </h1>
         <p>
-          ue vous ayez besoin de flexibles hydrauliques sur mesure, de solutions
-          de nettoyage industriel ou de location d'engins élévateurs, Mainger's
-          Hydraulic a ce qu'il vous faut. Nous sommes votre partenaire de
-          confiance pour des projets réussis.
+          Votre partenaire indiqué pour tous vos travaux d'inspection , de
+          confection de flexibles hydrauliques, de maintenance industrielle, de
+          location d'engins élévateurs et semi-remorques.
         </p>
       </div>
       <Swiper

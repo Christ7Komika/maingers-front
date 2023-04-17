@@ -5,12 +5,30 @@
   min-height: 500px;
 }
 
+.slider__contact__us {
+  background-color: var(--text-orange);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 45px;
+  margin-top: 10px;
+  border: 1px solid var(--text-orange);
+  transition: linear 0.4s;
+}
+
+.slider__contact__us:hover {
+  background-color: var(--white);
+  color: var(--text-orange);
+}
+
 .slider .content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 3rem;
+  padding: 2rem;
   display: flex;
   width: 800px;
   flex-direction: column;
@@ -20,10 +38,12 @@
   background-color: var(--bg-white);
   z-index: 2;
   text-align: center;
+  border-radius: 10px;
 }
 
 .slider .content h1 {
-  font-weight: 900;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: var(--text-orange);
 }
 

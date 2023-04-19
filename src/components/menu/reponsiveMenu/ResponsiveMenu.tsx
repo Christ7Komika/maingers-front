@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaPlus } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { v4 as uuid } from "uuid";
-import Logo from "../../../assets/logo/Logo.svg";
+import Logo from "../../../assets/logo/Logo.png";
 import "./responsiveMenu.css";
 
 const ResponsiveMenu = () => {

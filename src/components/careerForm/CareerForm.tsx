@@ -19,7 +19,6 @@ interface CareerType {
   civility: string | null;
   targetPosition: string | null;
   contractType: string | null;
-  searchFunction: string | null;
   motivation: File | null;
 }
 
@@ -34,7 +33,6 @@ const fields = {
   civility: " à la civilité",
   targetPosition: " au poste visé",
   contractType: " au type de contrat recherché",
-  searchFunction: " à la fonction recherché",
   motivation: " à la lettre de motivation",
 };
 
@@ -54,7 +52,6 @@ const CareerForm = () => {
     motivation: null,
     targetPosition: null,
     contractType: null,
-    searchFunction: null,
   });
 
   const init = () => {
@@ -72,7 +69,6 @@ const CareerForm = () => {
       motivation: null,
       targetPosition: null,
       contractType: null,
-      searchFunction: null,
     });
   };
 
@@ -122,7 +118,7 @@ const CareerForm = () => {
     form.append("motivation", career.motivation as File);
     form.append("targetPosition", career.targetPosition as string);
     form.append("contractType", career.contractType as string);
-    form.append("jobSearch", career.searchFunction as string);
+    form.append("jobSearch", "null");
 
     const config = {
       method: "post",
@@ -156,9 +152,9 @@ const CareerForm = () => {
         <div className="form-contact-content">
           <h2>Déposer une candidature spontanée</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            debitis atque veniam esse repellat cupiditate. Deleniti adipisci
-            ipsam voluptatem accusamus.
+            Recherchez vous un stage ou un emploi, Choisissez le type de
+            recherche souhaité et utilisez nos nombreux critères de ciblage et
+            envoyez votre candidature !
           </p>
           <form className="form-contact-form">
             <div className="form-group-x2">
@@ -251,7 +247,7 @@ const CareerForm = () => {
             <CustomSelect
               init={initCustom}
               setInit={setInitCustom}
-              data={data}
+              data={posts}
               getValue={(post: string) =>
                 setCareer({ ...career, targetPosition: post })
               }
@@ -263,23 +259,11 @@ const CareerForm = () => {
             <CustomSelect
               init={initCustom}
               setInit={setInitCustom}
-              data={data}
+              data={contracts}
               getValue={(contract: string) =>
                 setCareer({ ...career, contractType: contract })
               }
               placeholder="Type de contrat"
-              labelExtractor={(item: { name: string }) => item.name}
-              keyExtractor={(item: { name: number }) => item.name}
-              valueExtractor={(item: { name: number }) => item.name}
-            />
-            <CustomSelect
-              init={initCustom}
-              setInit={setInitCustom}
-              data={data}
-              getValue={(func: string) =>
-                setCareer({ ...career, searchFunction: func })
-              }
-              placeholder="Fonction recherché"
               labelExtractor={(item: { name: string }) => item.name}
               keyExtractor={(item: { name: number }) => item.name}
               valueExtractor={(item: { name: number }) => item.name}
@@ -307,35 +291,135 @@ const genre = [
     name: "Monsieur",
   },
 ];
-const data = [
+
+const posts = [
   {
     id: 1,
-    name: "Congo",
+    name: "Secrétaire",
   },
   {
     id: 2,
-    name: "Gabon",
+    name: "Secrétaire comptable",
   },
   {
     id: 3,
-    name: "Cameroun",
+    name: "Assistant(e) secrétaire",
+  },
+  {
+    id: 4,
+    name: "Comptable",
+  },
+  {
+    id: 5,
+    name: "Assistant(e) comptable",
+  },
+  {
+    id: 6,
+    name: "Gestionnaire administrative",
+  },
+  {
+    id: 7,
+    name: "Chargé d'affaire",
+  },
+  {
+    id: 8,
+    name: "Assistant directeur général",
+  },
+  {
+    id: 9,
+    name: "Mécanicien hydraulique",
+  },
+  {
+    id: 10,
+    name: "Cariste",
+  },
+  {
+    id: 11,
+    name: "Coursier",
+  },
+  {
+    id: 12,
+    name: "Marketeur commercial",
+  },
+  {
+    id: 13,
+    name: "Infographe réalisateur",
+  },
+  {
+    id: 14,
+    name: "Web développeur",
+  },
+  {
+    id: 15,
+    name: "Architecte",
+  },
+  {
+    id: 16,
+    name: "Hydraulicien",
+  },
+  {
+    id: 17,
+    name: "Maintenancier industriel",
+  },
+  {
+    id: 18,
+    name: "Chef d'atelier",
+  },
+  {
+    id: 19,
+    name: "Chauffeur",
+  },
+  {
+    id: 20,
+    name: "Agent de sécurité",
+  },
+  {
+    id: 21,
+    name: "Respensable RH",
+  },
+  {
+    id: 22,
+    name: "Technicien HSE",
+  },
+  {
+    id: 23,
+    name: "Respensable QHSE",
+  },
+  {
+    id: 24,
+    name: "Respensable administrative et financier",
+  },
+  {
+    id: 25,
+    name: "Automaticien",
+  },
+  {
+    id: 26,
+    name: "Electronicien",
+  },
+];
+
+const contracts = [
+  {
+    id: 1,
+    name: "Contrat de stage",
+  },
+  {
+    id: 2,
+    name: "Contrat de d'éssai",
+  },
+  {
+    id: 3,
+    name: "Contrat de prestation",
+  },
+  {
+    id: 4,
+    name: "CDD",
+  },
+  {
+    id: 5,
+    name: "CDI",
   },
 ];
 
 export default CareerForm;
-
-/**
- * Champs
- * nom
- * prenom
- * email
- * telephone
- * pays
- * cv
- * poste visé
- * type de contrat
- * fonction rechercher
- *
- *
- *
- */

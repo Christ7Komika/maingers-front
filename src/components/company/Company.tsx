@@ -33,9 +33,6 @@ const Company = () => {
           </div>
           <img src={Img7} alt="" />
         </div>
-        <div className="company-second-img">
-          <img src={Img6} alt="" />
-        </div>
       </div>
     </div>
   );

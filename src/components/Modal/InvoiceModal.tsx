@@ -263,7 +263,7 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
                 init={initCustom}
                 setInit={setInitCustom}
                 placeholder="Demander un devis sur"
-                data={data}
+                data={devis}
                 getValue={(devis: string) =>
                   setInvoice({ ...invoice, invoice: devis })
                 }
@@ -299,18 +299,31 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
   );
 };
 
-const data = [
+const devis = [
   {
     id: 1,
-    name: "Congo",
+    name: "Confection de flexibles",
   },
   {
     id: 2,
-    name: "Gabon",
+    name: "Inspection de flexibles",
   },
   {
     id: 3,
-    name: "Cameroun",
+    name: "Transport & livraison de marchandises",
+  },
+  {
+    id: 4,
+    name: "Location d'endins élévateur",
+  },
+  {
+    id: 5,
+    name: "Location d'engins de transport",
+  },
+  {
+    id: 6,
+    name: "Néttoyage de pipes",
   },
 ];
+
 export default InvoiceModal;

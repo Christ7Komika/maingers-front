@@ -168,7 +168,7 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
             </span>
             Être rappelé
           </h2>
-          <p>Vous avez un projet concret ? Un cahier des charges ?</p>
+          <p>Vous avez un projet concret ? Un cahier des charges ? </p>
           <p>Notre équipe vous rappelle dans les meilleurs délais !</p>
           <form encType="multipart/form-data">
             <div className="form-group">

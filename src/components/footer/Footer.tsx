@@ -11,7 +11,6 @@ import axios, { AxiosError } from "axios";
 import { host } from "../../host";
 const Footer = () => {
   const [email, setEmail] = useState("");
-
   const submit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
@@ -71,18 +70,22 @@ const Footer = () => {
         <div className="list-link">
           <h3>Lien</h3>
           <div className="group-link">
-            <a href="">
+            <a href="/">
               <FaArrowRight />
               Acceuil
             </a>
-            <a href="">
+            <a href="/career">
               <FaArrowRight />
-              Nos services
+              Carrières
             </a>
-            <a href="">
+            <a href="/actualities">
+              <FaArrowRight />
+              Actualités
+            </a>
+            <a href="/about">
               <FaArrowRight />A propos
             </a>
-            <a href="">
+            <a href="/contact">
               <FaArrowRight />
               Contact
             </a>

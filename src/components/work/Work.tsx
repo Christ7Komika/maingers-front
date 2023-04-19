@@ -3,6 +3,10 @@ import Img10 from "../../assets/pictures/img10.jpg";
 import { FaIndustry } from "react-icons/fa";
 import "./work.css";
 import Experience from "../../assets/pictures/experience.svg";
+import SecurityImg from "../../assets/objectifs/security.png";
+import QualityImg from "../../assets/objectifs/quality.svg";
+import FiabilityImg from "../../assets/objectifs/reliability.svg";
+import DurabilityImg from "../../assets/objectifs/hourglass.svg";
 
 const Work = () => {
   return (
@@ -10,7 +14,7 @@ const Work = () => {
       <div className="work-about">
         <div className="card-about">
           <span>
-            <FaIndustry />
+            <img src={SecurityImg} alt="" />
           </span>
           <div className="card-about-content">
             <h3>Sécurité</h3>
@@ -18,8 +22,7 @@ const Work = () => {
         </div>
         <div className="card-about">
           <span>
-            {/* <FaIndustry /> */}
-            <img src={Experience} alt="" />
+            <img src={QualityImg} alt="" />
           </span>
           <div className="card-about-content">
             <h3>Qualité</h3>
@@ -27,7 +30,7 @@ const Work = () => {
         </div>
         <div className="card-about">
           <span>
-            <FaIndustry />
+            <img src={FiabilityImg} alt="" />
           </span>
           <div className="card-about-content">
             <h3>Fiabilité</h3>
@@ -35,7 +38,7 @@ const Work = () => {
         </div>
         <div className="card-about">
           <span>
-            <FaIndustry />
+            <img src={DurabilityImg} alt="" />
           </span>
           <div className="card-about-content">
             <h3>Durabilité</h3>

@@ -183,8 +183,10 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
           <div className="modal-body">
             <h2>Demander un devis</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
-              officiis velit laudantium aut, expedita enim.
+              Nous sommes fiers de notre travail et nous sommes convaincus que
+              vous serez satisfait des résultats. N’hésitez pas à nous contacter
+              pour plus d’informations sur nos services ou pour demander un
+              devis. Nous serons ravis de vous aider!
             </p>
             <form encType="multipart/form-data">
               <div className="form-group">

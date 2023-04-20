@@ -1,16 +1,9 @@
-import React from "react";
 import "./sectionflexible.css";
-import { Swiper, SwiperSlide } from "swiper/react";
+import Im1 from "../../assets/flexible_engins/im1.png";
+import Im2 from "../../assets/flexible_engins/im2.png";
+import Im3 from "../../assets/flexible_engins/im3.png";
+import Im4 from "../../assets/flexible_engins/im4.png";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-// import required modules
-import { Pagination, Navigation, Autoplay } from "swiper";
-import Img4 from "../../assets/pictures/img4.jpg";
-import Img6 from "../../assets/pictures/img6.jpg";
 import Brochure from "../../assets/pictures/brochure.png";
 const SectionFlexible = () => {
   return (
@@ -37,22 +30,13 @@ const SectionFlexible = () => {
         </div>
       </div>
       <div className="section-flexible-bottom">
-        {[0, 1, 2, 3].map((elt) => (
-          <div className="card">
+        {flexible.map((elt) => (
+          <div className="card" key={"card__flexible__" + elt.id}>
             <div className="card-img">
-              <img src={Img6} alt="" />
+              <img src={elt.img} alt="" />
             </div>
             <div className="card-content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-                quidem sequi quasi aliquam nulla hic!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Facilis inventore quas earum unde dolorum? Sit eos minima,
-                voluptate harum porro blanditiis assumenda libero natus
-                molestias.
-              </p>
+              <p>{elt.content}</p>
             </div>
           </div>
         ))}
@@ -61,73 +45,41 @@ const SectionFlexible = () => {
   );
 };
 
-export default SectionFlexible;
+const flexible = [
+  {
+    id: 1,
+    content: `
+    Tronçonneuse pour flexibles hydrauliques assurent une coupe nette et précise du tuyau hydraulique. 
+    Alimentées d'un moteur électrique il s'adaptent facilement à la dimension et à la nature du flexible, 
+    pour couper tout vos tuyaux hydrauliques avec précision et netteté et permet une coupe droite et propre de vos tuyaux hydrauliques. 
+    Ainsi vous ne déformez pas votre tuyau et facilitez la mise en place de vos jupes (douilles à sertir). 
 
-/**
- * 
- * 
- *  <div className="container section-flexible">
-      <div className="section-content">
-        <h2>CONFECTION DE FLEXIBLES HYDRAULIQUES</h2>
-        <p>
-          MAINGER'S-HYDRAULIC & SERVICES dispose d'un atelier de confection de
-          tuyauteries hydrauliques aux normes de sécurité moderne et
-          performante.
-        </p>
-        <div className="flexible-card">
-          <h3>Type de presse hydraulique: FINN - POWER P 32 MS20</h3>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
-          </p>
-        </div>
-        <div className="flexible-card">
-          <h3>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-          </h3>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
-          </p>
-        </div>
-      </div>
-      <div className="section-img">
-        <Swiper
-          pagination={{
-            dynamicBullets: true,
-          }}
-          autoplay={{
-            delay: 4000,
-          }}
-          modules={[Pagination, Navigation, Autoplay]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <img src={Img4} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Img5} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Img6} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Img7} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Img8} alt="" />
-          </SwiperSlide>
-        </Swiper>
-      </div>
-    </div>
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- */
+`,
+    img: Im1,
+  },
+  {
+    id: 2,
+    content: `
+    
+    .`,
+    img: Im2,
+  },
+  {
+    id: 3,
+    content: `                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Facilis inventore quas earum unde dolorum? Sit eos minima,
+    voluptate harum porro blanditiis assumenda libero natus
+    molestias.`,
+    img: Im3,
+  },
+  {
+    id: 4,
+    content: `                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Facilis inventore quas earum unde dolorum? Sit eos minima,
+    voluptate harum porro blanditiis assumenda libero natus
+    molestias.`,
+    img: Im4,
+  },
+];
+
+export default SectionFlexible;

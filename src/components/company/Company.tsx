@@ -1,7 +1,5 @@
-import React from "react";
 import { FaIndustry, FaArrowRight } from "react-icons/fa";
-import Img6 from "../../assets/pictures/img6.jpg";
-import Img7 from "../../assets/pictures/img7.jpg";
+import Img from "../../assets/We/MicrosoftTeams-image (19).png";
 import "./company.css";
 
 const Company = () => {
@@ -31,7 +29,7 @@ const Company = () => {
             </span>
             <p>MH Votre partenaire</p>
           </div>
-          <img src={Img7} alt="" />
+          <img src={Img} alt="Qui somme nous image" />
         </div>
       </div>
     </div>

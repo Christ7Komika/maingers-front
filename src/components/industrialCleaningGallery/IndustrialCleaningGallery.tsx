@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import "./industrialCleaningGallery.css";
 import SlideModal from "../Modal/SlideModal";
@@ -7,20 +7,10 @@ import Img2 from "../../assets/cleaning/image4.jpg";
 import Img3 from "../../assets/cleaning/image5.jpg";
 import Img4 from "../../assets/cleaning/image6.png";
 import Img5 from "../../assets/cleaning/image7.png";
-import Img6 from "../../assets/cleaning/image8.png";
-import Img7 from "../../assets/cleaning/image9.png";
-import Img8 from "../../assets/cleaning/image10.png";
-import Img9 from "../../assets/cleaning/image11.png";
 import Img11 from "../../assets/cleaning/image13.jpg";
 import Img12 from "../../assets/cleaning/image14.jpg";
 import Img13 from "../../assets/cleaning/image15.jpg";
 import Img14 from "../../assets/cleaning/image16.jpg";
-
-interface TypeData {
-  id: number;
-  img: string;
-}
-[];
 
 const IndustrialCleaningGallery = () => {
   const [slide, setSlide] = useState(false);
@@ -414,22 +404,6 @@ const data3 = [
   {
     img: Img5,
     id: 4,
-  },
-  {
-    img: Img6,
-    id: 5,
-  },
-  {
-    img: Img7,
-    id: 6,
-  },
-  {
-    img: Img8,
-    id: 7,
-  },
-  {
-    img: Img9,
-    id: 8,
   },
 ];
 

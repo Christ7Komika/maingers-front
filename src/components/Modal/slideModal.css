@@ -13,6 +13,19 @@
   pointer-events: visibleStroke;
 }
 
+.slide__modal .delete {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .slide__modal .slide__modal__container {
   width: 100vw;
   height: 100vh;
@@ -28,7 +41,7 @@
 .slide__modal .slide__modal__container .slider-img {
   max-width: 100%;
   height: calc(100vh - 8rem);
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
 }
 
@@ -40,7 +53,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: transparent;
 
   /* Center slide text vertically */
   display: -webkit-box;

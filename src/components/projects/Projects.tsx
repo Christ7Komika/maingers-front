@@ -1,5 +1,9 @@
 import "./projects.css";
-import Img11 from "../../assets/pictures/img11.jpg";
+import Img3 from "../../assets/projet/986b1ade-fad1-4c62-bc99-e7b2dec895a4.jpg";
+import Img2 from "../../assets/projet/P1010183.jpg";
+import Img1 from "../../assets/projet/dakar.jpg";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const projet = [
   {
@@ -7,21 +11,21 @@ const projet = [
     title: "Projet Dakar",
     content:
       "Mise à disposition de vehicules atelier pour la  confection flexible à dakar",
-    img: Img11,
+    img: Img1,
   },
   {
     id: 2,
     title: "Projet MAINGER'S-HYDRAULIC Total Energie",
     content:
       "Planning de compagne d'inspection et de remplacement des flexibles...",
-    img: Img11,
+    img: Img2,
   },
   {
     id: 3,
     title: "Projet Perenco",
     content:
       "survey des flexibles hydrauliques sur la grue babord de litanzi (perenco)",
-    img: Img11,
+    img: Img3,
   },
 ];
 
@@ -32,12 +36,12 @@ const Projects = () => {
         <h2>Nos réalisation</h2>
         <div className="projects-more">
           <h3>Projets réalisé</h3>
-          {/* <a href="">
+          <Link to="/actualities">
             <span>
               <BsFillArrowRightCircleFill />
             </span>
-            EXPLORE MORE
-          </a> */}
+            VOIR PLUS
+          </Link>
         </div>
       </div>
       <div className="projects-all-list">

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./formcontact.css";
 import toast, { Toaster } from "react-hot-toast";
-import ContactImg from "../../assets/pictures/img15.jpg";
+import ContactImg from "../../assets/contact/MicrosoftTeams-image (21).png";
 import CustomFile from "../input/CustomFile";
 import axios, { AxiosError } from "axios";
 import CircularSpinner from "../spinner/CircularSpinner";
@@ -154,10 +154,11 @@ const FormContact = () => {
             <div className="number__phone">
               <small className="dial__number">{dial}</small>
               <input
-                type="text"
+                type="number"
                 placeholder="Téléphone *"
-                onChange={(e) => setPhone(`${dial} ${e.target.value}`)}
-                value={phone || ""}
+                onChange={(e) => setPhone(e.target.value)}
+                value={phone}
+                pattern="[0-9]*"
               />
             </div>
           </div>

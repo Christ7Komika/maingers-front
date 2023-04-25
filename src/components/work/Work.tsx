@@ -1,8 +1,5 @@
-import React from "react";
-import Img10 from "../../assets/pictures/img10.jpg";
-import { FaIndustry } from "react-icons/fa";
+import Img from "../../assets/objectifs/objectifs.jpg";
 import "./work.css";
-import Experience from "../../assets/pictures/experience.svg";
 import SecurityImg from "../../assets/objectifs/security.png";
 import QualityImg from "../../assets/objectifs/quality.svg";
 import FiabilityImg from "../../assets/objectifs/reliability.svg";
@@ -60,7 +57,7 @@ const Work = () => {
         </h3>
       </div>
       <div className="work-img">
-        <img src={Img10} alt="" />
+        <img src={Img} alt="" />
       </div>
     </div>
   );

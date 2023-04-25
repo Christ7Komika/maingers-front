@@ -7,7 +7,8 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
+import { RxCross2 } from "react-icons/rx";
 
 interface Props {
   close: Function;
@@ -40,6 +41,11 @@ const SlideModal = ({ close, slideData, open }: Props) => {
         }
       }}
     >
+      <div className="delete">
+        <span>
+          <RxCross2 />
+        </span>
+      </div>
       <div className="slide__modal__container">
         <Swiper
           pagination={{

@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   FaFacebook,
-  FaEnvelope,
-  FaPhone,
-  FaSearch,
   FaAngleDown,
+  FaLinkedin,
+  FaInstagram,
 } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { v4 as uuidV4 } from "uuid";
 import "./header.css";
-import Logo from "../../assets/logo/Logo.png";
+import Logo from "../../assets/logo/Logo1.svg";
 import ResponsiveMenu from "../menu/reponsiveMenu/ResponsiveMenu";
+import { TbPhoneCall } from "react-icons/tb";
 
 const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -31,27 +31,42 @@ const Header = () => {
       )}
       {width >= 650 ? (
         <div className="header">
+          <div className="header--header">
+            <div className="header--contact">
+              <a href="#" className="phone-number">
+                <span>
+                  <TbPhoneCall size={25} />
+                </span>
+                <div className="list--number">
+                  <span>+242 06 629 4230 </span>
+                  <span>/ +242 06 629 4230</span>
+                </div>
+              </a>
+            </div>
+          </div>
           <div className="header--content">
+            <div className="header--item">
+              <div className="logo">
+                <img src={Logo} alt="logo" />
+              </div>
+            </div>
+            {/* <div className="header--contact">
+              <a href="#" className="phone-number">
+                <span>
+                  <TbPhoneCall size={30} />
+                </span>
+                <div className="list--number">
+                  <span>+242 06 629 4230 </span>
+                  <span>/ +242 06 629 4230</span>
+                </div>
+              </a>
+            </div> */}
+          </div>
+
+          {/* <nav className="header--nav">
             <div className="logo">
               <img src={Logo} alt="logo" />
             </div>
-            <div className="header--infos">
-              <div className="header--search-bar">
-                <div className="search">
-                  <button>
-                    <FaSearch />
-                  </button>
-                  <input type="text" placeholder="Recherche" />
-                </div>
-              </div>
-              <div className="header--contact">
-                <a href="#" className="phone-number">
-                  <FaPhone /> 06 629 4230
-                </a>
-              </div>
-            </div>
-          </div>
-          <nav className="header--nav">
             <div className="main-nav">
               <div
                 className={location.pathname === "/" ? "link selected" : "link"}
@@ -139,8 +154,7 @@ const Header = () => {
                 <Link to="/contact">Contact</Link>
               </div>
             </div>
-            <div className="account"></div>
-          </nav>
+          </nav> */}
         </div>
       ) : (
         <ResponsiveMenu />

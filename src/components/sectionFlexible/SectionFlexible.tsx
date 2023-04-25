@@ -49,11 +49,8 @@ const flexible = [
   {
     id: 1,
     content: `
-    Tronçonneuse pour flexibles hydrauliques assurent une coupe nette et précise du tuyau hydraulique. 
-    Alimentées d'un moteur électrique il s'adaptent facilement à la dimension et à la nature du flexible, 
-    pour couper tout vos tuyaux hydrauliques avec précision et netteté et permet une coupe droite et propre de vos tuyaux hydrauliques. 
-    Ainsi vous ne déformez pas votre tuyau et facilitez la mise en place de vos jupes (douilles à sertir). 
-
+    Nous possédons au sein de notre atelier une tronçonneuse pour tous flexibles hydrauliques assurant une coupe nette et précise des tuyaux hydrauliques. 
+   
 `,
     img: Im1,
   },

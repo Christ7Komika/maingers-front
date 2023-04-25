@@ -59,10 +59,12 @@
 }
 
 .projects .projects-all-list .project-card {
-  height: 450px;
+  height: 350px;
   overflow: hidden;
   position: relative;
   box-shadow: var(--shadow);
+  background: #27364a;
+  border-radius: 5px;
 }
 
 .projects .projects-all-list .project-card img {

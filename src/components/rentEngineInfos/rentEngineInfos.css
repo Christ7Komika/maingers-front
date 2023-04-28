@@ -21,7 +21,16 @@
 .rent-engine-infos .rent-engine-infos-content p {
   color: var(--text-darkgrey);
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
+}
+
+.rent-engine-infos .rent-engine-infos-content p a {
+  color: var(--white);
+  /* text-decoration: underline; */
+  background: var(--text-orange);
+  padding: 0.2rem;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 .rent-engine-infos .rent-engine-infos-img {

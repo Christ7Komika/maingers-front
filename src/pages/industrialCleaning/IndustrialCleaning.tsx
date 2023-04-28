@@ -5,6 +5,7 @@ import IndustrialCleaningInfos from "../../components/indstrialCleaningInfos/Ind
 import IndustrialCleaningGallery from "../../components/industrialCleaningGallery/IndustrialCleaningGallery";
 import Footer from "../../components/footer/Footer";
 import SectionIndustrialCleaning from "../../components/sectionIndustrialCleaning/SectionIndustrialCleaning";
+import FloatingButton from "../../components/floatingBotton/FloatingButton";
 
 const IndustrialCleaning = () => {
   return (
@@ -15,6 +16,7 @@ const IndustrialCleaning = () => {
       <IndustrialCleaningInfos />
       <IndustrialCleaningGallery />
       <Footer />
+      <FloatingButton />
     </>
   );
 };

@@ -4,6 +4,7 @@ import Banner from "../../components/Banner/Banner";
 import RentEngineInfos from "../../components/rentEngineInfos/RentEngineInfos";
 import OurEngine from "../../components/ourEngine/OurEngine";
 import Footer from "../../components/footer/Footer";
+import FloatingButton from "../../components/floatingBotton/FloatingButton";
 const RentEngine = () => {
   return (
     <>
@@ -12,6 +13,7 @@ const RentEngine = () => {
       <RentEngineInfos />
       <OurEngine />
       <Footer />
+      <FloatingButton />
     </>
   );
 };

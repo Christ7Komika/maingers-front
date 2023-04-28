@@ -1,4 +1,4 @@
-import { FaIndustry, FaArrowRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import Img from "../../assets/We/MicrosoftTeams-image (19).png";
 import "./company.css";
 
@@ -23,12 +23,12 @@ const Company = () => {
       </div>
       <div className="company-img">
         <div className="company-first-img">
-          <div className="company-infos">
+          {/* <div className="company-infos">
             <span>
               <FaIndustry />
             </span>
             <p>MH Votre partenaire</p>
-          </div>
+          </div> */}
           <img src={Img} alt="Qui somme nous image" />
         </div>
       </div>

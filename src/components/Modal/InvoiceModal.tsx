@@ -181,7 +181,6 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
             </span>
           </div>
           <div className="modal-body">
-            <h2>Demander un devis</h2>
             <p>
               Nous sommes fiers de notre travail et nous sommes convaincus que
               vous serez satisfait des résultats. N’hésitez pas à nous contacter

@@ -4,6 +4,7 @@ import {
   FaAngleDown,
   FaLinkedin,
   FaInstagram,
+  FaSearch,
 } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -26,12 +27,22 @@ const Header = () => {
 
   return (
     <>
-      {open && (
-        <div className="header-layer" onClick={() => setOpen(false)}></div>
-      )}
       {width >= 650 ? (
         <div className="header">
           <div className="header--header">
+            <div className="header--contact">
+              <a href="#" className="phone-number">
+                <span>
+                  <FaFacebook size={20} />
+                </span>
+                <span>
+                  <FaLinkedin size={20} />
+                </span>
+                <span>
+                  <FaInstagram size={20} />
+                </span>
+              </a>
+            </div>
             <div className="header--contact">
               <a href="#" className="phone-number">
                 <span>
@@ -45,28 +56,12 @@ const Header = () => {
             </div>
           </div>
           <div className="header--content">
-            <div className="header--item">
-              <div className="logo">
-                <img src={Logo} alt="logo" />
-              </div>
-            </div>
-            {/* <div className="header--contact">
-              <a href="#" className="phone-number">
-                <span>
-                  <TbPhoneCall size={30} />
-                </span>
-                <div className="list--number">
-                  <span>+242 06 629 4230 </span>
-                  <span>/ +242 06 629 4230</span>
-                </div>
-              </a>
-            </div> */}
-          </div>
-
-          {/* <nav className="header--nav">
+            {/* Logo */}
             <div className="logo">
               <img src={Logo} alt="logo" />
             </div>
+
+            {/* NavBar */}
             <div className="main-nav">
               <div
                 className={location.pathname === "/" ? "link selected" : "link"}
@@ -94,7 +89,11 @@ const Header = () => {
                 </a>
 
                 {open && (
-                  <div className="sub-menu" id="select-sub-menu" data-id={uuid}>
+                  <div
+                    className="sub__menu"
+                    id="select__sub__menu"
+                    data-id={uuid}
+                  >
                     <Link
                       className="element"
                       data-id={uuid}
@@ -145,16 +144,25 @@ const Header = () => {
               >
                 <Link to="/about">A Propos</Link>
               </div>
-
-              <div
+              {/* <div
                 className={
                   location.pathname === "/contact" ? "link selected" : "link"
                 }
               >
                 <Link to="/contact">Contact</Link>
+              </div> */}
+            </div>
+
+            {/* SearchBar */}
+            <div className="nav__search">
+              <span>
+                <FaSearch />
+              </span>
+              <div className="search__bar">
+                <Link to="/contact">Contact</Link>
               </div>
             </div>
-          </nav> */}
+          </div>
         </div>
       ) : (
         <ResponsiveMenu />

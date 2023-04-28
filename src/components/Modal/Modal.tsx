@@ -248,7 +248,7 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
               init={initCustom}
               setInit={setInitCustom}
               placeholder="Sujet a aborder au téléphone ?"
-              data={data}
+              data={suggest}
               getValue={(subject: string) =>
                 setProject({ ...project, subject: subject })
               }
@@ -268,18 +268,26 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
   );
 };
 
-const data = [
+const suggest = [
   {
     id: 1,
-    name: "Congo",
+    name: "Survey sur les flexibles",
   },
   {
     id: 2,
-    name: "Gabon",
+    name: "Confections des flexibles",
   },
   {
     id: 3,
-    name: "Cameroun",
+    name: "Réparation des flexibles",
+  },
+  {
+    id: 4,
+    name: "Néttoyage industrielle",
+  },
+  {
+    id: 5,
+    name: "Locations engins",
   },
 ];
 export default Modal;

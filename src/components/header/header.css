@@ -1,11 +1,11 @@
 .header {
   width: 100%;
-  height: 120px;
+  height: 130px;
   display: grid;
-  grid-template-rows: 40px 70px 10px;
-
+  grid-template-rows: 40px 90px;
   background-color: #f7f7f7;
-  background: var(--text-blue);
+  /* background: var(--text-blue); */
+  background: var(--bg-blue);
 }
 
 .header-layer {
@@ -16,7 +16,7 @@
   bottom: 0;
   z-index: 1000;
   background: transparent;
-  height: 70px;
+  height: 80px;
   padding-inline: 4rem;
   background-color: #fff;
 }
@@ -26,38 +26,13 @@
 ******* HEADER TOP
 ************************
 */
-.header .header--content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  background: #fff;
-  padding-inline: 2rem;
-}
-
-.header .header--content .header--item {
-  width: 300px;
-  height: 100%;
-}
 
 .header .header--header {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding-inline: 2rem;
   height: 100%;
-}
-
-.header .header--content .header--item .logo {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-.header .header--content .header--item img {
-  object-fit: cover;
-  object-position: center center;
-  height: 100%;
-  padding: 5px 0;
 }
 
 .header .header--contact > a {
@@ -88,56 +63,132 @@
   gap: 0.2rem;
 }
 
-/*
-************************
-******* HEADER BOTTOM
-************************
-*/
-
-.header .header--nav {
+.header .header--content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 90px !important;
+  align-items: center;
   background: #fff;
-  padding: 0 0.5em;
-  display: flex;
-  align-items: center;
-  height: 100%;
+  padding-inline: 2rem;
 }
 
-.header .header--nav {
+.header .header--content .logo {
   display: flex;
-  height: 100%;
   align-items: center;
-  padding: 0.5rem 1rem;
-  gap: 1rem;
+  height: 90px;
 }
-
-.header .header--nav .logo {
-  height: 90%;
-}
-.header .header--nav .logo img {
+.header .header--content img {
   object-fit: contain;
   object-position: center center;
-  height: 100%;
-  pointer-events: none;
+  height: 90px;
+  padding: 5px 0;
 }
-.header .header--nav .main-nav {
+
+.header .header--content .main-nav {
   display: flex;
   align-items: center;
+  /* justify-content: center; */
+  width: fit-content;
   height: 100%;
-  margin-left: 100px;
 }
 
-.header .header--nav .main-nav .link {
+.header .header--content .main-nav .link {
   height: 80%;
-  border-right: 1px solid #cccccc;
+  border-right: 1px solid #e6e6e6;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
 }
 
-.header .header--nav .main-nav .link a {
+.header .header--content .main-nav .link:last-child {
+  border-right: none;
+}
+
+.header .header--content .main-nav .link a {
   width: 120px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--dark);
+  color: #686868;
+}
+
+.header .header--content .main-nav .sub__menu {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  width: 300px;
+  height: auto;
+  background: #fff;
+  transform: translateX(-50%);
+  padding-block: 1rem;
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  z-index: 4;
+}
+
+.header .header--content .main-nav .sub__menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  cursor: pointer;
+  transition: linear 0.4s;
+}
+
+.header .header--content .main-nav .sub__menu a:hover {
+  background: var(--bg-orange);
+  color: #fff;
+}
+
+.header .header--content .main-nav .link a span {
+  transform: translateY(3px);
+  margin-left: 3px;
+}
+
+.header .nav__search {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header .nav__search .search__bar {
+  width: 180px;
+  height: 90%;
+}
+
+.header .nav__search span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 100%;
+  color: #686868;
+}
+
+.header .nav__search .search__bar a {
+  background-color: var(--bg-orange);
+  border: 2px solid var(--bg-orange);
+  /* color: var(--bg-orange); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.2rem !important;
+  width: 100%;
+  height: 100%;
+  transition: ease 0.4s;
+}
+
+.header .nav__search .search__bar a:hover {
+  background: #fff;
+  color: var(--bg-orange);
 }
 
 @media (max-width: 1000px) {

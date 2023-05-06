@@ -271,23 +271,15 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
 const suggest = [
   {
     id: 1,
-    name: "Survey sur les flexibles",
+    name: " Confection & réparation de flexibles hydrauliques",
   },
   {
     id: 2,
-    name: "Confections des flexibles",
+    name: " Maintenance & Nettoyage industriel",
   },
   {
     id: 3,
-    name: "Réparation des flexibles",
-  },
-  {
-    id: 4,
-    name: "Néttoyage industrielle",
-  },
-  {
-    id: 5,
-    name: "Locations engins",
+    name: " Levage, manutention & transport",
   },
 ];
 export default Modal;

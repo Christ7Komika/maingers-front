@@ -49,32 +49,24 @@ const flexible = [
   {
     id: 1,
     content: `
-    Nous possédons au sein de notre atelier une tronçonneuse pour tous flexibles hydrauliques assurant une coupe nette et précise des tuyaux hydrauliques. 
-   
-`,
+    Dénudeuses pour tuyaux flexibles et câbles jusque 2" de diamètre. Raccordées en 220 ou 380 V, fonctionnent en automatique pour les applications d'assemblage de flexibles en série.
+    `,
     img: Im1,
   },
   {
     id: 2,
     content: `
-    
-    .`,
+    Notre sertisseuse vous permet de sertir une large gamme de composants pour vos circuits hydrauliques : embouts et douilles à sertir, tuyaux hydrauliques, raccords à bagues, adaptateurs, coupleurs, accessoires.`,
     img: Im2,
   },
   {
     id: 3,
-    content: `                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    Facilis inventore quas earum unde dolorum? Sit eos minima,
-    voluptate harum porro blanditiis assumenda libero natus
-    molestias.`,
+    content: `Notre tour à machine vous permet de fabriquer des pièces mécanique en utilisant le d usinage.`,
     img: Im3,
   },
   {
     id: 4,
-    content: `                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    Facilis inventore quas earum unde dolorum? Sit eos minima,
-    voluptate harum porro blanditiis assumenda libero natus
-    molestias.`,
+    content: `Banc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   test multiparamètre : Banc d'essais destructifs jusqu'à 4000 bar muni de pompe pneumo-hydraulique, avec contrôle automatique PLC.`,
     img: Im4,
   },
 ];

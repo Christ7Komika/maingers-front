@@ -41,10 +41,8 @@ const SlideModal = ({ close, slideData, open }: Props) => {
         }
       }}
     >
-      <div className="delete">
-        <span>
-          <RxCross2 />
-        </span>
+      <div className="delete" onClick={() => close(false)}>
+        <RxCross2 />
       </div>
       <div className="slide__modal__container">
         <Swiper

@@ -11,7 +11,7 @@ const IndustrialCleaning = () => {
   return (
     <>
       <Header />
-      <Banner title="Néttoyage industriel" />
+      <Banner title="Nettoyage industriel" />
       <SectionIndustrialCleaning />
       <IndustrialCleaningInfos />
       <IndustrialCleaningGallery />

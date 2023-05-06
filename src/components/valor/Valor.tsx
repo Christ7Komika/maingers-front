@@ -1,5 +1,6 @@
 import React from "react";
 import { FaVials } from "react-icons/fa";
+
 import "./valor.css";
 
 const Valor = () => {

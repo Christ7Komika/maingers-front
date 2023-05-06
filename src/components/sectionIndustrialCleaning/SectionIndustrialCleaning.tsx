@@ -7,16 +7,15 @@ const SectionIndustrialCleaning = () => {
   return (
     <div className="container rent-engine">
       <div className="rent-engine-content">
-        <h2>Néttoyage industriel</h2>
+        <h2>Nettoyage industriel</h2>
         <div className="rent-engine-card">
           <p>
-            MAINGER'S - Néttoyage industriel est votre partenaire indiqué pour
-            tout vos travaux de néttoyage industriel OFF / ON SHORT. Spécialisé
-            dans les différents types de travaux et de prestations
+            MAINGER'S - Nettoyage industriel est votre partenaire indiqué pour
+            tous vos travaux de nettoyage industriel OFFSHORE / ONSHORE.
           </p>
         </div>
         <ul>
-          <h2>ON SHORT</h2>
+          <h2>ONSHORE : </h2>
           {onShort.map((data, index) => (
             <li key={`section-rent-engine-${index}`}>
               <span>
@@ -27,7 +26,7 @@ const SectionIndustrialCleaning = () => {
           ))}
         </ul>
         <ul>
-          <h2>OFF SHORT</h2>
+          <h2>OFFSHORE : </h2>
           {offShort.map((data, index) => (
             <li key={`section-rent-engine-${index}`}>
               <span>
@@ -47,13 +46,13 @@ const SectionIndustrialCleaning = () => {
 
 const onShort = [
   "Inspection & Maintenance des TUBINGS NEUFS",
-  "Inspection , Maintenance & Néttoyage des TUBINGS USAGES",
+  "Inspection , Maintenance & Nettoyage des TUBINGS USAGES.",
 ];
 const offShort = [
-  "Néttoyage des plateformes",
-  "Néttoyage des capacités",
-  "Néttoyage des faisceaux",
-  "Néttoyage des bacs etc",
+  "Nettoyage des plateformes",
+  "Nettoyage des capacités",
+  "Nettoyage des faisceaux",
+  "Nettoyage des bacs etc",
   "Traitement et évacuation des boues...",
 ];
 

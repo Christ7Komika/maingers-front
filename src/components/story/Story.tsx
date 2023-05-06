@@ -1,4 +1,3 @@
-import React from "react";
 import "./story.css";
 
 const Story = () => {

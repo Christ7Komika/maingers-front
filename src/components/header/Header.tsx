@@ -12,7 +12,7 @@ import { v4 as uuidV4 } from "uuid";
 import "./header.css";
 import Logo from "../../assets/logo/Logo1.svg";
 import ResponsiveMenu from "../menu/reponsiveMenu/ResponsiveMenu";
-import { TbPhoneCall } from "react-icons/tb";
+import { RiWhatsappFill } from "react-icons/ri";
 
 const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <>
-      {width >= 650 ? (
+      {width >= 1250 ? (
         <div className="header">
           <div className="header--header">
             <div className="header--contact">
@@ -46,11 +46,11 @@ const Header = () => {
             <div className="header--contact">
               <a href="#" className="phone-number">
                 <span>
-                  <TbPhoneCall size={25} />
+                  <RiWhatsappFill size={25} fill="	#25d366" />
                 </span>
                 <div className="list--number">
                   <span>+242 06 629 4230 </span>
-                  <span>/ +242 06 629 4230</span>
+                  <span>/ +242 05 520 25 43</span>
                 </div>
               </a>
             </div>

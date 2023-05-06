@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./formcontact.css";
 import toast, { Toaster } from "react-hot-toast";
-import ContactImg from "../../assets/contact/MicrosoftTeams-image (21).png";
+import ContactImg from "../../assets/contact/contact.jpg";
 import CustomFile from "../input/CustomFile";
 import axios, { AxiosError } from "axios";
 import CircularSpinner from "../spinner/CircularSpinner";

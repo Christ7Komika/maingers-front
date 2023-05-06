@@ -1,6 +1,6 @@
 import React from "react";
 import "./industrialCleaningInfos.css";
-import Img from "../../assets/cleaning/image2.png";
+import Img from "../../assets/cleaning/manpos5-1.png";
 import { FaCheckCircle } from "react-icons/fa";
 
 const IndustrialCleaningInfos = () => {
@@ -15,11 +15,11 @@ const IndustrialCleaningInfos = () => {
           <p>
             MAINGER'S HYDRAULIC met à votre disposition un personnel qualifié,
             bénéficiant d'une solide expérience et rassemblant des compétences
-            variées dans le néttoyage de plateforme, de capacités ou
-            séparateurs, néttoyage de faisceaux ou échangeurs, néttoyage des
-            bacs de stockage, néttoyage de tuyauteries et pompes, néttoyage des
+            variées dans le nettoyage de plateforme, de capacités ou
+            séparateurs, nettoyage de faisceaux ou échangeurs, nettoyage des
+            bacs de stockage, nettoyage de tuyauteries et pompes, nettoyage des
             scrubbers et condenseur, décapage des zones souillées, curage et
-            néttoyage des drains, déparaffinage des têtes de puits, etc...
+            nettoyage des drains, déparaffinage des têtes de puits, etc...
           </p>
           <h3>
             Avec la THP (Très Haute Pression), nous réalisons des opérations de:
@@ -29,7 +29,7 @@ const IndustrialCleaningInfos = () => {
               <span>
                 <FaCheckCircle />
               </span>
-              Décapage de métaux, enlèvement des peintures
+              Décapage de métaux, enlèvement des peintures.
             </li>
             <li>
               <span>
@@ -37,19 +37,19 @@ const IndustrialCleaningInfos = () => {
               </span>
               Condenseur, faisceaux échangeurs, tuyauteries et canalisations,
               surfaces métalliques, cabine peinture, aéroréfrigérants, capacités
-              bacs, réacteurs pétrochimique, travaux maritimes
+              bacs, réacteurs pétrochimique, travaux maritimes.
             </li>
             <li>
               <span>
                 <FaCheckCircle />
               </span>
-              Enlèvement caoutchouc, résines, additifs
+              Enlèvement caoutchouc, résines, additifs.
             </li>
           </ul>
 
           <ul>
             <h3>
-              En utilisant la technique la plus adaptée à la problématique :{" "}
+              En utilisant la technique la plus adaptée à la problématique :
             </h3>
             <li>
               <span>
@@ -73,7 +73,7 @@ const IndustrialCleaningInfos = () => {
               <span>
                 <FaCheckCircle />
               </span>
-              Ultra haute pression 50 bars à 500 bars
+              Ultra haute pression 50 bars à 500 bars.
             </li>
           </ul>
         </div>

@@ -24,6 +24,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--text-blue);
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 100000000;
 }
 
 .slide__modal .slide__modal__container {

@@ -69,14 +69,14 @@ const IndustrialCleaningGallery = () => {
                 </span>
                 Soufflante à lobes rotatifs avec entraînement direct et pigon de
                 distribution hélicoïdal pour un fonctionnement plus silencieux
-                et plus puissant
+                et plus puissant.
               </p>
               <p>
                 <span>
                   <FaCheckCircle />
                 </span>
                 Décharge - Silencieux universel 6" SDY (RV-50 HP) / 10" SDY
-                (RV-100 HP) pour un environnement silencieux
+                (RV-100 HP) pour un environnement silencieux.
               </p>
               <p>
                 <span>
@@ -84,7 +84,7 @@ const IndustrialCleaningGallery = () => {
                 </span>
                 Conteneur approuvé DNV 2.7.1 de 20 pieds avec portes aux des
                 extrémités et réservoir de rétention à fond conique de 500 / 750
-                gal pour le RV-50 HP et le RV-100 HP respectivement
+                gal pour le RV-50 HP et le RV-100 HP respectivement.
               </p>
               <p>
                 <span>
@@ -92,7 +92,7 @@ const IndustrialCleaningGallery = () => {
                 </span>
                 Polyvalent - le système de vide conteneurisé Offshore Rig-Vac
                 <sup>TM</sup> a la capacité de passer du chargement sous vide au
-                déchargement pour vider le réservoir
+                déchargement pour vider le réservoir.
               </p>
               <p>
                 <span>
@@ -100,14 +100,14 @@ const IndustrialCleaningGallery = () => {
                 </span>
                 Les deux système ont des soupapes de suppression, une soupape de
                 suppression et une jauge de pression/vide composée (30 po HGg à
-                15 psig)
+                15 psig).
               </p>
               <p>
                 <span>
                   <FaCheckCircle />
                 </span>
                 Maintenance et fonctionnement - les unités ont effectué des
-                années de service fiable avec un minimum de maintenance
+                années de service fiable avec un minimum de maintenance.
               </p>
             </div>
             <div className="separator"></div>
@@ -118,28 +118,28 @@ const IndustrialCleaningGallery = () => {
                 </span>
                 Flexible - grâce à leur conception modulaire à deux composants,
                 la disposition des systèmes 50 HP et 100 HP peut être organisée
-                pour s'adapter à n'importe quel environnement
+                pour s'adapter à n'importe quel environnement.
               </p>
               <p>
                 <span>
                   <FaCheckCircle />
                 </span>
-                Sécurité - amèliore la sécurité du lieu de travail en permettant
-                une élimination rapide et facile des déversements
+                Sécurité - améliore la sécurité du lieu de travail en permettant
+                une élimination rapide et facile des déversements.
               </p>
               <p>
                 <span>
                   <FaCheckCircle />
                 </span>
                 Entretien - tous les systèmes ont un passage pour un hommes de
-                18 pouces pour un néttoyage facile
+                18 pouces pour un nettoyage facile.
               </p>
               <p>
                 <span>
                   <FaCheckCircle />
                 </span>
                 Capacité - plus puissante qu'un camion aspirateur ordinaire
-                facile à utiliser
+                facile à utiliser.
               </p>
               <p>
                 <span>
@@ -147,7 +147,7 @@ const IndustrialCleaningGallery = () => {
                 </span>
                 Les deux moteurs électriques sont dotés d'un interrupteur
                 marche-arrêt avec réinitialisation et le moteur diesel est
-                autonome
+                autonome.
               </p>
             </div>
           </div>
@@ -338,7 +338,7 @@ const IndustrialCleaningGallery = () => {
               tampons élastiques, etc.
             </p>
           </div>
-          <h3>Gallery nettoyage de pipe à haute pression</h3>
+          <h3>Gallerie nettoyage de pipe à haute pression</h3>
 
           <div className="industrial-cleaning-gallery-list">
             {data3.map((gallery, index) => (

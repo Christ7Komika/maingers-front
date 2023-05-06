@@ -4,7 +4,6 @@
   display: grid;
   grid-template-rows: 40px 90px;
   background-color: #f7f7f7;
-  /* background: var(--text-blue); */
   background: var(--bg-blue);
 }
 

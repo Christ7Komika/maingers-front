@@ -1,9 +1,17 @@
-import React, { useState } from "react";
-import { FaBars, FaPlus } from "react-icons/fa";
+import { useState } from "react";
+import {
+  FaBars,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaPlus,
+} from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { v4 as uuid } from "uuid";
-import Logo from "../../../assets/logo/Logo.png";
+import Logo from "../../../assets/logo/Logo1.svg";
+
 import "./responsiveMenu.css";
+import { RiWhatsappFill } from "react-icons/ri";
 
 const ResponsiveMenu = () => {
   const location = useLocation();
@@ -12,12 +20,45 @@ const ResponsiveMenu = () => {
 
   return (
     <div className="small-header">
-      <div className="logo">
-        <img src={Logo} alt="logo" />
+      <div className="mobile--container">
+        <div className="mobile--top">
+          <div className="mobile--social--network">
+            <a href="#">
+              <span>
+                <FaFacebook size={20} />
+              </span>
+            </a>
+            <a href="#">
+              <span>
+                <FaLinkedin size={20} />
+              </span>
+            </a>
+            <a href="#">
+              <span>
+                <FaInstagram size={20} />
+              </span>
+            </a>
+          </div>
+          <div className="mobile--contact">
+            <span>
+              <RiWhatsappFill size={25} fill="	#25d366" />
+            </span>
+            <div className="list--number">
+              <span>+242 06 629 4230 </span>
+              <span>/ +242 05 520 25 43</span>
+            </div>
+          </div>
+        </div>
+        <div className="mobile--bottom">
+          <div className="logo">
+            <img src={Logo} alt="logo" />
+          </div>
+
+          <span onClick={() => setMenu(true)}>
+            <FaBars size={25} />
+          </span>
+        </div>
       </div>
-      <span onClick={() => setMenu(true)}>
-        <FaBars />
-      </span>
       {menu && (
         <div className="menu">
           <span>

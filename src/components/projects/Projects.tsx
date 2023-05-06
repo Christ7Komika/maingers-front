@@ -10,7 +10,7 @@ const projet = [
     id: 1,
     title: "Projet Dakar",
     content:
-      "Mise à disposition de vehicules atelier pour la  confection flexible à dakar",
+      "Mise à disposition de véhicules atelier pour la  confection flexible à dakar",
     img: Img1,
   },
   {

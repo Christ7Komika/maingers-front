@@ -1,6 +1,5 @@
-import React from "react";
 import "./infoscontact.css";
-import { FaPhone, FaEnvelope, FaLocationArrow } from "react-icons/fa";
+import { FaEnvelope, FaLocationArrow, FaPhone } from "react-icons/fa";
 
 const InfosContact = () => {
   return (
@@ -14,7 +13,7 @@ const InfosContact = () => {
             </span>
             <h3>Numéro de téléphone</h3>
             <p>
-              <span>+242 05 568 12 23</span> / <span>+242 06 851 08 45</span>
+              <span>+242 05 520 25 43</span> / <span>+242 06 629 42 30</span>
             </p>
           </div>
           <div className="infos-contact-card">
@@ -22,14 +21,19 @@ const InfosContact = () => {
               <FaEnvelope />
             </span>
             <h3>Adresse email</h3>
-            <p>maingers-hydraulic@gmail.com</p>
+            <p>
+              secretariat@maingershydraulic.com <br />
+              administration@maingershydraulic.com
+            </p>
           </div>
           <div className="infos-contact-card">
             <span>
               <FaLocationArrow />
             </span>
             <h3>Adresse</h3>
-            <p>Zone industrielle</p>
+            <p>
+              74 JM MAVOUNGOU, Zone Industrielle De La Foire De Pointe-Noire.
+            </p>
           </div>
         </div>
         <div className="infos-contact-map">

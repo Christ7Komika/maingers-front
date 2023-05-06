@@ -23,21 +23,21 @@ const ResponsiveMenu = () => {
       <div className="mobile--container">
         <div className="mobile--top">
           <div className="mobile--social--network">
-            <a href="#">
+            <Link to="#">
               <span>
                 <FaFacebook size={20} />
               </span>
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
               <span>
                 <FaLinkedin size={20} />
               </span>
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
               <span>
                 <FaInstagram size={20} />
               </span>
-            </a>
+            </Link>
           </div>
           <div className="mobile--contact">
             <span>

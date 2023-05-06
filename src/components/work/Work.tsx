@@ -4,6 +4,7 @@ import SecurityImg from "../../assets/objectifs/security.png";
 import QualityImg from "../../assets/objectifs/quality.svg";
 import FiabilityImg from "../../assets/objectifs/reliability.svg";
 import DurabilityImg from "../../assets/objectifs/hourglass.svg";
+import { Link } from "react-router-dom";
 
 const Work = () => {
   return (
@@ -53,7 +54,7 @@ const Work = () => {
           Augmentez la productivité de vos installations hydrauliques!
           Bénéficiez de notre expertise et d’une large gamme de services et
           produits offerts ! N'hésitez plus{" "}
-          <a href="/contact">contactez nous</a>.
+          <Link to="/contact">contactez nous</Link>.
         </h3>
       </div>
       <div className="work-img">

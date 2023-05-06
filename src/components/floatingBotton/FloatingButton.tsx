@@ -8,6 +8,7 @@ import { FaFileInvoice } from "react-icons/fa";
 import Modal from "../Modal/Modal";
 import InvoiceModal from "../Modal/InvoiceModal";
 import FloatingMessage from "../floatingMessage/FloatingMessage";
+import { Link } from "react-router-dom";
 
 const FloatingButton = () => {
   const [show, setShow] = useState(false);
@@ -39,22 +40,22 @@ const FloatingButton = () => {
                 Message <span></span>
               </small>
             </a>
-            <a className="main-sub-button" href="/contact">
+            <Link className="main-sub-button" to="/contact">
               <span>
                 <FiMail />
               </span>
               <small className="tooltip">
                 Contact <span></span>
               </small>
-            </a>
-            <a className="main-sub-button" href="/career">
+            </Link>
+            <Link className="main-sub-button" to="/career">
               <span>
                 <MdWork />
               </span>
               <small className="tooltip">
                 Postuler <span></span>
               </small>
-            </a>
+            </Link>
             <a className="main-sub-button" onClick={() => setModal(!modal)}>
               <span>
                 <FiPhoneCall />

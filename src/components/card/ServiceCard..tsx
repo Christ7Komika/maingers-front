@@ -1,6 +1,7 @@
 import React from "react";
 import { FaAngleRight } from "react-icons/fa";
 import "./servicecard.css";
+import { Link } from "react-router-dom";
 
 interface Props {
   title: string;
@@ -17,9 +18,9 @@ const ServiceCard = ({ product }: { product: Props }) => {
       <div className="card-service-content">
         <h3>{product.title}</h3>
         <small>{product.text}</small>
-        <a href={product.link}>
+        <Link to={product.link}>
           Learn more <FaAngleRight />
-        </a>
+        </Link>
       </div>
     </div>
   );

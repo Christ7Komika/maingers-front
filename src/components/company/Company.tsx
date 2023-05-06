@@ -1,6 +1,7 @@
 import { FaArrowRight } from "react-icons/fa";
 import Img from "../../assets/We/MicrosoftTeams-image (19).png";
 import "./company.css";
+import { Link } from "react-router-dom";
 
 const Company = () => {
   return (
@@ -18,7 +19,7 @@ const Company = () => {
         </p>
         <button>
           <FaArrowRight />
-          <a href="/about">EN SAVOR PLUS</a>
+          <Link to="/about">EN SAVOR PLUS</Link>
         </button>
       </div>
       <div className="company-img">

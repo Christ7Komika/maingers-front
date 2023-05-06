@@ -9,6 +9,7 @@ import { formatDistance, subDays } from "date-fns";
 import { fr } from "date-fns/locale";
 import axios, { AxiosRequestConfig } from "axios";
 import { host } from "../../host";
+import { Link } from "react-router-dom";
 
 const socket = io(host);
 
@@ -145,8 +146,8 @@ const FloatingMessage = ({ handleShow, isShow }: Props) => {
                       </p>
                     </div>
                     {isValidUrl(message.message) ? (
-                      <a
-                        href={message.message}
+                      <Link
+                        to={message.message}
                         style={{
                           inlineSize: 50,
                           overflowWrap: "break-word",
@@ -154,7 +155,7 @@ const FloatingMessage = ({ handleShow, isShow }: Props) => {
                         target="_blank"
                       >
                         {message.message}
-                      </a>
+                      </Link>
                     ) : (
                       <p
                         style={{
@@ -184,8 +185,8 @@ const FloatingMessage = ({ handleShow, isShow }: Props) => {
                       </p>
                     </div>
                     {isValidUrl(message.message) ? (
-                      <a
-                        href={message.message}
+                      <Link
+                        to={message.message}
                         style={{
                           inlineSize: 50,
                           overflowWrap: "break-word",
@@ -193,7 +194,7 @@ const FloatingMessage = ({ handleShow, isShow }: Props) => {
                         target="_blank"
                       >
                         {message.message}
-                      </a>
+                      </Link>
                     ) : (
                       <p
                         style={{

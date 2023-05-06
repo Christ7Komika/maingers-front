@@ -31,7 +31,7 @@ const Header = () => {
         <div className="header">
           <div className="header--header">
             <div className="header--contact">
-              <a href="#" className="phone-number">
+              <a className="phone-number">
                 <span>
                   <FaFacebook size={20} />
                 </span>
@@ -44,7 +44,7 @@ const Header = () => {
               </a>
             </div>
             <div className="header--contact">
-              <a href="#" className="phone-number">
+              <a className="phone-number">
                 <span>
                   <RiWhatsappFill size={25} fill="	#25d366" />
                 </span>
@@ -75,8 +75,8 @@ const Header = () => {
                     : "link select-menu"
                 }
               >
-                <a
-                  href=""
+                <Link
+                  to=""
                   onClick={(e) => {
                     e.preventDefault();
                     setOpen(!open);
@@ -86,7 +86,7 @@ const Header = () => {
                   <span>
                     <FaAngleDown />
                   </span>
-                </a>
+                </Link>
 
                 {open && (
                   <div

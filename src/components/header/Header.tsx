@@ -25,6 +25,10 @@ const Header = () => {
     });
   });
 
+  useEffect(() => {
+    scrollTo({ top: 0 });
+  }, []);
+
   return (
     <>
       {width >= 1250 ? (

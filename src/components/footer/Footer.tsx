@@ -71,22 +71,22 @@ const Footer = () => {
         <div className="list-link">
           <h3>Lien</h3>
           <div className="group-link">
-            <Link to="/" reloadDocument>
+            <Link to={"/"}>
               <FaArrowRight />
               Acceuil
             </Link>
-            <Link to="/career" reloadDocument>
+            <Link to={"/career"}>
               <FaArrowRight />
               Carrières
             </Link>
-            <Link to="/actualities" reloadDocument>
+            <Link to={"/actualities"}>
               <FaArrowRight />
               Actualités
             </Link>
-            <Link to="/about" reloadDocument>
+            <Link to={"/about"}>
               <FaArrowRight />A propos
             </Link>
-            <Link to="/contact" reloadDocument>
+            <Link to={"/contact"}>
               <FaArrowRight />
               Contact
             </Link>

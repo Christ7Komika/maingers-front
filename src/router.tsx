@@ -56,8 +56,8 @@ export const Router = () => {
           path="/actualities/infos/:name/:id"
           element={<ActualityInfos />}
         />
-        <Route path="*" element={<NotFound />} />
         <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

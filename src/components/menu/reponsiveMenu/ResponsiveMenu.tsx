@@ -6,7 +6,7 @@ import {
   FaLinkedin,
   FaPlus,
 } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import Logo from "../../../assets/logo/Logo1.svg";
 
@@ -23,21 +23,21 @@ const ResponsiveMenu = () => {
       <div className="mobile--container">
         <div className="mobile--top">
           <div className="mobile--social--network">
-            <Link to="#">
+            <NavLink to="#">
               <span>
                 <FaFacebook size={20} />
               </span>
-            </Link>
-            <Link to="#">
+            </NavLink>
+            <NavLink to="#">
               <span>
                 <FaLinkedin size={20} />
               </span>
-            </Link>
-            <Link to="#">
+            </NavLink>
+            <NavLink to="#">
               <span>
                 <FaInstagram size={20} />
               </span>
-            </Link>
+            </NavLink>
           </div>
           <div className="mobile--contact">
             <span>
@@ -66,9 +66,12 @@ const ResponsiveMenu = () => {
           </span>
           <div className="menu-list">
             <div className="sub-menu">
-              <Link to="/" className={location.pathname == "/" ? "select" : ""}>
+              <NavLink
+                to="/"
+                className={location.pathname == "/" ? "select" : ""}
+              >
                 Acceuil
-              </Link>
+              </NavLink>
             </div>
             <div className="sub-menu drop-menu">
               <small
@@ -85,7 +88,7 @@ const ResponsiveMenu = () => {
               </small>
               {submenu && (
                 <div className="drop-submenu">
-                  <Link
+                  <NavLink
                     className={
                       location.pathname == "/services/flexibles" ? "select" : ""
                     }
@@ -94,8 +97,8 @@ const ResponsiveMenu = () => {
                     onClick={(e) => setMenu(false)}
                   >
                     Confection & réparation de flexibles hydrauliques
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     className={
                       location.pathname == "/services/industrial-cleaning"
                         ? "select"
@@ -106,8 +109,8 @@ const ResponsiveMenu = () => {
                     onClick={(e) => setMenu(false)}
                   >
                     Maintenance & Nettoyage industriel
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     className={
                       location.pathname == "/services/rent-engine"
                         ? "select"
@@ -118,41 +121,41 @@ const ResponsiveMenu = () => {
                     onClick={(e) => setMenu(false)}
                   >
                     Levage, manutention & transport
-                  </Link>
+                  </NavLink>
                 </div>
               )}
             </div>
             <div className="sub-menu">
-              <Link
+              <NavLink
                 to="/career"
                 className={location.pathname == "/career" ? "select" : ""}
               >
                 Carrières
-              </Link>
+              </NavLink>
             </div>
             <div className="sub-menu">
-              <Link
+              <NavLink
                 to="/actualities"
                 className={location.pathname == "/actualities" ? "select" : ""}
               >
                 Actualités
-              </Link>
+              </NavLink>
             </div>
             <div className="sub-menu">
-              <Link
+              <NavLink
                 to="/about"
                 className={location.pathname == "/about" ? "select" : ""}
               >
                 A Propos
-              </Link>
+              </NavLink>
             </div>
             <div className="sub-menu">
-              <Link
+              <NavLink
                 to="/contact"
                 className={location.pathname == "/contact" ? "select" : ""}
               >
                 Contact
-              </Link>
+              </NavLink>
             </div>
           </div>
         </div>

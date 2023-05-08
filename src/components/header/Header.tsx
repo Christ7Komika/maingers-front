@@ -6,7 +6,7 @@ import {
   FaInstagram,
   FaSearch,
 } from "react-icons/fa";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { v4 as uuidV4 } from "uuid";
 import "./header.css";
@@ -66,7 +66,9 @@ const Header = () => {
               <div
                 className={location.pathname === "/" ? "link selected" : "link"}
               >
-                <Link to="/">Acceuil</Link>
+                <NavLink to="/" reloadDocument>
+                  Acceuil
+                </NavLink>
               </div>
               <div
                 className={
@@ -75,18 +77,19 @@ const Header = () => {
                     : "link select-menu"
                 }
               >
-                <Link
+                <NavLink
                   to=""
                   onClick={(e) => {
                     e.preventDefault();
                     setOpen(!open);
                   }}
+                  reloadDocument
                 >
                   Services
                   <span>
                     <FaAngleDown />
                   </span>
-                </Link>
+                </NavLink>
 
                 {open && (
                   <div
@@ -94,30 +97,33 @@ const Header = () => {
                     id="select__sub__menu"
                     data-id={uuid}
                   >
-                    <Link
+                    <NavLink
                       className="element"
                       data-id={uuid}
                       to={"/services/flexibles"}
                       onClick={(e) => setOpen(false)}
+                      reloadDocument
                     >
                       Confection & réparation de flexibles hydrauliques
-                    </Link>
-                    <Link
+                    </NavLink>
+                    <NavLink
                       className="element"
                       data-id={uuid}
                       to={"/services/industrial-cleaning"}
                       onClick={(e) => setOpen(false)}
+                      reloadDocument
                     >
                       Maintenance & Nettoyage industriel
-                    </Link>
-                    <Link
+                    </NavLink>
+                    <NavLink
                       className="element"
                       data-id={uuid}
                       to={"/services/rent-engine"}
                       onClick={(e) => setOpen(false)}
+                      reloadDocument
                     >
                       Levage, manutention & transport
-                    </Link>
+                    </NavLink>
                   </div>
                 )}
               </div>
@@ -126,7 +132,9 @@ const Header = () => {
                   location.pathname === "/career" ? "link selected" : "link"
                 }
               >
-                <Link to="/career">Carrières</Link>
+                <NavLink to="/career" reloadDocument>
+                  Carrières
+                </NavLink>
               </div>
               <div
                 className={
@@ -135,14 +143,18 @@ const Header = () => {
                     : "link"
                 }
               >
-                <Link to="/actualities">Actualités</Link>
+                <NavLink to="/actualities" reloadDocument>
+                  Actualités
+                </NavLink>
               </div>
               <div
                 className={
                   location.pathname === "/about" ? "link selected" : "link"
                 }
               >
-                <Link to="/about">A Propos</Link>
+                <NavLink to="/about" reloadDocument>
+                  A Propos
+                </NavLink>
               </div>
               {/* <div
                 className={
@@ -159,7 +171,9 @@ const Header = () => {
                 <FaSearch />
               </span>
               <div className="search__bar">
-                <Link to="/contact">Contact</Link>
+                <NavLink to="/contact" reloadDocument>
+                  Contact
+                </NavLink>
               </div>
             </div>
           </div>

@@ -14,7 +14,7 @@ const productData = [
   },
   {
     title: "Maintenance & Nettoyage industriel",
-    text: "Néttoyage des plateforme, des capacités, des pipes...",
+    text: "Nettoyage des plateforme, des capacités, des pipes...",
     link: "/services/industrial-cleaning",
     img: Cleaning,
   },

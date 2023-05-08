@@ -6,7 +6,7 @@ import {
   FaInstagram,
   FaSearch,
 } from "react-icons/fa";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { v4 as uuidV4 } from "uuid";
 import "./header.css";
@@ -66,9 +66,9 @@ const Header = () => {
               <div
                 className={location.pathname === "/" ? "link selected" : "link"}
               >
-                <NavLink to="/" reloadDocument>
+                <Link to="/" reloadDocument>
                   Acceuil
-                </NavLink>
+                </Link>
               </div>
               <div
                 className={
@@ -77,7 +77,7 @@ const Header = () => {
                     : "link select-menu"
                 }
               >
-                <NavLink
+                <Link
                   to=""
                   onClick={(e) => {
                     e.preventDefault();
@@ -89,7 +89,7 @@ const Header = () => {
                   <span>
                     <FaAngleDown />
                   </span>
-                </NavLink>
+                </Link>
 
                 {open && (
                   <div
@@ -97,7 +97,7 @@ const Header = () => {
                     id="select__sub__menu"
                     data-id={uuid}
                   >
-                    <NavLink
+                    <Link
                       className="element"
                       data-id={uuid}
                       to={"/services/flexibles"}
@@ -105,8 +105,8 @@ const Header = () => {
                       reloadDocument
                     >
                       Confection & réparation de flexibles hydrauliques
-                    </NavLink>
-                    <NavLink
+                    </Link>
+                    <Link
                       className="element"
                       data-id={uuid}
                       to={"/services/industrial-cleaning"}
@@ -114,8 +114,8 @@ const Header = () => {
                       reloadDocument
                     >
                       Maintenance & Nettoyage industriel
-                    </NavLink>
-                    <NavLink
+                    </Link>
+                    <Link
                       className="element"
                       data-id={uuid}
                       to={"/services/rent-engine"}
@@ -123,7 +123,7 @@ const Header = () => {
                       reloadDocument
                     >
                       Levage, manutention & transport
-                    </NavLink>
+                    </Link>
                   </div>
                 )}
               </div>
@@ -132,9 +132,9 @@ const Header = () => {
                   location.pathname === "/career" ? "link selected" : "link"
                 }
               >
-                <NavLink to="/career" reloadDocument>
+                <Link to="/career" reloadDocument>
                   Carrières
-                </NavLink>
+                </Link>
               </div>
               <div
                 className={
@@ -143,26 +143,19 @@ const Header = () => {
                     : "link"
                 }
               >
-                <NavLink to="/actualities" reloadDocument>
+                <Link to="/actualities" reloadDocument>
                   Actualités
-                </NavLink>
+                </Link>
               </div>
               <div
                 className={
                   location.pathname === "/about" ? "link selected" : "link"
                 }
               >
-                <NavLink to="/about" reloadDocument>
+                <Link to="/about" reloadDocument>
                   A Propos
-                </NavLink>
+                </Link>
               </div>
-              {/* <div
-                className={
-                  location.pathname === "/contact" ? "link selected" : "link"
-                }
-              >
-                <Link to="/contact">Contact</Link>
-              </div> */}
             </div>
 
             {/* SearchBar */}
@@ -171,9 +164,9 @@ const Header = () => {
                 <FaSearch />
               </span>
               <div className="search__bar">
-                <NavLink to="/contact" reloadDocument>
+                <Link to="/contact" reloadDocument>
                   Contact
-                </NavLink>
+                </Link>
               </div>
             </div>
           </div>

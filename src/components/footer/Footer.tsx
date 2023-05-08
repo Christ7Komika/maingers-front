@@ -9,7 +9,7 @@ import {
 import toast, { Toaster } from "react-hot-toast";
 import axios, { AxiosError } from "axios";
 import { host } from "../../host";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Footer = () => {
   const [email, setEmail] = useState("");
   const submit = (e: React.SyntheticEvent) => {
@@ -71,25 +71,25 @@ const Footer = () => {
         <div className="list-link">
           <h3>Lien</h3>
           <div className="group-link">
-            <NavLink to="/" reloadDocument>
+            <Link to="/" reloadDocument>
               <FaArrowRight />
               Acceuil
-            </NavLink>
-            <NavLink to="/career" reloadDocument>
+            </Link>
+            <Link to="/career" reloadDocument>
               <FaArrowRight />
               Carrières
-            </NavLink>
-            <NavLink to="/actualities" reloadDocument>
+            </Link>
+            <Link to="/actualities" reloadDocument>
               <FaArrowRight />
               Actualités
-            </NavLink>
-            <NavLink to="/about" reloadDocument>
+            </Link>
+            <Link to="/about" reloadDocument>
               <FaArrowRight />A propos
-            </NavLink>
-            <NavLink to="/contact" reloadDocument>
+            </Link>
+            <Link to="/contact" reloadDocument>
               <FaArrowRight />
               Contact
-            </NavLink>
+            </Link>
           </div>
         </div>
         <div className="contact-infos">

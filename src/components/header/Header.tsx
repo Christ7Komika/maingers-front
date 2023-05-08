@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <>
       {width >= 1250 ? (
-        <div className="header">
+        <div className="header" id="headers">
           <div className="header--header">
             <div className="header--contact">
               <a className="phone-number">
@@ -66,9 +66,7 @@ const Header = () => {
               <div
                 className={location.pathname === "/" ? "link selected" : "link"}
               >
-                <Link to="/" reloadDocument>
-                  Acceuil
-                </Link>
+                <Link to="/">Acceuil</Link>
               </div>
               <div
                 className={
@@ -83,7 +81,6 @@ const Header = () => {
                     e.preventDefault();
                     setOpen(!open);
                   }}
-                  reloadDocument
                 >
                   Services
                   <span>
@@ -102,7 +99,6 @@ const Header = () => {
                       data-id={uuid}
                       to={"/services/flexibles"}
                       onClick={(e) => setOpen(false)}
-                      reloadDocument
                     >
                       Confection & réparation de flexibles hydrauliques
                     </Link>
@@ -111,7 +107,6 @@ const Header = () => {
                       data-id={uuid}
                       to={"/services/industrial-cleaning"}
                       onClick={(e) => setOpen(false)}
-                      reloadDocument
                     >
                       Maintenance & Nettoyage industriel
                     </Link>
@@ -120,7 +115,6 @@ const Header = () => {
                       data-id={uuid}
                       to={"/services/rent-engine"}
                       onClick={(e) => setOpen(false)}
-                      reloadDocument
                     >
                       Levage, manutention & transport
                     </Link>
@@ -132,9 +126,7 @@ const Header = () => {
                   location.pathname === "/career" ? "link selected" : "link"
                 }
               >
-                <Link to="/career" reloadDocument>
-                  Carrières
-                </Link>
+                <Link to="/career">Carrières</Link>
               </div>
               <div
                 className={
@@ -143,18 +135,14 @@ const Header = () => {
                     : "link"
                 }
               >
-                <Link to="/actualities" reloadDocument>
-                  Actualités
-                </Link>
+                <Link to="/actualities">Actualités</Link>
               </div>
               <div
                 className={
                   location.pathname === "/about" ? "link selected" : "link"
                 }
               >
-                <Link to="/about" reloadDocument>
-                  A Propos
-                </Link>
+                <Link to="/about">A Propos</Link>
               </div>
             </div>
 
@@ -164,9 +152,7 @@ const Header = () => {
                 <FaSearch />
               </span>
               <div className="search__bar">
-                <Link to="/contact" reloadDocument>
-                  Contact
-                </Link>
+                <Link to="/contact">Contact</Link>
               </div>
             </div>
           </div>

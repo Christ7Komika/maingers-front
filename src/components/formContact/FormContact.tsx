@@ -4,7 +4,6 @@ import toast, { Toaster } from "react-hot-toast";
 import ContactImg from "../../assets/contact/contact.jpg";
 import CustomFile from "../input/CustomFile";
 import axios, { AxiosError } from "axios";
-import CircularSpinner from "../spinner/CircularSpinner";
 import { host } from "../../host";
 import CustomSelectNumber from "../input/CustomSelectNumber";
 import { countryList } from "../../countryList";
@@ -182,7 +181,7 @@ const FormContact = () => {
             value={message}
           ></textarea>
           <button type="submit" onClick={submit}>
-            {!isLoad ? "Envoyer" : <CircularSpinner />}
+            {!isLoad ? "Envoyer" : "Envoi en cour..."}
           </button>
         </form>
       </div>

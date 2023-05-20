@@ -540,7 +540,7 @@ const flexibleTypeData = [
           &Renforcement: Plis textile
           &Revêtement: EPDM/SBR bleu, rouge ou blanc, aspect toilé
           &Résistant aux intempéries, détergents et produits chimiques diluées.
-          &Température: -30°c à +70°c pointes à 140°c pendant la période de néttoyage à la vapeur`,
+          &Température: -30°c à +70°c pointes à 140°c pendant la période de nettoyage à la vapeur`,
         IdTableau: 28,
       },
       {
@@ -555,7 +555,7 @@ const flexibleTypeData = [
           &Renforcement: Plis textile et spiral métallique
           &Revêtement: EPDM/SBR bleu, rouge ou blanc, aspect toilé
           &Résistant aux intempéries, détergents et produits chimiques diluées.
-          &Température: -30°c à +70°c pointes à 140°c pendant la période de néttoyage à la vapeur`,
+          &Température: -30°c à +70°c pointes à 140°c pendant la période de nettoyage à la vapeur`,
         IdTableau: 29,
       },
     ],

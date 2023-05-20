@@ -7,6 +7,7 @@ import { countryList } from "../../countryList";
 import toast, { Toaster } from "react-hot-toast";
 import axios, { AxiosError } from "axios";
 import { host } from "../../host";
+import CircularSpinner from "../spinner/CircularSpinner";
 
 interface CareerType {
   photo: File | null;
@@ -40,6 +41,7 @@ const CareerForm = () => {
   const [initPhoto, setInitPhoto] = useState(false);
   const [initCustom, setInitCustom] = useState(false);
   const [dial, setDial] = useState("");
+  const [isLoad, setIsLoad] = useState(false);
   const [career, setCareer] = useState<CareerType>({
     photo: null,
     firstName: null,
@@ -126,16 +128,17 @@ const CareerForm = () => {
       url: host + "/career",
       data: form,
     };
-
+    setIsLoad(true);
     axios(config)
       .then(function () {
         init();
+        setIsLoad(false);
         return toast.success("Votre demande a été envoyé avec succès");
       })
       .catch((e: AxiosError) => {
         //@ts-ignore
         const error = e.response?.data.errors;
-        console.log(e);
+        setIsLoad(false);
         if (e.response?.status === 400) {
           return toast.error(error);
         }
@@ -269,7 +272,9 @@ const CareerForm = () => {
               valueExtractor={(item: { name: number }) => item.name}
             />
 
-            <button onClick={submit}>Valider</button>
+            <button onClick={submit}>
+              {isLoad ? "Envoi en cour..." : "Soumettre"}
+            </button>
           </form>
         </div>
       </form>

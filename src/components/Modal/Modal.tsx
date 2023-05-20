@@ -7,6 +7,7 @@ import toast, { Toaster } from "react-hot-toast";
 import axios, { AxiosError } from "axios";
 import { host } from "../../host";
 import { countryList } from "../../countryList";
+
 type Props = {
   isOpen: boolean;
   handleOpen: Function;
@@ -40,6 +41,7 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
   const html = document.querySelector("html") as HTMLElement;
   const [initCustom, setInitCustom] = useState(false);
   const [dial, setDial] = useState("");
+  const [isLoad, setIsLoad] = useState(false);
   const [project, setProject] = useState<ProjectType>({
     lastname: null,
     firstname: null,
@@ -129,11 +131,11 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
       url: host + "/project",
       data: project,
     };
-
+    setIsLoad(true);
     axios(config)
       .then(function () {
         init();
-
+        setIsLoad(false);
         toast.success("Votre demande a été envoyé avec succès");
         setTimeout(() => {
           handleOpen(false);
@@ -142,6 +144,7 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
       .catch((e: AxiosError) => {
         //@ts-ignore
         const error = e.response?.data.errors;
+        setIsLoad(false);
         if (e.response?.status === 400) {
           return toast.error(error);
         }
@@ -155,113 +158,120 @@ const Modal = ({ isOpen, handleOpen }: Props) => {
     <div className="modal-normal">
       <Toaster />
       <div className="modal-container">
-        <div className="modal-header">
-          <h2>Mon projet</h2>
-          <span onClick={() => handleOpen(false)}>
-            <RxCross2 />
-          </span>
-        </div>
-        <div className="modal-body">
-          <h2>
-            <span>
-              <BsTelephoneFill />
+        <div className="modal-content">
+          <div className="modal-header">
+            <h2>Mon projet</h2>
+            <span onClick={() => handleOpen(false)}>
+              <RxCross2 />
             </span>
-            Être rappelé
-          </h2>
-          <p>Vous avez un projet concret ? Un cahier des charges ? </p>
-          <p>Notre équipe vous rappelle dans les meilleurs délais ! </p>
-          <form encType="multipart/form-data">
-            <div className="form-group">
-              <input
-                type="text"
-                placeholder="Entrer votre nom"
-                onChange={(e) =>
-                  setProject({ ...project, lastname: e.target.value })
-                }
-              />
-              <input
-                type="text"
-                placeholder="Entrer votre prénom"
-                onChange={(e) =>
-                  setProject({ ...project, firstname: e.target.value })
-                }
-              />
-            </div>
-            <div className="form-group">
-              <input
-                type="text"
-                placeholder="Email"
-                onChange={(e) =>
-                  setProject({ ...project, email: e.target.value })
-                }
-              />
-              <input
-                type="text"
-                placeholder="Nom de la societé"
-                onChange={(e) =>
-                  setProject({ ...project, society: e.target.value })
-                }
-              />
-            </div>
-            <div className="form-group">
-              <input
-                type="text"
-                placeholder="Fonction au sein de la société"
-                onChange={(e) =>
-                  setProject({ ...project, func: e.target.value })
-                }
-              />
-              <input
-                type="text"
-                placeholder="Code postal de la société"
-                onChange={(e) =>
-                  setProject({ ...project, codePostal: e.target.value })
-                }
-              />
-            </div>
+          </div>
+          <div className="modal-body">
+            <h2>
+              <span>
+                <BsTelephoneFill />
+              </span>
+              Être rappelé
+            </h2>
+            <p>Vous avez un projet concret ? Un cahier des charges ? </p>
+            <p>Notre équipe vous rappelle dans les meilleurs délais ! </p>
+            <form encType="multipart/form-data">
+              <div className="form-group">
+                <input
+                  type="text"
+                  placeholder="Entrer votre nom"
+                  onChange={(e) =>
+                    setProject({ ...project, lastname: e.target.value })
+                  }
+                />
+                <input
+                  type="text"
+                  placeholder="Entrer votre prénom"
+                  onChange={(e) =>
+                    setProject({ ...project, firstname: e.target.value })
+                  }
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="text"
+                  placeholder="Email"
+                  onChange={(e) =>
+                    setProject({ ...project, email: e.target.value })
+                  }
+                />
+                <input
+                  type="text"
+                  placeholder="Nom de la société"
+                  onChange={(e) =>
+                    setProject({ ...project, society: e.target.value })
+                  }
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="text"
+                  placeholder="Fonction au sein de la société"
+                  onChange={(e) =>
+                    setProject({ ...project, func: e.target.value })
+                  }
+                />
+                <input
+                  type="text"
+                  placeholder="Code postal de la société"
+                  onChange={(e) =>
+                    setProject({ ...project, codePostal: e.target.value })
+                  }
+                />
+              </div>
 
-            <CustomSelect
-              init={initCustom}
-              setInit={setInitCustom}
-              placeholder="Pays"
-              data={countryList}
-              getValue={(country: string) =>
-                setProject({ ...project, country: country })
-              }
-              labelExtractor={(item: { name: string }) => item.name}
-              keyExtractor={(item: { name: number }) => item.name}
-              valueExtractor={(item: { name: number }) => item.name}
-            />
-            <div className="number__phone">
-              <small className="dial__number">{dial}</small>
-              <input
-                type="text"
-                placeholder="Veuillez saisir numéro de téléphone *"
-                onChange={(e) =>
-                  setProject({ ...project, phone: `${dial} ${e.target.value}` })
+              <CustomSelect
+                init={initCustom}
+                setInit={setInitCustom}
+                placeholder="Pays"
+                data={countryList}
+                getValue={(country: string) =>
+                  setProject({ ...project, country: country })
                 }
-                value={project.phone || ""}
+                labelExtractor={(item: { name: string }) => item.name}
+                keyExtractor={(item: { name: number }) => item.name}
+                valueExtractor={(item: { name: number }) => item.name}
               />
-            </div>
+              <div className="number__phone">
+                <small className="dial__number">{dial}</small>
+                <input
+                  type="text"
+                  placeholder="Veuillez saisir numéro de téléphone *"
+                  onChange={(e) =>
+                    setProject({
+                      ...project,
+                      phone: `${dial} ${e.target.value}`,
+                    })
+                  }
+                  value={project.phone || ""}
+                />
+              </div>
 
-            <CustomSelect
-              init={initCustom}
-              setInit={setInitCustom}
-              placeholder="Sujet a aborder au téléphone ?"
-              data={suggest}
-              getValue={(subject: string) =>
-                setProject({ ...project, subject: subject })
-              }
-              labelExtractor={(item: { name: string }) => item.name}
-              keyExtractor={(item: { name: number }) => item.name}
-              valueExtractor={(item: { name: number }) => item.name}
-            />
-            <p>
-              MAINGER'S-HYDRAULIC s'engage à protéger et à respecter vos
-              données.
-            </p>
-            <button onClick={(e) => submit(e)}>Être Rappelé</button>
-          </form>
+              <CustomSelect
+                init={initCustom}
+                setInit={setInitCustom}
+                placeholder="Sujet a aborder au téléphone ?"
+                data={suggest}
+                getValue={(subject: string) =>
+                  setProject({ ...project, subject: subject })
+                }
+                labelExtractor={(item: { name: string }) => item.name}
+                keyExtractor={(item: { name: number }) => item.name}
+                valueExtractor={(item: { name: number }) => item.name}
+              />
+              <p>
+                MAINGER'S-HYDRAULIC s'engage à protéger et à respecter vos
+                données.
+              </p>
+              <button onClick={(e) => submit(e)}>
+                {isLoad ? "Envoi en cour..." : "Être Rappelé"}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -283,15 +293,3 @@ const suggest = [
   },
 ];
 export default Modal;
-
-/**
- *
- * function de la personne qui contact
- * avant code postal champ adresse
- * pays
- *
- *
- *
- *
- *
- */

@@ -42,6 +42,7 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
   const html = document.querySelector("html") as HTMLElement;
   const [initCustom, setInitCustom] = useState(false);
   const [dial, setDial] = useState("");
+  const [isLoad, setIsLoad] = useState(false);
   const [invoice, setInvoice] = useState<InvoiceType>({
     lastname: null,
     firstname: null,
@@ -209,7 +210,7 @@ const InvoiceModal = ({ isOpen, handleOpen }: Props) => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Nom de la socité"
+                  placeholder="Nom de la société"
                   required
                   onChange={(e) =>
                     setInvoice({ ...invoice, society: e.target.value })
@@ -323,7 +324,7 @@ const devis = [
   },
   {
     id: 6,
-    name: "Néttoyage de pipes",
+    name: "Nettoyage de pipes",
   },
 ];
 

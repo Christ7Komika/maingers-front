@@ -12,6 +12,7 @@ import { host } from "../../host";
 import { Link } from "react-router-dom";
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const [isLoad, setIsLoad] = useState(false);
   const submit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
@@ -25,15 +26,17 @@ const Footer = () => {
       data: { email: email },
     };
 
+    setIsLoad(true);
     axios(config)
       .then(function () {
         setEmail("");
+        setIsLoad(false);
         return toast.success("Votre demande a été envoyé avec succès");
       })
       .catch(function (e: AxiosError) {
         //@ts-ignore
         const error = e.response?.data.status;
-
+        setIsLoad(false);
         if (error === 4000) {
           return toast.error(
             "Vous êtes déjà souscrit à notre service de newsletter "
@@ -58,7 +61,9 @@ const Footer = () => {
               onChange={(e) => setEmail(e.target.value)}
               value={email}
             />
-            <button onClick={(e) => submit(e)}>Souscrire</button>
+            <button onClick={(e) => submit(e)}>
+              {isLoad ? "Souscrire..." : "Souscrire"}
+            </button>
           </form>
         </div>
         <div className="company-infos">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./ourEngine.css";
 import Img1 from "../../assets/locations/image1.jpg";
 import Img2 from "../../assets/locations/image2.jpg";
@@ -12,7 +12,6 @@ import Img9 from "../../assets/locations/image9.jpg";
 import Img10 from "../../assets/locations/image10.jpg";
 import Img11 from "../../assets/locations/image11.jpg";
 
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import Modal from "../Modal/Modal";
 import SlideModal from "../Modal/SlideModal";
 

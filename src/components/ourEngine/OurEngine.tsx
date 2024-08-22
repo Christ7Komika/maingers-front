@@ -1,16 +1,16 @@
 import { useState } from "react";
 import "./ourEngine.css";
-import Img1 from "../../assets/locations/image1.jpg";
-import Img2 from "../../assets/locations/image2.jpg";
-import Img3 from "../../assets/locations/image3.jpg";
-import Img4 from "../../assets/locations/image4.jpg";
-import Img5 from "../../assets/locations/image5.jpg";
-import Img6 from "../../assets/locations/image6.jpg";
-import Img7 from "../../assets/locations/image7.jpg";
-import Img8 from "../../assets/locations/image8.jpg";
-import Img9 from "../../assets/locations/image9.jpg";
-import Img10 from "../../assets/locations/image10.jpg";
-import Img11 from "../../assets/locations/image11.jpg";
+import Img1 from "./../../assets/locations/image1.jpg";
+import Img2 from "./../../assets/locations/image2.jpg";
+import Img3 from "./../../assets/locations/image3.jpg";
+import Img4 from "./../../assets/locations/image4.jpg";
+import Img5 from "./../../assets/locations/image5.jpg";
+import Img6 from "./../../assets/locations/image6.jpg";
+import Img7 from "./../../assets/locations/image7.jpg";
+import Img8 from "./../../assets/locations/image8.jpg";
+import Img9 from "./../../assets/locations/image9.jpg";
+import Img11 from "./../../assets/locations/image11.jpg";
+import Img10 from "./../../assets/locations/image10.jpg";
 
 import Modal from "../Modal/Modal";
 import SlideModal from "../Modal/SlideModal";

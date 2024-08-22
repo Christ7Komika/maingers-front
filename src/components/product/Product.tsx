@@ -1,4 +1,3 @@
-import React from "react";
 import "./product.css";
 import ProductCard from "../card/ProductCard";
 import Flexibles from "../../assets/pictures/flexible.svg";
